@@ -164,6 +164,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9128fbf389109b0468f49600a8d2c2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  baseSprites: []
+  mouthSprites: []
+  neutralBase: {fileID: 0}
+  sadBase: {fileID: 0}
+  angryBase: {fileID: 0}
+  happyBase: {fileID: 0}
+  neutralMouth: {fileID: 0}
+  sadMouth: {fileID: 0}
+  angryMouth: {fileID: 0}
+  happyMouth: {fileID: 0}
+  moralPoints: 0
+  defaultDialogue: 
+  ascensionDialogue: 
+  reincarnationDialogue: 
+  condemnationDialogue: 
+  option1Dialogue: 
+  option1Continue: 
+  option2Dialogue: 
+  option2Continue: 
+  option3Dialogue: 
+  option3Continue: 
 --- !u!1 &251182347
 GameObject:
   m_ObjectHideFlags: 0
