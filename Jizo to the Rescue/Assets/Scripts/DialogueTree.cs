@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-
+/*
 public class DialogueTree : MonoBehaviour
 {
     public string headChoiceAnswer;
@@ -68,16 +68,5 @@ public class DialogueTree : MonoBehaviour
         c1.connectionStrings.Add(connection);
         return true;
     }
-
-    public class Choice : MonoBehaviour{
-        public string answer;
-        public List<Choice> choices;
-        public List<string> connectionStrings;
-
-        public Choice(string answer) {
-            this.answer = answer;
-            choices = new List<Choice>();
-            connectionStrings = new List<string>();
-        }
-    }
 }
+*/

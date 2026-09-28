@@ -23,19 +23,6 @@ public class PersonController : MonoBehaviour
     //      they send the person.
     public float moralPoints;
 
-    //dialogue declaration
-    //[SerializeField] private List<Dictionary<string, string,>> dialogueListofDicts;
-    [SerializeField] public string defaultDialogue; //what person says on entrance
-    [SerializeField] public string ascensionDialogue; //what person says in response to being ascended
-    [SerializeField] public string reincarnationDialogue; 
-    [SerializeField] public string condemnationDialogue; 
-    [SerializeField] public string option1Dialogue; //what person says in response to option1 dialogue option, might change var name later
-    [SerializeField] public string option1Continue; 
-    [SerializeField] public string option2Dialogue;
-    [SerializeField] public string option2Continue;
-    [SerializeField] public string option3Dialogue;
-    [SerializeField] public string option3Continue;
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
