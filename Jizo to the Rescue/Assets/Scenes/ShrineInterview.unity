@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 238882764}
   - component: {fileID: 238882765}
+  - component: {fileID: 238882766}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -165,25 +166,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   baseSprites: []
   mouthSprites: []
-  neutralBase: {fileID: 0}
-  sadBase: {fileID: 0}
-  angryBase: {fileID: 0}
-  happyBase: {fileID: 0}
-  neutralMouth: {fileID: 0}
-  sadMouth: {fileID: 0}
-  angryMouth: {fileID: 0}
-  happyMouth: {fileID: 0}
+  topOptionDialogue: []
+  thingsPersonSays:
+  - key: barcomepdlf
+    value:
+    - 1
+    - 2
+  - key: arsdfs
+    value:
+    - 144
+    - 44
   moralPoints: 0
-  defaultDialogue: 
+--- !u!114 &238882766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238882763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e856f23a8cc144808da7a3d3a7eb28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   ascensionDialogue: 
   reincarnationDialogue: 
   condemnationDialogue: 
-  option1Dialogue: 
-  option1Continue: 
-  option2Dialogue: 
-  option2Continue: 
-  option3Dialogue: 
-  option3Continue: 
+  speechBubbleText: {fileID: 1598700183}
+  optionButton1Text: {fileID: 971141624}
+  optionButton2Text: {fileID: 547301058}
+  optionButton3Text: {fileID: 1978191884}
 --- !u!1 &251182347
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +504,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &389941205
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -549,6 +561,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!1 &501126788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,15 +1047,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ComponentVersion: 2
+  m_ComponentVersion: 4
   m_LightType: 4
   m_BlendStyleIndex: 0
+  m_Light2DProvider:
+    rid: -2
+  m_SelectionSources:
+    rid: 7111305435034157240
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000i
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1057,6 +1074,9 @@ MonoBehaviour:
   m_ShadowSoftnessFalloffIntensity: 0.5
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
@@ -1074,6 +1094,23 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 7111305435034157240
+      type: {class: Light2DProviderSources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_SelectedHashCode: 4
+        m_SelectedSource:
+          rid: -2
+        m_Provider2DCache:
+          rid: 7111305435034157247
+    - rid: 7111305435034157247
+      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.Light2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_Cache: []
 --- !u!4 &619394802
 Transform:
   m_ObjectHideFlags: 0
@@ -2368,7 +2405,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -2427,20 +2464,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e856f23a8cc144808da7a3d3a7eb28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
-  firstNodeText: hi there
-  NPCanswer1aText: ew
-  NPCanswer1bText: no
-  NPCanswer1cText: u suck
-  PlayerConnection1: yo wassup
-  PlayerConnection2: hey bbg
-  PlayerConnection3: yooooooo <3 3
+  ascensionDialogue: 
+  reincarnationDialogue: 
+  condemnationDialogue: 
   speechBubbleText: {fileID: 1598700183}
   optionButton1Text: {fileID: 971141624}
   optionButton2Text: {fileID: 547301058}
   optionButton3Text: {fileID: 1978191884}
-  Ascendsiontext1: 
-  Ascendsiontext2: 
-  Ascendsiontext3: 
 --- !u!4 &1640416334
 Transform:
   m_ObjectHideFlags: 0

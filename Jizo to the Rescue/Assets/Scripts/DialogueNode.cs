@@ -8,14 +8,14 @@ using System.Collections.Generic;
 public class DialogueNode{
 
     public string NPCtext; //text displayed
-    public List <DialogueNode> nextnodes; //next nodes
-    public List <string> answerschoices; //answers
+    public List <DialogueNode> nextNodes; //next nodes
+    public List <string> answerChoices; //answers
     public Sprite characterSprite; //node that keeps character sprites(?)
  
     public DialogueNode(string NPCanswer) {
         this.NPCtext = NPCanswer;
-        answerschoices = new List<string>();
-        nextnodes = new List<DialogueNode>(); 
+        answerChoices = new List<string>();
+        nextNodes = new List<DialogueNode>(); 
         this.characterSprite = characterSprite; //doesnt work yet but im thinking every node contains the sprite of the character?
     }
 }

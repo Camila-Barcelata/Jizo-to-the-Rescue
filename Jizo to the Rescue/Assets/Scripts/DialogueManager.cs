@@ -1,35 +1,40 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+
 
 //Called this the dialogue manager, this will build the tree and instantiate the first
 
 
 public class DialogueManager : MonoBehaviour
 {
+    //JUST IN CASEEEE
+    // //NPCtext
+    // public string firstNodeText;
 
-    //NPCtext
-    public string firstNodeText;
+    // //NPCanswers
+    // public string NPCanswer1aText;
+    // public string NPCanswer1bText;
+    // public string NPCanswer1cText;
 
-    //NPCanswers
-    public string NPCanswer1aText;
-    public string NPCanswer1bText;
-    public string NPCanswer1cText;
+    PersonController character;
+
     //NPC judgement texts
     [SerializeField] public string ascensionDialogue; //what person says in response to being ascended
     [SerializeField] public string reincarnationDialogue; 
     [SerializeField] public string condemnationDialogue; 
-
-    //choices
-    public string PlayerConnection1; 
-    public string PlayerConnection2; 
-    public string PlayerConnection3;
+    
+    //OTHER JUST IN CASE
+    // //choices
+    // public string PlayerConnection1; 
+    // public string PlayerConnection2; 
+    // public string PlayerConnection3;
 
     public TMP_Text speechBubbleText;
 
     public TMP_Text optionButton1Text;
     public TMP_Text optionButton2Text;
-    public TMP_Text optionButton3Text;
 
     private DialogueNode firstNode;
     private DialogueNode currentNode;
@@ -37,80 +42,137 @@ public class DialogueManager : MonoBehaviour
     //[SerializeField] public Sprite characterSprite;
 
     void Start(){
-        
-        //first chocies will intialize, 
+        character = GetComponent<PersonController>();
+        //this is the dictionary that will be made into a heap
+        Dictionary<string, string[]> thingsCharacterSays = character.thingsPersonSays;
 
-        firstNode = new DialogueNode(firstNodeText);
-
-        DialogueNode Node1a = new DialogueNode(NPCanswer1aText);
-        DialogueNode Node1b = new DialogueNode(NPCanswer1bText);
-        DialogueNode Node1c = new DialogueNode(NPCanswer1cText);
-
-        Connect(firstNode,Node1a, PlayerConnection1);
-        Connect(firstNode,Node1b, PlayerConnection2);
-        Connect(firstNode,Node1c, PlayerConnection3);
-
-        //-------------------------------------------------------
-        //we'll figure out a way to make the text for the next nodes, either serializes field
-        //or putting it in directly (might be easier to just do it directly)
-
-        //this is branch 1
-        DialogueNode Node1a2a = new DialogueNode("NPCanswer2aText");
-        DialogueNode Node1a2b = new DialogueNode("NPCanswer1bText");
-        DialogueNode Node1a2c = new DialogueNode("NPCanswer1cText");
-
-        Connect(Node1a, Node1a2a, "yooooo"); //change text
-        Connect(Node1a, Node1a2b, "wewefwef"); 
-        Connect(Node1a, Node1a2c, "ladadadadada");
-
-        //-------------------------------------------------------
-        
-        //this is branch 2 (test end)
-        DialogueNode endNode = new DialogueNode("Good bye!!!!");
-        DialogueNode endNode1 = new DialogueNode("Good bye!!!!");
-        DialogueNode endNode2 = new DialogueNode("Good bye!!!!");
-
-        Connect(Node1a2a, endNode, "bye bye!!!"); //change text
-        Connect(Node1a2a, endNode1, "bye byeee!!!"); //change text
-        Connect(Node1a2a, endNode2, "bye byeeeeeee!!!"); //change text
-
+        // initialize all DialogueNodes! <3 
+        // dialogueNodeDict holds thingsChrSays's keys as keys & its DialogueNode object as values
+        Dictionary<string, DialogueNode> dialogueNodeDict =InitializeDialogueNodes(thingsCharacterSays);
+        //Initialize the heap! <3
+        InitializeHeap(thingsCharacterSays, dialogueNodeDict);
         //--------------------------------------------------------
         
+
+        //ERRRRRRRR WRONG BUTTON THIS IS WRONG!!!! 
+        //should reference the first dialogue node object in dialogueNodeDict, since we only initialize our dialogue nodes here
+        //  (i'll leave that to u <3)
         currentNode = firstNode;
+
+        //also i think we should do the traversal/displaying in update? mayhaps?
         DisplayCurrentNode(); //call display function
+
+        //comment hell.... where u go when u don't use 6.6. tabbed for clarity, untab if we use this
+            //first chocies will intialize, 
+
+            // firstNode = new DialogueNode(firstNodeText);
+
+            // DialogueNode Node1a = new DialogueNode(NPCanswer1aText);
+            // DialogueNode Node1b = new DialogueNode(NPCanswer1bText);
+            // DialogueNode Node1c = new DialogueNode(NPCanswer1cText);
+
+            // Connect(firstNode,Node1a, PlayerConnection1);
+            // Connect(firstNode,Node1b, PlayerConnection2);
+            // Connect(firstNode,Node1c, PlayerConnection3);
+
+            // //-------------------------------------------------------
+            // //we'll figure out a way to make the text for the next nodes, either serializes field
+            // //or putting it in directly (might be easier to just do it directly)
+
+            // //this is branch 1
+            // DialogueNode Node1a2a = new DialogueNode("NPCanswer2aText");
+            // DialogueNode Node1a2b = new DialogueNode("NPCanswer1bText");
+            // DialogueNode Node1a2c = new DialogueNode("NPCanswer1cText");
+
+            // Connect(Node1a, Node1a2a, "yooooo"); //change text
+            // Connect(Node1a, Node1a2b, "wewefwef"); 
+            // Connect(Node1a, Node1a2c, "ladadadadada");
+
+            // //-------------------------------------------------------
+            
+            // //this is branch 2 (test end)
+            // DialogueNode endNode = new DialogueNode("Good bye!!!!");
+            // DialogueNode endNode1 = new DialogueNode("Good bye!!!!");
+            // DialogueNode endNode2 = new DialogueNode("Good bye!!!!");
+
+            // Connect(Node1a2a, endNode, "bye bye!!!"); //change text
+            // Connect(Node1a2a, endNode1, "bye byeee!!!"); //change text
+            // Connect(Node1a2a, endNode2, "bye byeeeeeee!!!"); //change text
         
     }
     
 
     public static bool Connect(DialogueNode headnode, DialogueNode followingnode, string playerAnswer)
     {
-        if (headnode.nextnodes.Contains(followingnode)){
+        if (headnode.nextNodes.Contains(followingnode)){
             return false;
         }
 
-        headnode.nextnodes.Add(followingnode);
-        headnode.answerschoices.Add(playerAnswer);
+        headnode.nextNodes.Add(followingnode);
+        headnode.answerChoices.Add(playerAnswer);
         return true;    
         
+    }
+
+    Dictionary<string, DialogueNode> InitializeDialogueNodes(Dictionary<string, string[]> thingsCharacterSays)
+    {
+        List<string> keyList = new List<string>(thingsCharacterSays.Keys);
+
+        //keys = strings, vals = dialogue node object
+        Dictionary<string, DialogueNode> dialogueNodeDict = new Dictionary<string, DialogueNode>();
+        for(int i = 0; i < thingsCharacterSays.Count; i++)
+        {
+            dialogueNodeDict[keyList[i]]= new DialogueNode(keyList[i]);
+        }
+        return dialogueNodeDict;
+    }
+
+    void InitializeHeap(Dictionary<string, string[]> thingsCharacterSays, Dictionary<string, DialogueNode> dialogueNodeDict)
+    {
+        for (int i = 0; i < thingsCharacterSays.Count; i ++)
+        {
+            List<string> characterKeyList = new List<string>(thingsCharacterSays.Keys);
+            List<string> dialogueNodeKeys = new List<string>(dialogueNodeDict.Keys);
+            
+            //ensure no null pointers
+            if (characterKeyList[i] != null && dialogueNodeKeys[i] != null) 
+            {
+                //get left/right child indices, & the head node object
+                int leftChild = FindLeftChild(i);
+                int rightChild = FindRightChild(i);
+                DialogueNode tempHeadDialogueNode = dialogueNodeDict[dialogueNodeKeys[i]];
+
+                //connect 2 children to head node
+                Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[leftChild]], tempHeadDialogueNode.answerChoices[0]);
+                Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[rightChild]], tempHeadDialogueNode.answerChoices[1]);
+            }
+            break;
+        }
+    }
+
+
+    int FindLeftChild(int index) {
+        int leftChildIndex = (index* 2 )+ 1;
+        return leftChildIndex;
+
+    }
+    int FindRightChild(int index) {
+        int rightChildIndex = (index* 2 )+ 2;
+        return rightChildIndex;
     }
     
     void DisplayCurrentNode() //then this displays everything
 
-    {
-    
+    { 
         speechBubbleText.text = currentNode.NPCtext;
-        optionButton1Text.text = currentNode.answerschoices[0];
-        optionButton2Text.text = currentNode.answerschoices[1];
-        optionButton3Text.text = currentNode.answerschoices[2];
-        //characterSprite = characterSprite
-
+        optionButton1Text.text = currentNode.answerChoices[0];
+        optionButton2Text.text = currentNode.answerChoices[1];
+        //characterSprite = characterSprite;
     }
  
     public void SelectOption(int index) //this first
-
-
     {
-        currentNode = currentNode.nextnodes[index];
+        currentNode = currentNode.nextNodes[index];
         DisplayCurrentNode();   
     }
 

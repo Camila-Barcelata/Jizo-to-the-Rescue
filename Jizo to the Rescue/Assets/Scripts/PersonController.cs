@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PersonController : MonoBehaviour
 {
@@ -9,14 +10,19 @@ public class PersonController : MonoBehaviour
     //       and element 0 of mouthSprites should be neutralMouth
     [SerializeField] private Sprite[] baseSprites;
     [SerializeField] private Sprite[] mouthSprites;
-    public Sprite neutralBase;
-    public Sprite sadBase;
-    public Sprite angryBase;
-    public Sprite happyBase;
-    public Sprite neutralMouth;
-    public Sprite sadMouth;
-    public Sprite angryMouth;
-    public Sprite happyMouth;
+
+    //dialogue the person says --top options
+    // (Element 0 is their Greeting dialogue, 
+    // element 1 is their condemnation dialogue, 
+    // element2 is their pure land dialogue,
+    // element3 is their reincarnation dialogue) 
+    [SerializeField] public string[] topOptionDialogue;
+
+
+    //make an empty dictionary
+    [SerializeField] public Dictionary<string, string[]> thingsPersonSays;
+    //[SerializeField] public List<KeyValuePairs<string, string[]>> thingsPersonSays;
+
 
     //idk exactly how this will b implemented, just know that this will
     //      eventually affect the player's reputation depending on where
@@ -24,16 +30,16 @@ public class PersonController : MonoBehaviour
     public float moralPoints;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //might have to add "new" 
+        
+
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
     }
 
 }
