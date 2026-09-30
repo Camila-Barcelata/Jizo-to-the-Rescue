@@ -18,8 +18,6 @@ public class DialogueManager : MonoBehaviour
     // public string NPCanswer1bText;
     // public string NPCanswer1cText;
 
-    PersonController character;
-
     //NPC judgement texts
     [SerializeField] public string ascensionDialogue; //what person says in response to being ascended
     [SerializeField] public string reincarnationDialogue; 
@@ -31,8 +29,9 @@ public class DialogueManager : MonoBehaviour
     // public string PlayerConnection2; 
     // public string PlayerConnection3;
 
-    public TMP_Text speechBubbleText;
+    PersonController character;
 
+    public TMP_Text speechBubbleText;
     public TMP_Text optionButton1Text;
     public TMP_Text optionButton2Text;
 
@@ -145,8 +144,9 @@ public class DialogueManager : MonoBehaviour
                 //connect 2 children to head node
                 Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[leftChild]], tempHeadDialogueNode.answerChoices[0]);
                 Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[rightChild]], tempHeadDialogueNode.answerChoices[1]);
+            } else {
+                break;
             }
-            break;
         }
     }
 

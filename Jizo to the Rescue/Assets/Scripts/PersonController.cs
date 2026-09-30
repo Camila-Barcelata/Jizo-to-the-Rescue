@@ -32,9 +32,8 @@ public class PersonController : MonoBehaviour
 
     void Start()
     {
-        //might have to add "new" 
-        
-
+        //always display a default base sprite + 
+        //  default mouth sprite combo so that character doesn't just "disappear"
     }
 
     
