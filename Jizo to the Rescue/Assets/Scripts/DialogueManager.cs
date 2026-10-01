@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
         InitializeHeap(thingsCharacterSays, dialogueNodeDict);
         //--------------------------------------------------------
         List<string> thingsChrSaysKeys = new List<string>(thingsCharacterSays.Keys);
+        firstNode = dialogueNodeDict[thingsChrSaysKeys[0]]; //DON'T DELETE THIS, THIS IS NOT REDUNDANT!
         currentNode = dialogueNodeDict[thingsChrSaysKeys[0]];
 
         //also i think we should do the traversal/displaying in update? mayhaps?
@@ -148,26 +149,39 @@ public class DialogueManager : MonoBehaviour
         speechBubbleText.text = currentNode.NPCtext;
         optionButton1Text.text = currentNode.answerChoices[0];
         optionButton2Text.text = currentNode.answerChoices[1];
+        Debug.Log("DispCurN: " + "speech: " + speechBubbleText.text + " optionButton1Text: " + optionButton1Text.text + " optionButton1Text: " + optionButton2Text.text);
         //characterSprite = characterSprite;
     }
 
     public void TraverseLeftChild()
     {
-        currentNode = currentNode.nextNodes[0];
-        DisplayCurrentNode();
+        try
+        {
+            currentNode = currentNode.nextNodes[0];
+            DisplayCurrentNode();
+
+        }
+        catch(ArgumentOutOfRangeException argumentOutOfRangeException)
+        {
+            //reset to beginning of tree
+            currentNode = firstNode;
+        }  
     }
     public void TraverseRightChild()
     {
-        currentNode = currentNode.nextNodes[1];
-        DisplayCurrentNode();
+        try
+        {
+            currentNode = currentNode.nextNodes[1];
+            DisplayCurrentNode();
+
+        }
+        catch(ArgumentOutOfRangeException argumentOutOfRangeException)
+        {
+            //reset to beginning of tree
+            currentNode = firstNode;
+        }  
     }
  
-    // public void SelectOption(int index) //this first
-    // {
-    //     currentNode = currentNode.nextNodes[index];
-    //     DisplayCurrentNode();   
-    // }
-
     
     public void AscensionClicked(int index)
     {
@@ -187,8 +201,6 @@ public class DialogueManager : MonoBehaviour
             pureLand.gameObject.SetActive(true);
         }
     }
-            
-
 }
     
 
