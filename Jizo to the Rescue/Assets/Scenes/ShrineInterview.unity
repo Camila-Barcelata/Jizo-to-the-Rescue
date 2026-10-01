@@ -170,24 +170,26 @@ MonoBehaviour:
   mouthSprites: []
   topOptionDialogue: []
   thingsPersonSays:
-  - key: '"hello i am person"'
+  - key: "Hello\u2026 My name is Lady Yanagiya. Please treat me kindly, I\u2019ve gone through so much\u2026 "
     value:
-    - '"i hate uuu"'
-    - omi gosh i love u
-  - key: '"wow that''s crazy"'
+    - "\u201CLady\u201D? Are you of noble blood? "
+    - 'What has transpired that you believe warrants my compassion? '
+  - key: "Yes, my lord. My father is a wealthy aristocrat. Though that is not important here\u2026 "
     value:
-    - '"yea ig so"'
-    - lol im just a guy
-  - key: awww tysm
+    - Uhuh
+    - Uhhuh
+  - key: "It\u2019s quite the tale, my lord\u2026 I was at Kiyomizu. I had gone to pray to Kannon. When a handsome man approached me. "
     value:
-    - sdfio
-    - oooo
-  - key: '"so u hate me fr"'
-    value: []
-  - key: '"sdifuhsdfhs"'
+    - "If you\u2019re so beautiful, why the lack of suitors?"
+    - 'Who was the man? '
+  - key: "Are you trying to say I\u2019m ugly? My advisor tells me I\u2019m beautiful all the time. That\u2019s all that matters, anyway. As I was saying\u2026 "
     value:
-    - did u say i have autism
-    - ur welcome bud
+    - 'Why had you gone to pray? '
+    - 'What did he say? '
+  - key: "He was a bold man. He said he was unmarried\u2026 Complimented me\u2026 And asked for my hand in marriage. "
+    value:
+    - 'Why did you say you were a fool? '
+    - 'Did you know him? '
   moralPoints: 0
 --- !u!114 &238882766
 MonoBehaviour:
@@ -207,9 +209,9 @@ MonoBehaviour:
   speechBubbleText: {fileID: 1598700183}
   optionButton1Text: {fileID: 971141624}
   optionButton2Text: {fileID: 547301058}
-  fire: {fileID: 0}
-  pureLand: {fileID: 0}
-  humanLand: {fileID: 0}
+  fire: {fileID: 1055183854}
+  pureLand: {fileID: 448240422}
+  humanLand: {fileID: 1126801659}
 --- !u!1 &251182347
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &448240421
 Transform:
   m_ObjectHideFlags: 0
@@ -1099,8 +1101,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 604.2571, y: 12.065918}
-  m_SizeDelta: {x: 2349.562, y: 24.133}
+  m_AnchoredPosition: {x: 604.26, y: 12.065918}
+  m_SizeDelta: {x: 2349.6, y: 24.133}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605085776
 MonoBehaviour:
@@ -1115,7 +1117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4056604, g: 0.18560877, b: 0.18560877, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1275,8 +1277,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664569145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3496184, y: 2.2493637, z: 2.52267}
+  m_LocalPosition: {x: 0, y: 0, z: -0.17838}
+  m_LocalScale: {x: 1.5404545, y: 2.5674236, z: 2.8793755}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 547301057}
@@ -1284,7 +1286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.999054, y: -316.67572}
+  m_AnchoredPosition: {x: -0, y: -394}
   m_SizeDelta: {x: 2248.713, y: 94.377}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &664569147
@@ -1363,7 +1365,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6122179371576550197, guid: a7613e47623fb5c46bc355d17150a2a6, type: 3}
+  m_Sprite: {fileID: -4816990551846497349, guid: ca3a74d49e2974f4abca480a489860fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1416,8 +1418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -611.86, y: 114.973}
-  m_SizeDelta: {x: 999.267, y: 332.172}
+  m_AnchoredPosition: {x: -359, y: -334}
+  m_SizeDelta: {x: 3481.602, y: -67.287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &715969975
 MonoBehaviour:
@@ -1439,7 +1441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9218302431739866236, guid: eae66108c8baccd41940fbe0a2b8f2bc, type: 3}
+  m_Sprite: {fileID: -527351264971043790, guid: 1abc912ce9ccc44919b9fed773e465d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1914,7 +1916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1055183853
 Transform:
   m_ObjectHideFlags: 0
@@ -2006,7 +2008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1126801658
 Transform:
   m_ObjectHideFlags: 0
@@ -2242,8 +2244,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377646213}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3496184, y: 2.2493637, z: 2.52267}
+  m_LocalPosition: {x: 0, y: 0, z: -0.17838}
+  m_LocalScale: {x: 1.5404545, y: 2.5674236, z: 2.8793755}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 971141623}
@@ -2251,7 +2253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19, y: -28}
+  m_AnchoredPosition: {x: -0.0014400482, y: -64.496155}
   m_SizeDelta: {x: 2248.713, y: 94.377}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377646215
@@ -2330,7 +2332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6122179371576550197, guid: a7613e47623fb5c46bc355d17150a2a6, type: 3}
+  m_Sprite: {fileID: -4816990551846497349, guid: ca3a74d49e2974f4abca480a489860fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2598,8 +2600,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -247.977, y: 21.802}
-  m_SizeDelta: {x: 1388.313, y: 881.15}
+  m_AnchoredPosition: {x: 98, y: -106}
+  m_SizeDelta: {x: 4687.327, y: 790.665}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1598700183
 MonoBehaviour:
@@ -2687,7 +2689,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -115.57245, w: -112.207756}
+  m_margin: {x: 0, y: 0, z: -20.958984, w: -4.1318283}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2727,8 +2729,8 @@ Transform:
   m_GameObject: {fileID: 1680723863}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.807349, y: -0.534442, z: 0}
-  m_LocalScale: {x: 0.05116404, y: 0.026781438, z: 0.83496827}
+  m_LocalPosition: {x: -3.8078, y: -0.531, z: 0}
+  m_LocalScale: {x: 0.03895374, y: 0.020390047, z: 0.6357031}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 238882764}
@@ -2979,7 +2981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3207547, g: 0.15583839, b: 0.15583839, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
