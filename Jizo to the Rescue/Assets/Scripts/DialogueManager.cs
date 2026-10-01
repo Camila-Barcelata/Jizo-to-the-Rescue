@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Linq;
 
 
 //Called this the dialogue manager, this will build the tree and instantiate the first
@@ -51,12 +52,11 @@ public class DialogueManager : MonoBehaviour
         //Initialize the heap! <3
         InitializeHeap(thingsCharacterSays, dialogueNodeDict);
         //--------------------------------------------------------
-        
-
         //ERRRRRRRR WRONG BUTTON THIS IS WRONG!!!! 
         //should reference the first dialogue node object in dialogueNodeDict, since we only initialize our dialogue nodes here
         //  (i'll leave that to u <3)
-        currentNode = firstNode;
+        List<string> thingsChrSaysKeys = new List<string>(thingsCharacterSays.Keys);
+        currentNode = dialogueNodeDict[thingsChrSaysKeys[0]];
 
         //also i think we should do the traversal/displaying in update? mayhaps?
         DisplayCurrentNode(); //call display function
@@ -101,27 +101,32 @@ public class DialogueManager : MonoBehaviour
     }
     
 
-    public static bool Connect(DialogueNode headnode, DialogueNode followingnode, string playerAnswer)
+    public static bool Connect(DialogueNode headnode, DialogueNode followingnode)
     {
         if (headnode.nextNodes.Contains(followingnode)){
             return false;
         }
 
         headnode.nextNodes.Add(followingnode);
-        headnode.answerChoices.Add(playerAnswer);
+        // headnode.answerChoices.Add(playerAnswer);
         return true;    
         
     }
 
     Dictionary<string, DialogueNode> InitializeDialogueNodes(Dictionary<string, string[]> thingsCharacterSays)
     {
-        List<string> keyList = new List<string>(thingsCharacterSays.Keys);
 
         //keys = strings, vals = dialogue node object
         Dictionary<string, DialogueNode> dialogueNodeDict = new Dictionary<string, DialogueNode>();
         for(int i = 0; i < thingsCharacterSays.Count; i++)
         {
+            List<string> keyList = new List<string>(thingsCharacterSays.Keys);
+
             dialogueNodeDict[keyList[i]]= new DialogueNode(keyList[i]);
+            string[] tempQuestionsLst = thingsCharacterSays[keyList[i]];
+        
+            dialogueNodeDict[keyList[i]].answerChoices.Add(tempQuestionsLst[0]);
+            dialogueNodeDict[keyList[i]].answerChoices.Add(tempQuestionsLst[1]);
         }
         return dialogueNodeDict;
     }
@@ -139,11 +144,23 @@ public class DialogueManager : MonoBehaviour
                 //get left/right child indices, & the head node object
                 int leftChild = FindLeftChild(i);
                 int rightChild = FindRightChild(i);
+                Debug.Log("InitializeHeap(): leftChild: " + leftChild);
+                Debug.Log("InitializeHeap(): rightChild: " + rightChild);
                 DialogueNode tempHeadDialogueNode = dialogueNodeDict[dialogueNodeKeys[i]];
+                Debug.Log("DialogueNode tempHeadDialogueNode: " + tempHeadDialogueNode + "dialogueNodeKeys[i]" + dialogueNodeKeys[i]);
+                Debug.Log("tempHeadDialogueNode.answerChoices: " + tempHeadDialogueNode.answerChoices[0]);
 
                 //connect 2 children to head node
-                Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[leftChild]], tempHeadDialogueNode.answerChoices[0]);
-                Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[rightChild]], tempHeadDialogueNode.answerChoices[1]);
+                // for (int j; j< dialogueNodeDict.Count; j++)
+                // {
+                //     Debug.Log("dialogueNodeDict[dialogueNodeKeys[j]]" + dialogueNodeDict[dialogueNodeKeys[j]]);    
+                // }
+
+                Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[leftChild]]);
+                Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[rightChild]]);
+
+                //Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[rightChild]], tempHeadDialogueNode.answerChoices[1]);
+
             } else {
                 break;
             }
@@ -169,12 +186,23 @@ public class DialogueManager : MonoBehaviour
         optionButton2Text.text = currentNode.answerChoices[1];
         //characterSprite = characterSprite;
     }
- 
-    public void SelectOption(int index) //this first
+
+    public void TraverseLeftChild()
     {
-        currentNode = currentNode.nextNodes[index];
-        DisplayCurrentNode();   
+        currentNode = currentNode.nextNodes[0];
+        DisplayCurrentNode();
     }
+    public void TraverseRightChild()
+    {
+        currentNode = currentNode.nextNodes[1];
+        DisplayCurrentNode();
+    }
+ 
+    // public void SelectOption(int index) //this first
+    // {
+    //     currentNode = currentNode.nextNodes[index];
+    //     DisplayCurrentNode();   
+    // }
 
     
     public void AscensionClicked(int index)

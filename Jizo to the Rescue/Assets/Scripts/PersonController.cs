@@ -18,11 +18,8 @@ public class PersonController : MonoBehaviour
     // element3 is their reincarnation dialogue) 
     [SerializeField] public string[] topOptionDialogue;
 
-
     //make an empty dictionary
     [SerializeField] public Dictionary<string, string[]> thingsPersonSays;
-    //[SerializeField] public List<KeyValuePairs<string, string[]>> thingsPersonSays;
-
 
     //idk exactly how this will b implemented, just know that this will
     //      eventually affect the player's reputation depending on where
@@ -34,6 +31,7 @@ public class PersonController : MonoBehaviour
     {
         //always display a default base sprite + 
         //  default mouth sprite combo so that character doesn't just "disappear"
+
     }
 
     
