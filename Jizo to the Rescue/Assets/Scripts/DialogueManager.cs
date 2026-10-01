@@ -26,6 +26,12 @@ public class DialogueManager : MonoBehaviour
     private DialogueNode firstNode;
     private DialogueNode currentNode;
 
+    public SpriteRenderer fire;
+
+    public SpriteRenderer pureLand;
+
+    public SpriteRenderer humanLand;
+
     void Start(){
         character = GetComponent<PersonController>();
         //this is the dictionary that will be made into a heap
@@ -168,17 +174,17 @@ public class DialogueManager : MonoBehaviour
         if (index == 0)
         {
             speechBubbleText.text = ascensionDialogue;
-            SceneManager.LoadScene("Ascension");
+            fire.gameObject.SetActive(true);
         }
         else if (index == 1)
         {   
             speechBubbleText.text = reincarnationDialogue;
-            SceneManager.LoadScene("Ascension");
+            humanLand.gameObject.SetActive(true);
         }
         else if (index == 2)
         {
             speechBubbleText.text = condemnationDialogue;
-            SceneManager.LoadScene("Ascension");
+            pureLand.gameObject.SetActive(true);
         }
     }
             
