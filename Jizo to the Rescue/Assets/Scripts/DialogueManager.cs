@@ -187,7 +187,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (index == 0)
         {
-            speechBubbleText.text = ascensionDialogue;
+            speechBubbleText.text = condemnationDialogue;
             fire.gameObject.SetActive(true);
         }
         else if (index == 1)
@@ -197,7 +197,7 @@ public class DialogueManager : MonoBehaviour
         }
         else if (index == 2)
         {
-            speechBubbleText.text = condemnationDialogue;
+            speechBubbleText.text = ascensionDialogue;
             pureLand.gameObject.SetActive(true);
         }
     }
