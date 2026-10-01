@@ -5,10 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 
-
-//Called this the dialogue manager, this will build the tree and instantiate the first
-
-
 public class DialogueManager : MonoBehaviour
 {
 
@@ -42,7 +38,7 @@ public class DialogueManager : MonoBehaviour
         Dictionary<string, DialogueNode> dialogueNodeDict =InitializeDialogueNodes(thingsCharacterSays);
         //Initialize the heap! <3
         InitializeHeap(thingsCharacterSays, dialogueNodeDict);
-        //--------------------------------------------------------
+
         List<string> thingsChrSaysKeys = new List<string>(thingsCharacterSays.Keys);
         firstNode = dialogueNodeDict[thingsChrSaysKeys[0]]; //DON'T DELETE THIS, THIS IS NOT REDUNDANT!
         currentNode = dialogueNodeDict[thingsChrSaysKeys[0]];
@@ -59,14 +55,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         headnode.nextNodes.Add(followingnode);
-        // headnode.answerChoices.Add(playerAnswer);
         return true;    
-        
     }
 
     Dictionary<string, DialogueNode> InitializeDialogueNodes(Dictionary<string, string[]> thingsCharacterSays)
     {
-
         //keys = strings, vals = dialogue node object
         Dictionary<string, DialogueNode> dialogueNodeDict = new Dictionary<string, DialogueNode>();
         for(int i = 0; i < thingsCharacterSays.Count; i++)
@@ -79,9 +72,7 @@ public class DialogueManager : MonoBehaviour
             {
                 dialogueNodeDict[keyList[i]].answerChoices.Add(tempQuestionsLst[0]);
                 dialogueNodeDict[keyList[i]].answerChoices.Add(tempQuestionsLst[1]);
-            }
-
-            
+            } 
         }
         return dialogueNodeDict;
     }
@@ -123,8 +114,6 @@ public class DialogueManager : MonoBehaviour
                 { 
                     Debug.Log("Probably reached the end of tree; "+ argumentOutOfRangeException.Message);
                 }
-                // Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[leftChild]]);
-                // Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[rightChild]]);
 
             } else {
                 break;
@@ -150,7 +139,6 @@ public class DialogueManager : MonoBehaviour
         optionButton1Text.text = currentNode.answerChoices[0];
         optionButton2Text.text = currentNode.answerChoices[1];
         Debug.Log("DispCurN: " + "speech: " + speechBubbleText.text + " optionButton1Text: " + optionButton1Text.text + " optionButton1Text: " + optionButton2Text.text);
-        //characterSprite = characterSprite;
     }
 
     public void TraverseLeftChild()
@@ -165,6 +153,7 @@ public class DialogueManager : MonoBehaviour
         {
             //reset to beginning of tree
             currentNode = firstNode;
+            currentNode.nextNodes = firstNode.nextNodes;
         }  
     }
     public void TraverseRightChild()
@@ -179,10 +168,10 @@ public class DialogueManager : MonoBehaviour
         {
             //reset to beginning of tree
             currentNode = firstNode;
+            currentNode.nextNodes = firstNode.nextNodes;
         }  
     }
  
-    
     public void AscensionClicked(int index)
     {
         if (index == 0)
@@ -202,7 +191,3 @@ public class DialogueManager : MonoBehaviour
         }
     }
 }
-    
-
-
-

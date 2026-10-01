@@ -31,7 +31,6 @@ public class PersonController : MonoBehaviour
     {
         //always display a default base sprite + 
         //  default mouth sprite combo so that character doesn't just "disappear"
-
     }
 
     
