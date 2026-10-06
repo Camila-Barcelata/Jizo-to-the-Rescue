@@ -1,4 +1,6 @@
 using UnityEngine;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "CharacterObjectScript", menuName = "Scriptable Objects/CharacterObjectScript")]
@@ -7,6 +9,8 @@ public class CharacterObjectScript : ScriptableObject
     //base and mouth sprites should be assigned in the same elements. 
     //e.g. element 0 of baseSprites should be neutralBase(or neutralSprite)
     //       and element 0 of mouthSprites should be neutralMouth
+    
+    
     [SerializeField] public List<Sprite> baseSprites;
     [SerializeField] public List<Sprite> mouthSprites;
 
@@ -19,5 +23,8 @@ public class CharacterObjectScript : ScriptableObject
     //dictionary that is made into a dialogue tree/heap
     [SerializeField] public Dictionary<string, string[]> thingsPersonSays;
 
-    public float karmicMerit;
+    
+
+    [Header("karmicMerit")]
+    [SerializeField] public float karmicMerit;
 }
