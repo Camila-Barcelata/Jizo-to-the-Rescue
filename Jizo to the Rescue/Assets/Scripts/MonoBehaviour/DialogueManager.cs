@@ -88,12 +88,12 @@ public class DialogueManager : MonoBehaviour
             if (characterKeyList[i] != null && dialogueNodeKeys[i] != null) 
             {
                 DialogueNode tempHeadDialogueNode = dialogueNodeDict[dialogueNodeKeys[i]];
-                Debug.Log("DialogueNode tempHeadDialogueNode: " + tempHeadDialogueNode + "dialogueNodeKeys[i]" + dialogueNodeKeys[i]);
+                //Debug.Log("DialogueNode tempHeadDialogueNode: " + tempHeadDialogueNode + "dialogueNodeKeys[i]" + dialogueNodeKeys[i]);
                 //get left/right child indices, & the head node object
                 int leftChild = FindLeftChild(i);
                 int rightChild = FindRightChild(i);
-                Debug.Log("InitializeHeap(): leftChild: " + leftChild);
-                Debug.Log("InitializeHeap(): rightChild: " + rightChild);
+                // Debug.Log("InitializeHeap(): leftChild: " + leftChild);
+                // Debug.Log("InitializeHeap(): rightChild: " + rightChild);
                 
                 
 
@@ -102,12 +102,12 @@ public class DialogueManager : MonoBehaviour
                 {
                     if(dialogueNodeKeys[leftChild] != null && dialogueNodeKeys[rightChild] != null)
                     {
-                        Debug.Log("tempHeadDialogueNode.answerChoices[0]: " + tempHeadDialogueNode.answerChoices[0]);
-                        Debug.Log("tempHeadDialogueNode.answerChoices[1]: " + tempHeadDialogueNode.answerChoices[1]);
+                        // Debug.Log("tempHeadDialogueNode.answerChoices[0]: " + tempHeadDialogueNode.answerChoices[0]);
+                        // Debug.Log("tempHeadDialogueNode.answerChoices[1]: " + tempHeadDialogueNode.answerChoices[1]);
                         
                         bool connect1Success = Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[leftChild]]);
                         bool connect2Success =Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[rightChild]]);
-                        Debug.Log("Connection success:" + connect1Success + ", "+connect2Success);
+                        // Debug.Log("Connection success:" + connect1Success + ", "+connect2Success);
                     }
                 }
                 catch (ArgumentOutOfRangeException argumentOutOfRangeException)
@@ -145,30 +145,38 @@ public class DialogueManager : MonoBehaviour
     {
         try
         {
+            Debug.Log("currentNode.NPCtext: " + currentNode.NPCtext);
             currentNode = currentNode.nextNodes[0];
+            Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
             DisplayCurrentNode();
 
         }
         catch(ArgumentOutOfRangeException argumentOutOfRangeException)
         {
             //reset to beginning of tree
+            Debug.Log("Maybe reached end of tree");
             currentNode = firstNode;
             currentNode.nextNodes = firstNode.nextNodes;
+            DisplayCurrentNode();
         }  
     }
     public void TraverseRightChild()
     {
         try
         {
+            Debug.Log("currentNode.NPCtext: " + currentNode.NPCtext);
             currentNode = currentNode.nextNodes[1];
+            Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
             DisplayCurrentNode();
 
         }
         catch(ArgumentOutOfRangeException argumentOutOfRangeException)
         {
             //reset to beginning of tree
+            Debug.Log("Maybe reached end of tree");
             currentNode = firstNode;
             currentNode.nextNodes = firstNode.nextNodes;
+            DisplayCurrentNode();
         }  
     }
  
