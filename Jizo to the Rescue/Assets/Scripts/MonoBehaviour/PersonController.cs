@@ -24,7 +24,7 @@ public class PersonController : MonoBehaviour
     //idk exactly how this will b implemented, just know that this will
     //      eventually affect the player's reputation depending on where
     //      they send the person.
-    public float moralPoints;
+    public float karmicMerit;
 
 
     void Start()
