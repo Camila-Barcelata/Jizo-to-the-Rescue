@@ -13,21 +13,24 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public string reincarnationDialogue; 
     [SerializeField] public string condemnationDialogue; 
     
+    //objects
     PersonController character;
     public GameObject backButton;
+    public GameObject leftButton;
+    public GameObject rightButton;
 
+    //text
     public TMP_Text speechBubbleText;
     public TMP_Text optionButton1Text;
     public TMP_Text optionButton2Text;
-
-
+    
+    //private important global dialogue nodes
     private DialogueNode firstNode;
     private DialogueNode currentNode;
 
+    //animation...???
     public SpriteRenderer fire;
-
     public SpriteRenderer pureLand;
-
     public SpriteRenderer humanLand;
 
     void Start(){
@@ -51,12 +54,40 @@ public class DialogueManager : MonoBehaviour
     
     void Update()
     {
-        DisplayCurrentNode();
-        //if node is a dead end
-        if (currentNode.answerChoices[0] == "" && currentNode.answerChoices[1] =="")
+        try
         {
-            SetBackButtonActive();
+            DisplayCurrentNode();
+            //if we're at the start, make sure back button isn't Active
+            if(currentNode == firstNode)
+            {
+                SetBackButtonActive(false);
+                SetLeftButtonActive(true);
+                SetRightButtonActive(true);
+            }
+            //if node is a dead end, set back button active & hide left/right button
+            if (currentNode.answerChoices[0] == "" || currentNode.answerChoices[1] =="")
+            {
+                if(currentNode.answerChoices[0] == "" && currentNode.answerChoices[1] =="")
+                {
+                    SetBackButtonActive(true);
+                }
+                if(currentNode.answerChoices[0] =="")
+                {
+                    SetLeftButtonActive(false);
+                }
+                if(currentNode.answerChoices[1] =="")
+                {
+                    SetRightButtonActive(false);
+                }
+            }
         }
+        catch(ArgumentOutOfRangeException argumentOutOfRangeException)
+        {
+            //skip dummy text
+            Debug.Log("ArgumentOutOfRangeException in Update()");
+            ResetTree();
+        }
+        
     }
 
     public static bool Connect(DialogueNode headnode, DialogueNode followingnode)
@@ -168,8 +199,7 @@ public class DialogueManager : MonoBehaviour
         {
             //reset to beginning of tree
             Debug.Log("Maybe reached end of tree");
-            currentNode = firstNode;
-            currentNode.nextNodes = firstNode.nextNodes;
+            ResetTree();
         }  
     }
     public void TraverseRightChild()
@@ -189,8 +219,7 @@ public class DialogueManager : MonoBehaviour
         {
             //reset to beginning of tree
             Debug.Log("Maybe reached end of tree");
-            currentNode = firstNode;
-            currentNode.nextNodes = firstNode.nextNodes;
+            ResetTree();
         }  
     }
  
@@ -212,13 +241,25 @@ public class DialogueManager : MonoBehaviour
             pureLand.gameObject.SetActive(true);
         }
     }
-    public void SetBackButtonActive()
+    public void SetBackButtonActive(bool isActive)
     {
-        backButton.SetActive(true);
+        backButton.SetActive(isActive);
+    }
+
+    //Handles setting button correlating to left child active or not
+    public void SetLeftButtonActive(bool isActive)
+    {
+        leftButton.SetActive(isActive);
+    }
+    //Handles setting button correlating to right child active or not
+    public void SetRightButtonActive(bool isActive)
+    {
+        rightButton.SetActive(isActive);
     }
 
     public void ResetTree() 
     {
         currentNode = firstNode;
+        currentNode.nextNodes = firstNode.nextNodes;
     }
 }

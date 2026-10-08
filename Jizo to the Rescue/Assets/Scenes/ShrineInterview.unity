@@ -178,34 +178,114 @@ MonoBehaviour:
     value:
     - 
     - 
-  - key: "It\u2019s quite the tale, my lord\u2026 I was at Kiyomizu. I had gone to pray to Kannon. When a handsome man approached me. "
+  - key: "It\u2019s quite the tale, my lord... I was at Kiyomizu. I had gone to pray to Kannon. When a handsome man approached me."
     value:
     - Why had you gone to pray?
     - Who was the man?
-  - key: "Well\u2026 While I am of beautiful visage, my luck romantically had been stale. I went to pray for love. Are you trying to say I\u2019m ugly? My advisor tells me I\u2019m beautiful all the time. That\u2019s all that matters, anyway. As I was saying\u2026"
+  - key: None3
     value:
     - 
+    - 
+  - key: None4
+    value:
+    - 
+    - 
+  - key: "Well\u2026 While I am of beautiful visage, my luck romantically had been stale. I went to pray for love."
+    value:
+    - "If you\u2019re so beautiful, why the lack of suitors? "
     - 
   - key: "At first glance, he simply looked like\u2026 A handsome aristocrat. He said\u2026 Oh, I was a fool\u2026"
     value:
-    - "If you\u2019re so beautiful, why the lack of suitors? "
     - What did he say?
-  - key: "Are you trying to say I\u2019m ugly? My advisor tells me I\u2019m beautiful all the time. That\u2019s all that matters, anyway. As I was saying\u2026"
+    - 
+  - key: None7
     value:
     - 
-    - ' '
+    - 
+  - key: None8
+    value:
+    - 
+    - 
+  - key: None9
+    value:
+    - 
+    - 
+  - key: None10
+    value:
+    - 
+    - 
+  - key: "Are you trying to say I\u2019m ugly? My advisor tells me I\u2019m beautiful all the time. That\u2019s all that matters, anyway."
+    value:
+    - 
+    - 
+  - key: None11
+    value:
+    - 
+    - 
   - key: "He was a bold man. He said he was unmarried... Complimented me\u2026 And asked for my hand in marriage. Of course, I obliged. I had gone to pray for someone like him, after all!"
     value:
     - Why did you say you were a fool?
     - Did you know him?
+  - key: None14
+    value:
+    - 
+    - 
+  - key: None15
+    value:
+    - 
+    - 
+  - key: None16
+    value:
+    - 
+    - 
+  - key: None17
+    value:
+    - 
+    - 
+  - key: None18
+    value:
+    - 
+    - 
+  - key: None19
+    value:
+    - 
+    - 
+  - key: None20
+    value:
+    - 
+    - 
+  - key: None21
+    value:
+    - 
+    - 
+  - key: None22
+    value:
+    - 
+    - 
+  - key: None23
+    value:
+    - 
+    - 
+  - key: None24
+    value:
+    - 
+    - 
+  - key: None25
+    value:
+    - 
+    - 
+  - key: None26
+    value:
+    - 
+    - 
   - key: "Well, during the wedding ceremony\u2026 I kept noticing strange occurrences around the venue. Tiger-like dogs lurching from corners, mice cooking the very food we were eating\u2026 It was all very impure! That\u2019s when I knew all wasn\u2019t as it seemed."
     value:
-    - ....
-    - .....
-  - key: "Not at first. But when I realized the truth of his home, it was like I could see with a fresh pair of eyes. He was no man\u2026 He was a mouse! Without sparing a second, I used one of the strings from my koto to spring a trap on him. I saw him start to gnaw through it, but I had turned my back and started to run before I saw much more. And now\u2026 I\u2019m here."
+    - 
+    - 
+  - key: " Not at first. But when I realized the truth of his home, it was like I could see with a fresh pair of eyes. He was no man\u2026 He was a mouse! Without sparing a second, I used one of the strings from my koto to spring a trap on him. I saw him start to gnaw through it, but I had turned my back and started to run before I saw much more. And now\u2026 I\u2019m here."
     value:
-    - ....
-    - .....
+    - 
+    - 
   karmicMerit: 0
 --- !u!114 &238882766
 MonoBehaviour:
@@ -223,6 +303,8 @@ MonoBehaviour:
   reincarnationDialogue: I promise to you... I will do better in my next life.
   condemnationDialogue: ' I appreciate you more than you could know, my lord. I will never forget you throughout my lives.'
   backButton: {fileID: 1537200565}
+  leftButton: {fileID: 1377646213}
+  rightButton: {fileID: 664569145}
   speechBubbleText: {fileID: 1598700183}
   optionButton1Text: {fileID: 971141624}
   optionButton2Text: {fileID: 1975803337}
@@ -2704,7 +2786,7 @@ RectTransform:
   m_GameObject: {fileID: 1537200565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4891, y: 1.4891, z: 1.4891}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 381939720}
@@ -2712,7 +2794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 526, y: -440}
+  m_AnchoredPosition: {x: 445, y: -384}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1537200567
@@ -2738,8 +2820,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78616345, g: 0.6798583, b: 0.6798583, a: 1}
+    m_SelectedColor: {r: 0.9811321, g: 0.82378066, b: 0.82378066, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2791,8 +2873,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -4816990551846497349, guid: ca3a74d49e2974f4abca480a489860fc, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
