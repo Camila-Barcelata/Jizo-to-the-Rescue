@@ -176,28 +176,36 @@ MonoBehaviour:
     - 'What has transpired that you believe warrants my compassion? '
   - key: "Yes, my lord. My father is a wealthy aristocrat. Though that is not important here\u2026 "
     value:
-    - Uhuh
-    - Uhhuh
+    - 
+    - 
   - key: "It\u2019s quite the tale, my lord\u2026 I was at Kiyomizu. I had gone to pray to Kannon. When a handsome man approached me. "
     value:
-    - 
-    - 
-  - key: "Are you trying to say I\u2019m ugly? My advisor tells me I\u2019m beautiful all the time. That\u2019s all that matters, anyway. As I was saying\u2026 "
-    value:
-    - 'Why had you gone to pray? '
-    - 'What did he say? '
-  - key: "He was a bold man. He said he was unmarried\u2026 Complimented me\u2026 And asked for my hand in marriage. "
-    value:
-    - 'Why did you say you were a fool? '
-    - 'Did you know him? '
-  - key: None6
+    - Why had you gone to pray?
+    - Who was the man?
+  - key: "Well\u2026 While I am of beautiful visage, my luck romantically had been stale. I went to pray for love. Are you trying to say I\u2019m ugly? My advisor tells me I\u2019m beautiful all the time. That\u2019s all that matters, anyway. As I was saying\u2026"
     value:
     - 
     - 
-  - key: None7
+  - key: "At first glance, he simply looked like\u2026 A handsome aristocrat. He said\u2026 Oh, I was a fool\u2026"
+    value:
+    - "If you\u2019re so beautiful, why the lack of suitors? "
+    - What did he say?
+  - key: "Are you trying to say I\u2019m ugly? My advisor tells me I\u2019m beautiful all the time. That\u2019s all that matters, anyway. As I was saying\u2026"
     value:
     - 
-    - 
+    - ' '
+  - key: "He was a bold man. He said he was unmarried... Complimented me\u2026 And asked for my hand in marriage. Of course, I obliged. I had gone to pray for someone like him, after all!"
+    value:
+    - Why did you say you were a fool?
+    - Did you know him?
+  - key: "Well, during the wedding ceremony\u2026 I kept noticing strange occurrences around the venue. Tiger-like dogs lurching from corners, mice cooking the very food we were eating\u2026 It was all very impure! That\u2019s when I knew all wasn\u2019t as it seemed."
+    value:
+    - ....
+    - .....
+  - key: "Not at first. But when I realized the truth of his home, it was like I could see with a fresh pair of eyes. He was no man\u2026 He was a mouse! Without sparing a second, I used one of the strings from my koto to spring a trap on him. I saw him start to gnaw through it, but I had turned my back and started to run before I saw much more. And now\u2026 I\u2019m here."
+    value:
+    - ....
+    - .....
   karmicMerit: 0
 --- !u!114 &238882766
 MonoBehaviour:
@@ -217,7 +225,7 @@ MonoBehaviour:
   backButton: {fileID: 1537200565}
   speechBubbleText: {fileID: 1598700183}
   optionButton1Text: {fileID: 971141624}
-  optionButton2Text: {fileID: 547301058}
+  optionButton2Text: {fileID: 1975803337}
   fire: {fileID: 1055183854}
   pureLand: {fileID: 448240422}
   humanLand: {fileID: 1126801659}
@@ -764,7 +772,7 @@ Transform:
   m_GameObject: {fileID: 448240420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -960.8, y: -491.2, z: 0}
+  m_LocalPosition: {x: -967.78, y: -619.37, z: 0}
   m_LocalScale: {x: 2.1464834, y: 2.1464834, z: 2.1464834}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -815,11 +823,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -134540925
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6703330761795740491, guid: 9ef2f92ac01884ab8b2416736cd82538, type: 3}
+  m_Sprite: {fileID: -6139317666516262386, guid: f717dffbc4b6d44428f5811d2cd4ec1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1075,143 +1083,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &547301056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 547301057}
-  - component: {fileID: 547301059}
-  - component: {fileID: 547301058}
-  m_Layer: 5
-  m_Name: answertext2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &547301057
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547301056}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 664569146}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.9992676, y: -6.663452}
-  m_SizeDelta: {x: -2, y: -2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &547301058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547301056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: buukhkhkjhkjhkhjkkjhkjhkjhjkhkjh
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 29
-  m_fontSizeBase: 29
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 0
-  m_fontSizeMax: 0
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 3
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 68.76306, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &547301059
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547301056}
-  m_CullTransparentMesh: 1
 --- !u!1 &605085774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,8 +1109,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605085774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16664, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.010466}
+  m_LocalScale: {x: 0.16803025, y: 1.0083429, z: 1.0083429}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1953495794}
@@ -1330,7 +1201,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000i
+  m_ApplyToSortingLayers: 00000000d1a21ea28311fbf7i
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1428,7 +1299,7 @@ RectTransform:
   m_LocalScale: {x: 1.5404545, y: 2.5674236, z: 2.8793755}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 547301057}
+  - {fileID: 1975803336}
   m_Father: {fileID: 1953495794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1557,7 +1428,7 @@ RectTransform:
   m_GameObject: {fileID: 715969973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20766778, y: 0.3333, z: 1}
+  m_LocalScale: {x: 0.22641525, y: 0.36338905, z: 1.0902762}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1598700182}
@@ -1565,7 +1436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -359, y: -334}
+  m_AnchoredPosition: {x: -329, y: -408}
   m_SizeDelta: {x: 3481.602, y: -67.287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &715969975
@@ -1696,7 +1567,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1899,7 +1770,7 @@ RectTransform:
   m_GameObject: {fileID: 971141622}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.83206, y: 0.83206, z: 0.83206}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1377646214}
@@ -1962,12 +1833,12 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 0
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_characterHorizontalScale: 3
+  m_characterHorizontalScale: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2073,7 +1944,7 @@ Transform:
   m_GameObject: {fileID: 1055183852}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -960.4, y: -490.9, z: 0}
+  m_LocalPosition: {x: -967.4, y: -620.9, z: 0}
   m_LocalScale: {x: 2.1395912, y: 2.1395912, z: 2.1395912}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2124,11 +1995,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -134540925
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6378626747486794411, guid: 5a99598df3cd04350a2824d74fd6c574, type: 3}
+  m_Sprite: {fileID: 6992780356944715303, guid: e6885b84acb0a4def90d11442d8df722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2257,7 +2128,7 @@ Transform:
   m_GameObject: {fileID: 1126801657}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -960.5, y: -491.4, z: 0}
+  m_LocalPosition: {x: -967.54, y: -620.8, z: 0}
   m_LocalScale: {x: 2.0690029, y: 2.0690029, z: 2.0690029}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2308,11 +2179,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -134540925
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1746635912284284193, guid: 441b577a1e45346a689da27d7a7898ab, type: 3}
+  m_Sprite: {fileID: 7295422636866266320, guid: 52875df5b0e4e46518c397b8656bdb8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3033,7 +2904,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_characterHorizontalScale: 1
+  m_characterHorizontalScale: 1.5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -3257,7 +3128,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3377,6 +3248,143 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953495793}
+  m_CullTransparentMesh: 1
+--- !u!1 &1975803335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975803336}
+  - component: {fileID: 1975803338}
+  - component: {fileID: 1975803337}
+  m_Layer: 5
+  m_Name: answertext1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1975803336
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975803335}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 0.8409, y: 0.8409, z: 0.8409}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 664569146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1, y: -5}
+  m_SizeDelta: {x: -2, y: -2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1975803337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975803335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: buukhkhkjhkjhkhjkkjhkjhkjhjkhkjh
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 29
+  m_fontSizeBase: 29
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 5
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 68.76306, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1975803338
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975803335}
   m_CullTransparentMesh: 1
 --- !u!1 &1978191882
 GameObject:
