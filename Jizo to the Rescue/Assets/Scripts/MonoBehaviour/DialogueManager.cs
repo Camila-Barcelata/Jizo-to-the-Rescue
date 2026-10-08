@@ -14,10 +14,12 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public string condemnationDialogue; 
     
     PersonController character;
+    public GameObject backButton;
 
     public TMP_Text speechBubbleText;
     public TMP_Text optionButton1Text;
     public TMP_Text optionButton2Text;
+
 
     private DialogueNode firstNode;
     private DialogueNode currentNode;
@@ -47,6 +49,15 @@ public class DialogueManager : MonoBehaviour
         DisplayCurrentNode(); //call display function 
     }
     
+    void Update()
+    {
+        DisplayCurrentNode();
+        //if node is a dead end
+        if (currentNode.answerChoices[0] == "" && currentNode.answerChoices[1] =="")
+        {
+            SetBackButtonActive();
+        }
+    }
 
     public static bool Connect(DialogueNode headnode, DialogueNode followingnode)
     {
@@ -96,7 +107,6 @@ public class DialogueManager : MonoBehaviour
                 // Debug.Log("InitializeHeap(): rightChild: " + rightChild);
                 
                 
-
                 //if not at end, connect 2 children to head node
                 try
                 {
@@ -138,7 +148,7 @@ public class DialogueManager : MonoBehaviour
         speechBubbleText.text = currentNode.NPCtext;
         optionButton1Text.text = currentNode.answerChoices[0];
         optionButton2Text.text = currentNode.answerChoices[1];
-        Debug.Log("DispCurN: " + "speech: " + speechBubbleText.text + " optionButton1Text: " + optionButton1Text.text + " optionButton1Text: " + optionButton2Text.text);
+        //Debug.Log("DispCurN: " + "speech: " + speechBubbleText.text + " optionButton1Text: " + optionButton1Text.text + " optionButton1Text: " + optionButton2Text.text);
     }
 
     public void TraverseLeftChild()
@@ -146,9 +156,12 @@ public class DialogueManager : MonoBehaviour
         try
         {
             Debug.Log("currentNode.NPCtext: " + currentNode.NPCtext);
+            if (currentNode.nextNodes[0].NPCtext.Contains("None"))
+            {
+                Debug.Log("left child is None");
+            }
             currentNode = currentNode.nextNodes[0];
             Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
-            DisplayCurrentNode();
 
         }
         catch(ArgumentOutOfRangeException argumentOutOfRangeException)
@@ -157,7 +170,6 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("Maybe reached end of tree");
             currentNode = firstNode;
             currentNode.nextNodes = firstNode.nextNodes;
-            DisplayCurrentNode();
         }  
     }
     public void TraverseRightChild()
@@ -165,9 +177,12 @@ public class DialogueManager : MonoBehaviour
         try
         {
             Debug.Log("currentNode.NPCtext: " + currentNode.NPCtext);
+            if (currentNode.nextNodes[1].NPCtext.Contains("None"))
+            {
+                Debug.Log("right child is None");
+            }
             currentNode = currentNode.nextNodes[1];
             Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
-            DisplayCurrentNode();
 
         }
         catch(ArgumentOutOfRangeException argumentOutOfRangeException)
@@ -176,7 +191,6 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("Maybe reached end of tree");
             currentNode = firstNode;
             currentNode.nextNodes = firstNode.nextNodes;
-            DisplayCurrentNode();
         }  
     }
  
@@ -197,5 +211,14 @@ public class DialogueManager : MonoBehaviour
             speechBubbleText.text = ascensionDialogue;
             pureLand.gameObject.SetActive(true);
         }
+    }
+    public void SetBackButtonActive()
+    {
+        backButton.SetActive(true);
+    }
+
+    public void ResetTree() 
+    {
+        currentNode = firstNode;
     }
 }
