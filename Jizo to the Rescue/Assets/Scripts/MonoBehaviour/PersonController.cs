@@ -4,41 +4,36 @@ using System.Collections.Generic;
 public class PersonController : MonoBehaviour
 {
 
-    //--------<3333 SPRITE DECLARATION <3333-----
-    //base and mouth sprites should be assigned in the same elements. 
-    //e.g. element 0 of baseSprites should be neutralBase(or neutralSprite)
-    //       and element 0 of mouthSprites should be neutralMouth
-    [SerializeField] private Sprite[] baseSprites;
-    [SerializeField] private Sprite[] mouthSprites;
-
-    //dialogue the person says --top options
-    // (Element 0 is their Greeting dialogue, 
-    // element 1 is their condemnation dialogue, 
-    // element2 is their pure land dialogue,
-    // element3 is their reincarnation dialogue) 
-    [SerializeField] public string[] topOptionDialogue;
-
-    //make an empty dictionary
-    [SerializeField] public Dictionary<string, string[]> thingsPersonSays;
-
-    //ENDING DIALOGUE--dialogue that displays after all valid nodes have been traveled to
-    [SerializeField] public List<string> endingDialouge;
-
-    //idk exactly how this will b implemented, just know that this will
-    //      eventually affect the player's reputation depending on where
-    //      they send the person.
-    public float karmicMerit;
+    //------SPRITE DECLARATION-----<3
+        //base and mouth sprites should be assigned in the same elements. 
+        //e.g. element 0 of baseSprites should be neutralBase(or neutralSprite)
+        //       and element 0 of mouthSprites should be neutralMouth
+        [SerializeField] private Sprite[] baseSprites;
+        [SerializeField] private Sprite[] mouthSprites;
 
 
+    //-----DIALOGUE------<3
+        //realmDialogue--dialogue the person says in response to which realm they've been reincarnated to
+        // element 0 = condemnation dialogue, (hell)
+        // element 1 = reincarnation dialogue, (human)
+        // element 2 = heaven dialogue) 
+        [SerializeField] public List<string> realmDialogue;
+
+        //main dialogue tree dictionary
+        [SerializeField] public Dictionary<string, string[]> thingsPersonSays;
+
+        //ENDING DIALOGUE--dialogue that displays after all valid nodes have been traveled to
+        [SerializeField] public List<string> endingDialogue;
+
+    //-----KARMIC MERIT/MECHANICS-----<3
+        //idk exactly how this will b implemented, just know that this will
+        //      eventually affect the player's reputation depending on where
+        //      they send the person.
+        public float karmicMerit;
+    
     void Start()
     {
         //always display a default base sprite + 
         //  default mouth sprite combo so that character doesn't just "disappear"
     }
-
-    
-    void Update()
-    {
-    }
-
 }

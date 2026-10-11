@@ -7,43 +7,64 @@ using System;
 
 public class DialogueManager : MonoBehaviour
 {
+    //-----OBJECTS-------<3
+        //character & UI buttons
+        PersonController character;
+        public GameObject nextButton;
+        public GameObject backButton;
+        public GameObject leftButton;
+        public GameObject rightButton;
+        //text objects
+        public TMP_Text speechBubbleText;
+        public TMP_Text optionButton1Text;
+        public TMP_Text optionButton2Text;
 
-    //NPC judgement texts
-    [SerializeField] public string ascensionDialogue; //what person says in response to being ascended
-    [SerializeField] public string reincarnationDialogue; 
-    [SerializeField] public string condemnationDialogue; 
-    
-    //objects: character &UI
-    PersonController character;
-    public GameObject backButton;
-    public GameObject leftButton;
-    public GameObject rightButton;
-    //text objects
-    public TMP_Text speechBubbleText;
-    public TMP_Text optionButton1Text;
-    public TMP_Text optionButton2Text;
+        //private HandwritingText obj, handles the
+        //  cool typewriter/handwriting dialogue effect
+        // (i think this script should be put in the Person GameObject)
+        //private HandwritingText handwritingText;
 
-    //global Dictionary, keys = NPCText : values = corresponding DialogueNode
-    Dictionary<string, DialogueNode> dialogueNodeDict
-    int validNodesCount;
-    
-    //private important global dialogue nodes
-    private DialogueNode firstNode;
-    private DialogueNode currentNode;
+    //-----REALMS ANIMATIONS----<3
+        //animations that play when you send a person to hell. all consolidated into a list.
+        //element 0 = fire/hell animation
+        //element 1 = human land animation
+        //element 2 = heaven land animation
 
-    //private HandwritingText obj, handles the
-    //  cool typewriter/handwriting dialogue effect
-    //private HandwritingText handwritingText;
+        //btw---this will probably not be how we handle animation for the future!!
+        public List<SpriteRenderer> realmAnimations;
 
-    //animation...???
-    public SpriteRenderer fire;
-    public SpriteRenderer pureLand;
-    public SpriteRenderer humanLand;
+    //----HANDLE DIALOGUE STATES----<3
+        //way to tell displayCurrentNode to display either dialogue tree dialogue, realms dialogue, or ending dialogue!
+        enum DialogueState{mainDialogueTree, Realms, Endings};//could probably be named better lol
+        DialogueState currentDialogueState = DialogueState.mainDialogueTree;
+
+        int currentIndex =0; //used to iterate through dialogue boxes, updated with the Next-> button
+
+    //-----MAIN DIALOGUE TREE------<3
+        //global Dictionary, keys = NPCText : values = corresponding DialogueNode
+        Dictionary<string, DialogueNode> dialogueNodeDict;
+        int validNodesCount;
+        int incrementor = 0; //keeps track of valid nodes that have been traveled to
+        
+        //private important global dialogue nodes
+        private DialogueNode firstNode;
+        private DialogueNode currentNode;
+
+    //-----REALMS DIALOGUE---------<3
+        //aka what a character says in response to where they're reincarnated
+        List<string> realmDialogue;
+
+    //-----ENDING DIALOGUE--------<3
+        List<string> endingDialogue;
+
 
     void Start(){
+        //-----ACCESS PERSON SCRIPTS/DATA-----<3
         character = GetComponent<PersonController>();
         //this is the dictionary that will be made into a heap
         Dictionary<string, string[]> thingsCharacterSays = character.thingsPersonSays;
+        realmDialogue = character.realmDialogue;
+        endingDialogue = character.endingDialogue;
         
         //-----INITIALIZE NODES AND TREE------<3
 
@@ -62,14 +83,14 @@ public class DialogueManager : MonoBehaviour
         currentNode.traveledTo = true; //set firstNode's traveledTo to true, since technically we never travel to it using the buttons
 
         //-----DISPLAY IT ALL!!!------<3
-        DisplayCurrentNode(); //call display function 
+        HandleDisplayCurrentText(); //call display function 
     }
     
     void Update()
     {
         try
         {
-            DisplayCurrentNode();
+            HandleDisplayCurrentText();
             HandleButtons();
         }
         catch(ArgumentOutOfRangeException argumentOutOfRangeException)
@@ -94,10 +115,10 @@ public class DialogueManager : MonoBehaviour
     int CountValidNodes(Dictionary<string, DialogueNode> dialogueNodeDict)
     {
         int validNodesCount = 0;
-        foreach(DialogueNode node in dialogueNodeDict.Values())
+        foreach(DialogueNode node in dialogueNodeDict.Values)
         {
             //if node is valid
-            if(!node.NPCText.Contains("None"))
+            if(!node.NPCtext.Contains("None"))
             {
                 //increment validNodesCount
                 validNodesCount++;
@@ -160,14 +181,63 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    //handles displaying current text, regardless of it's in the main tree, ending dialogue list, or realms list
+    void HandleDisplayCurrentText()
+    {
+        if(currentDialogueState == DialogueState.mainDialogueTree)
+        {
+            DisplayCurrentNode();
+        } else if(currentDialogueState == DialogueState.Endings)
+        {
+            DisplayCurrentEndingText(currentIndex);
+            //called when "Next" button is clicked
+            SetNextString();
+        }
+
+        //don't need to call realm text-- that's called when you click a realms button
+        
+    }
     void DisplayCurrentNode() 
     { 
         //implement handwriting effect later lol
         //ONLY USE HANDWRITE EFFECT ON THIS NPC TEXT!!
-        speechBubbleText.text = currentNode.NPCtext;
+        if(currentNode != null)
+        {
+            speechBubbleText.text = currentNode.NPCtext;
 
-        optionButton1Text.text = currentNode.answerChoices[0];
-        optionButton2Text.text = currentNode.answerChoices[1];
+            optionButton1Text.text = currentNode.answerChoices[0];
+            optionButton2Text.text = currentNode.answerChoices[1];
+        }
+    }
+
+    void DisplayCurrentEndingText(int currentIndex)
+    {
+        //only shows first string --should fix the button to iterate to next ending dialogue 
+        speechBubbleText.text = endingDialogue[0];
+        //speechBubbleText.text = endingDialogue[currentIndex];
+        nextButton.SetActive(true);
+
+        //hide normal dialogue option buttons
+        SetLeftButtonActive(false);
+        SetRightButtonActive(false);
+    }
+
+    void DisplayCurrentRealmText(int index)
+    {
+        speechBubbleText.text = realmDialogue[index];
+
+        realmAnimations[index].gameObject.SetActive(true);
+
+        //display realm animation
+        //hide normal dialogue option buttons
+        SetLeftButtonActive(false);
+        SetRightButtonActive(false);
+    }
+
+    //called when Next button is pressed
+    public void SetNextString()
+    {
+        currentIndex ++;
     }
     
     //ONLY RESETS CURR NODE TO FIRST NODE, DOES NOT HANDLE RESETING FULL INTERACTION
@@ -183,9 +253,11 @@ public class DialogueManager : MonoBehaviour
     {
         currentNode = firstNode;
         currentNode.nextNodes = firstNode.nextNodes;
+        //update dialogueState to main dialogue tree
+        currentDialogueState = DialogueState.mainDialogueTree;
 
         //might not work cause we're updating it locally??? maybe??
-        foreach(DialogueNode node in dialogueNodeDict.Values())
+        foreach(DialogueNode node in dialogueNodeDict.Values)
         {
             node.traveledTo = false;
         }
@@ -196,24 +268,24 @@ public class DialogueManager : MonoBehaviour
     {
         try
         {
-            Debug.Log("currentNode.NPCtext: " + currentNode.NPCtext);
+            //Debug.Log("currentNode.NPCtext: " + currentNode.NPCtext);
 
             //logs dummy nodes; should never end up being displayed
             if (currentNode.nextNodes[0].NPCtext.Contains("None"))
             {
-                Debug.Log("left child is None");
+                //Debug.Log("left child is None");
             }
 
             currentNode.traveledTo = true;
             currentNode = currentNode.nextNodes[0];
-            checkForEndingDialogue()
+            CheckForEndingDialogue();
 
-            Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
+            //Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
         }
         catch(ArgumentOutOfRangeException argumentOutOfRangeException)
         {
             //reset to beginning of tree
-            Debug.Log("Maybe reached end of tree");
+            //Debug.Log("Maybe reached end of tree");
             ResetTree();
         }  
     }
@@ -223,7 +295,7 @@ public class DialogueManager : MonoBehaviour
     {
         try
         {
-            Debug.Log("currentNode.NPCtext: " + currentNode.NPCtext);
+            //Debug.Log("currentNode.NPCtext: " + currentNode.NPCtext);
 
             //logs dummy nodes; should never end up being displayed
             if (currentNode.nextNodes[1].NPCtext.Contains("None"))
@@ -233,57 +305,49 @@ public class DialogueManager : MonoBehaviour
 
             currentNode = currentNode.nextNodes[1];
             currentNode.traveledTo = true;
-            checkForEndingDialogue()
+            CheckForEndingDialogue();
 
-            Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
+            //Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
         }
         catch(ArgumentOutOfRangeException argumentOutOfRangeException)
         {
             //reset to beginning of tree
-            Debug.Log("Maybe reached end of tree");
+            //Debug.Log("Maybe reached end of tree");
             ResetTree();
         }  
     }
 
-    void checkForEndingDialogue()
+    //NOT DONE!!!
+    void CheckForEndingDialogue()
     {
         //test every non-dummy node
-        int incrementor = 0; //keeps track of valid nodes that have been traveled to
-        foreach(DialogueNode node in dialogueNodeDict)
+        Debug.Log("START checkingEnd: validNodesCt: " + validNodesCount + " incrementor: " + incrementor);
+        
+        foreach(DialogueNode node in dialogueNodeDict.Values)
         {
             //if node is not a dummy node
-            if(!node.NPCtext.Contains("None") && node.traveledTo = true)
+            if(!node.NPCtext.Contains("None") && node.traveledTo == true)
             {incrementor++;} 
             //for better runtime--breaks early if we catch a valid node that hasn't been traveled to
-            elif(!node.NPCtext.Contains("None") && node.traveledTo = false) 
+            else if(!node.NPCtext.Contains("None") && node.traveledTo == false) 
             {break;}
         }
 
+        Debug.Log("END checkingEnd: validNodesCt: " + validNodesCount + " incrementor: " + incrementor);
         if(incrementor == validNodesCount)
         {
-            //!!!change to ending dialogue lst (will figure this out in a bit)
-            Debug.Log("Reached ending dialogue successfully!!")
+            //changes to display endingDialogue!
+            currentDialogueState = DialogueState.Endings;
+            Debug.Log("Reached ending dialogue successfully!!");
         }
     }
 
-    //handles the realm decision animations
-    public void AscensionClicked(int index)
+    //is called when realm buttons are clicked
+    public void RealmsButtonsClicked(int index)
     {
-        if (index == 0)
-        {
-            speechBubbleText.text = condemnationDialogue;
-            fire.gameObject.SetActive(true);
-        }
-        else if (index == 1)
-        {   
-            speechBubbleText.text = reincarnationDialogue;
-            humanLand.gameObject.SetActive(true);
-        }
-        else if (index == 2)
-        {
-            speechBubbleText.text = ascensionDialogue;
-            pureLand.gameObject.SetActive(true);
-        }
+        currentDialogueState = DialogueState.Realms;
+
+        DisplayCurrentRealmText(index);
     }
 
     int FindLeftChild(int index) {
@@ -324,21 +388,19 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void SetBackButtonActive(bool isActive)
+    void SetBackButtonActive(bool isActive)
     {
         backButton.SetActive(isActive);
     }
 
     //Handles setting button correlating to left child active or not
-    public void SetLeftButtonActive(bool isActive)
+    void SetLeftButtonActive(bool isActive)
     {
         leftButton.SetActive(isActive);
     }
     //Handles setting button correlating to right child active or not
-    public void SetRightButtonActive(bool isActive)
+    void SetRightButtonActive(bool isActive)
     {
         rightButton.SetActive(isActive);
     }
-
-    
 }
