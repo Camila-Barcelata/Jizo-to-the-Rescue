@@ -13,20 +13,27 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public string reincarnationDialogue; 
     [SerializeField] public string condemnationDialogue; 
     
-    //objects
+    //objects: character &UI
     PersonController character;
     public GameObject backButton;
     public GameObject leftButton;
     public GameObject rightButton;
-
-    //text
+    //text objects
     public TMP_Text speechBubbleText;
     public TMP_Text optionButton1Text;
     public TMP_Text optionButton2Text;
+
+    //global Dictionary, keys = NPCText : values = corresponding DialogueNode
+    Dictionary<string, DialogueNode> dialogueNodeDict
+    int validNodesCount;
     
     //private important global dialogue nodes
     private DialogueNode firstNode;
     private DialogueNode currentNode;
+
+    //private HandwritingText obj, handles the
+    //  cool typewriter/handwriting dialogue effect
+    //private HandwritingText handwritingText;
 
     //animation...???
     public SpriteRenderer fire;
@@ -37,18 +44,24 @@ public class DialogueManager : MonoBehaviour
         character = GetComponent<PersonController>();
         //this is the dictionary that will be made into a heap
         Dictionary<string, string[]> thingsCharacterSays = character.thingsPersonSays;
+        
+        //-----INITIALIZE NODES AND TREE------<3
 
         // initialize all DialogueNodes! <3 
         // dialogueNodeDict holds thingsChrSays's keys as keys & its DialogueNode object as values
-        Dictionary<string, DialogueNode> dialogueNodeDict =InitializeDialogueNodes(thingsCharacterSays);
+        dialogueNodeDict =InitializeDialogueNodes(thingsCharacterSays);
+        //count how many "valid" nodes there are in dialogueNodeDict (or non-dummy nodes)
+        validNodesCount = CountValidNodes(dialogueNodeDict);
         //Initialize the heap! <3
         InitializeHeap(thingsCharacterSays, dialogueNodeDict);
 
+        //-----INITIALIZE IMPORTANT NODES------<3
         List<string> thingsChrSaysKeys = new List<string>(thingsCharacterSays.Keys);
         firstNode = dialogueNodeDict[thingsChrSaysKeys[0]]; //DON'T DELETE THIS, THIS IS NOT REDUNDANT!
         currentNode = dialogueNodeDict[thingsChrSaysKeys[0]];
+        currentNode.traveledTo = true; //set firstNode's traveledTo to true, since technically we never travel to it using the buttons
 
-        //also i think we should do the traversal/displaying in update? mayhaps?
+        //-----DISPLAY IT ALL!!!------<3
         DisplayCurrentNode(); //call display function 
     }
     
@@ -57,29 +70,7 @@ public class DialogueManager : MonoBehaviour
         try
         {
             DisplayCurrentNode();
-            //if we're at the start, make sure back button isn't Active
-            if(currentNode == firstNode)
-            {
-                SetBackButtonActive(false);
-                SetLeftButtonActive(true);
-                SetRightButtonActive(true);
-            }
-            //if node is a dead end, set back button active & hide left/right button
-            if (currentNode.answerChoices[0] == "" || currentNode.answerChoices[1] =="")
-            {
-                if(currentNode.answerChoices[0] == "" && currentNode.answerChoices[1] =="")
-                {
-                    SetBackButtonActive(true);
-                }
-                if(currentNode.answerChoices[0] =="")
-                {
-                    SetLeftButtonActive(false);
-                }
-                if(currentNode.answerChoices[1] =="")
-                {
-                    SetRightButtonActive(false);
-                }
-            }
+            HandleButtons();
         }
         catch(ArgumentOutOfRangeException argumentOutOfRangeException)
         {
@@ -100,9 +91,24 @@ public class DialogueManager : MonoBehaviour
         return true;    
     }
 
+    int CountValidNodes(Dictionary<string, DialogueNode> dialogueNodeDict)
+    {
+        int validNodesCount = 0;
+        foreach(DialogueNode node in dialogueNodeDict.Values())
+        {
+            //if node is valid
+            if(!node.NPCText.Contains("None"))
+            {
+                //increment validNodesCount
+                validNodesCount++;
+            }
+        }
+        return validNodesCount;
+    }
+
     Dictionary<string, DialogueNode> InitializeDialogueNodes(Dictionary<string, string[]> thingsCharacterSays)
     {
-        //keys = strings, vals = dialogue node object
+        //keys = NPCText strings, vals = dialogue node object
         Dictionary<string, DialogueNode> dialogueNodeDict = new Dictionary<string, DialogueNode>();
         for(int i = 0; i < thingsCharacterSays.Count; i++)
         {
@@ -130,25 +136,17 @@ public class DialogueManager : MonoBehaviour
             if (characterKeyList[i] != null && dialogueNodeKeys[i] != null) 
             {
                 DialogueNode tempHeadDialogueNode = dialogueNodeDict[dialogueNodeKeys[i]];
-                //Debug.Log("DialogueNode tempHeadDialogueNode: " + tempHeadDialogueNode + "dialogueNodeKeys[i]" + dialogueNodeKeys[i]);
                 //get left/right child indices, & the head node object
                 int leftChild = FindLeftChild(i);
                 int rightChild = FindRightChild(i);
-                // Debug.Log("InitializeHeap(): leftChild: " + leftChild);
-                // Debug.Log("InitializeHeap(): rightChild: " + rightChild);
-                
                 
                 //if not at end, connect 2 children to head node
                 try
                 {
                     if(dialogueNodeKeys[leftChild] != null && dialogueNodeKeys[rightChild] != null)
                     {
-                        // Debug.Log("tempHeadDialogueNode.answerChoices[0]: " + tempHeadDialogueNode.answerChoices[0]);
-                        // Debug.Log("tempHeadDialogueNode.answerChoices[1]: " + tempHeadDialogueNode.answerChoices[1]);
-                        
                         bool connect1Success = Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[leftChild]]);
                         bool connect2Success =Connect(tempHeadDialogueNode, dialogueNodeDict[dialogueNodeKeys[rightChild]]);
-                        // Debug.Log("Connection success:" + connect1Success + ", "+connect2Success);
                     }
                 }
                 catch (ArgumentOutOfRangeException argumentOutOfRangeException)
@@ -162,38 +160,55 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-
-    int FindLeftChild(int index) {
-        int leftChildIndex = (index * 2 )+ 1;
-        return leftChildIndex;
-
-    }
-    int FindRightChild(int index) {
-        int rightChildIndex = (index* 2 )+ 2;
-        return rightChildIndex;
-    }
-    
-    void DisplayCurrentNode() //then this displays everything
-
+    void DisplayCurrentNode() 
     { 
+        //implement handwriting effect later lol
+        //ONLY USE HANDWRITE EFFECT ON THIS NPC TEXT!!
         speechBubbleText.text = currentNode.NPCtext;
+
         optionButton1Text.text = currentNode.answerChoices[0];
         optionButton2Text.text = currentNode.answerChoices[1];
-        //Debug.Log("DispCurN: " + "speech: " + speechBubbleText.text + " optionButton1Text: " + optionButton1Text.text + " optionButton1Text: " + optionButton2Text.text);
+    }
+    
+    //ONLY RESETS CURR NODE TO FIRST NODE, DOES NOT HANDLE RESETING FULL INTERACTION
+    //used for looping back to start when reached a dummy node
+    public void ResetTree() 
+    {
+        currentNode = firstNode;
+        currentNode.nextNodes = firstNode.nextNodes;
     }
 
+    //RESETS FULL INTERACTION
+    public void ResetInteraction()
+    {
+        currentNode = firstNode;
+        currentNode.nextNodes = firstNode.nextNodes;
+
+        //might not work cause we're updating it locally??? maybe??
+        foreach(DialogueNode node in dialogueNodeDict.Values())
+        {
+            node.traveledTo = false;
+        }
+    }
+
+    //top button press
     public void TraverseLeftChild()
     {
         try
         {
             Debug.Log("currentNode.NPCtext: " + currentNode.NPCtext);
+
+            //logs dummy nodes; should never end up being displayed
             if (currentNode.nextNodes[0].NPCtext.Contains("None"))
             {
                 Debug.Log("left child is None");
             }
-            currentNode = currentNode.nextNodes[0];
-            Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
 
+            currentNode.traveledTo = true;
+            currentNode = currentNode.nextNodes[0];
+            checkForEndingDialogue()
+
+            Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
         }
         catch(ArgumentOutOfRangeException argumentOutOfRangeException)
         {
@@ -202,18 +217,25 @@ public class DialogueManager : MonoBehaviour
             ResetTree();
         }  
     }
+
+    //bottom button press
     public void TraverseRightChild()
     {
         try
         {
             Debug.Log("currentNode.NPCtext: " + currentNode.NPCtext);
+
+            //logs dummy nodes; should never end up being displayed
             if (currentNode.nextNodes[1].NPCtext.Contains("None"))
             {
                 Debug.Log("right child is None");
             }
-            currentNode = currentNode.nextNodes[1];
-            Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
 
+            currentNode = currentNode.nextNodes[1];
+            currentNode.traveledTo = true;
+            checkForEndingDialogue()
+
+            Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
         }
         catch(ArgumentOutOfRangeException argumentOutOfRangeException)
         {
@@ -222,7 +244,29 @@ public class DialogueManager : MonoBehaviour
             ResetTree();
         }  
     }
- 
+
+    void checkForEndingDialogue()
+    {
+        //test every non-dummy node
+        int incrementor = 0; //keeps track of valid nodes that have been traveled to
+        foreach(DialogueNode node in dialogueNodeDict)
+        {
+            //if node is not a dummy node
+            if(!node.NPCtext.Contains("None") && node.traveledTo = true)
+            {incrementor++;} 
+            //for better runtime--breaks early if we catch a valid node that hasn't been traveled to
+            elif(!node.NPCtext.Contains("None") && node.traveledTo = false) 
+            {break;}
+        }
+
+        if(incrementor == validNodesCount)
+        {
+            //!!!change to ending dialogue lst (will figure this out in a bit)
+            Debug.Log("Reached ending dialogue successfully!!")
+        }
+    }
+
+    //handles the realm decision animations
     public void AscensionClicked(int index)
     {
         if (index == 0)
@@ -241,6 +285,45 @@ public class DialogueManager : MonoBehaviour
             pureLand.gameObject.SetActive(true);
         }
     }
+
+    int FindLeftChild(int index) {
+        int leftChildIndex = (index * 2 )+ 1;
+        return leftChildIndex;
+    }
+    int FindRightChild(int index) {
+        int rightChildIndex = (index* 2 )+ 2;
+        return rightChildIndex;
+    }
+
+    //------BUTTON LOGIC--HIDING AND UNHIDING FOR CLEANER UI---<3
+
+    void HandleButtons()
+    {
+        //if we're at the start, make sure back button isn't Active
+        if(currentNode == firstNode)
+        {
+            SetBackButtonActive(false);
+            SetLeftButtonActive(true);
+            SetRightButtonActive(true);
+        }
+        //if node is a dead end, set back button active & hide left/right button
+        if (currentNode.answerChoices[0] == "" || currentNode.answerChoices[1] =="")
+        {
+            if(currentNode.answerChoices[0] == "" && currentNode.answerChoices[1] =="")
+            {
+                SetBackButtonActive(true);
+            }
+            if(currentNode.answerChoices[0] =="")
+            {
+                SetLeftButtonActive(false);
+            }
+            if(currentNode.answerChoices[1] =="")
+            {
+                SetRightButtonActive(false);
+            }
+        }
+    }
+
     public void SetBackButtonActive(bool isActive)
     {
         backButton.SetActive(isActive);
@@ -257,9 +340,5 @@ public class DialogueManager : MonoBehaviour
         rightButton.SetActive(isActive);
     }
 
-    public void ResetTree() 
-    {
-        currentNode = firstNode;
-        currentNode.nextNodes = firstNode.nextNodes;
-    }
+    
 }

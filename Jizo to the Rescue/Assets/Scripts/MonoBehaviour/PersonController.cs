@@ -21,6 +21,9 @@ public class PersonController : MonoBehaviour
     //make an empty dictionary
     [SerializeField] public Dictionary<string, string[]> thingsPersonSays;
 
+    //ENDING DIALOGUE--dialogue that displays after all valid nodes have been traveled to
+    [SerializeField] public List<string> endingDialouge;
+
     //idk exactly how this will b implemented, just know that this will
     //      eventually affect the player's reputation depending on where
     //      they send the person.
