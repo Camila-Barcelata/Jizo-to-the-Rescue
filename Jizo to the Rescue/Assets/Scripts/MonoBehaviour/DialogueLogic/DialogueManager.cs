@@ -216,11 +216,15 @@ public class DialogueManager : MonoBehaviour
     {
         //only shows first string --should fix the button to iterate to next ending dialogue 
         speechBubbleText.text = endingDialogue[0];
+        
         //speechBubbleText.text = endingDialogue[currentIndex];
+        backButton.SetActive(false);
         nextButton.SetActive(true);
+
 
         //hide normal dialogue option buttons
         resetButton.SetActive(true);
+        
         SetLeftButtonActive(false);
         SetRightButtonActive(false);
     }
@@ -285,6 +289,7 @@ public class DialogueManager : MonoBehaviour
             currentNode.traveledTo = true;
             currentNode = currentNode.nextNodes[0];
             CheckForEndingDialogue();
+            
 
             //Debug.Log("nextNode.NPCtext: " + currentNode.NPCtext);
         }
@@ -346,7 +351,8 @@ public class DialogueManager : MonoBehaviour
         if(incrementor >= validNodesCount-1)
         {
             //changes to display endingDialogue!
-            currentDialogueState = DialogueState.Endings;
+            
+            currentDialogueState = DialogueState.Endings; 
             Debug.Log("Reached ending dialogue successfully!!");
         }
     }
