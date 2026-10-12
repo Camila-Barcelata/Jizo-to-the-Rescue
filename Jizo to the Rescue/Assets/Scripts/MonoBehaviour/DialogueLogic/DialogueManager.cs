@@ -193,7 +193,6 @@ public class DialogueManager : MonoBehaviour
         {
             DisplayCurrentEndingText(currentIndex);
             //called when "Next" button is clicked
-            SetNextString();
         }
 
         //don't need to call realm text-- that's called when you click a realms button
@@ -215,12 +214,22 @@ public class DialogueManager : MonoBehaviour
     void DisplayCurrentEndingText(int currentIndex)
     {
         //only shows first string --should fix the button to iterate to next ending dialogue 
-        speechBubbleText.text = endingDialogue[0];
         
-        //speechBubbleText.text = endingDialogue[currentIndex];
-        backButton.SetActive(false);
+        speechBubbleText.text = endingDialogue[currentIndex];
         nextButton.SetActive(true);
+ 
+        if (currentIndex < endingDialogue.Count-1){
+            nextButton.SetActive(true);
+        }
 
+        else{
+
+            Debug.Log("reached the ending of nexts");
+            nextButton.SetActive(false);
+            backButton.SetActive(false);
+        }
+    
+        backButton.SetActive(false);
 
         //hide normal dialogue option buttons
         resetButton.SetActive(true);
@@ -286,8 +295,9 @@ public class DialogueManager : MonoBehaviour
                 //Debug.Log("left child is None");
             }
 
-            currentNode.traveledTo = true;
+            
             currentNode = currentNode.nextNodes[0];
+            currentNode.traveledTo = true;
             CheckForEndingDialogue();
             
 
@@ -331,7 +341,7 @@ public class DialogueManager : MonoBehaviour
     //NOT DONE!!!
     void CheckForEndingDialogue()
     {
-
+        incrementor = 0;
         //test every non-dummy node
         Debug.Log("START checkingEnd: validNodesCt: " + validNodesCount + " incrementor: " + incrementor);
         
@@ -342,9 +352,7 @@ public class DialogueManager : MonoBehaviour
             
             if(!node.NPCtext.Contains("None") && node.traveledTo == true)
             {incrementor++;} 
-            //for better runtime--breaks early if we catch a valid node that hasn't been traveled to
-            else if(!node.NPCtext.Contains("None") && node.traveledTo == false) 
-            {break;}
+    
         }
 
         Debug.Log("END checkingEnd: validNodesCt: " + validNodesCount + " incrementor: " + incrementor);
@@ -379,7 +387,8 @@ public class DialogueManager : MonoBehaviour
     void HandleButtons()
     {
         //if we're at the start, make sure back button isn't Active
-        if(currentNode == firstNode)
+        if (currentDialogueState == DialogueState.mainDialogueTree){
+            if(currentNode == firstNode)
         {
             SetBackButtonActive(false);
             SetLeftButtonActive(true);
@@ -390,6 +399,7 @@ public class DialogueManager : MonoBehaviour
         {
             if(currentNode.answerChoices[0] == "" && currentNode.answerChoices[1] =="")
             {
+                
                 SetBackButtonActive(true);
             }
             if(currentNode.answerChoices[0] =="")
@@ -401,11 +411,13 @@ public class DialogueManager : MonoBehaviour
                 SetRightButtonActive(false);
             }
         }
+        }
     }
 
     void SetBackButtonActive(bool isActive)
     {
         backButton.SetActive(isActive);
+
     }
 
     //Handles setting button correlating to left child active or not
