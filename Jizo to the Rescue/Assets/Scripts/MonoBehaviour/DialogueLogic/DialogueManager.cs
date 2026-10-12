@@ -19,6 +19,8 @@ public class DialogueManager : MonoBehaviour
         public TMP_Text optionButton1Text;
         public TMP_Text optionButton2Text;
 
+        public GameObject resetButton;
+
         //private HandwritingText obj, handles the
         //  cool typewriter/handwriting dialogue effect
         // (i think this script should be put in the Person GameObject)
@@ -218,6 +220,7 @@ public class DialogueManager : MonoBehaviour
         nextButton.SetActive(true);
 
         //hide normal dialogue option buttons
+        resetButton.SetActive(true);
         SetLeftButtonActive(false);
         SetRightButtonActive(false);
     }
@@ -251,16 +254,19 @@ public class DialogueManager : MonoBehaviour
     //RESETS FULL INTERACTION
     public void ResetInteraction()
     {
+        currentDialogueState = DialogueState.mainDialogueTree;
         currentNode = firstNode;
         currentNode.nextNodes = firstNode.nextNodes;
         //update dialogueState to main dialogue tree
-        currentDialogueState = DialogueState.mainDialogueTree;
-
         //might not work cause we're updating it locally??? maybe??
         foreach(DialogueNode node in dialogueNodeDict.Values)
         {
+            Debug.Log("Node state first is:" + node.traveledTo);
             node.traveledTo = false;
+            Debug.Log("Node state now is:" + node.traveledTo);
         }
+        nextButton.SetActive(false);
+        incrementor=0;
     }
 
     //top button press
@@ -320,12 +326,15 @@ public class DialogueManager : MonoBehaviour
     //NOT DONE!!!
     void CheckForEndingDialogue()
     {
+
         //test every non-dummy node
         Debug.Log("START checkingEnd: validNodesCt: " + validNodesCount + " incrementor: " + incrementor);
         
         foreach(DialogueNode node in dialogueNodeDict.Values)
         {
+
             //if node is not a dummy node
+            
             if(!node.NPCtext.Contains("None") && node.traveledTo == true)
             {incrementor++;} 
             //for better runtime--breaks early if we catch a valid node that hasn't been traveled to
@@ -334,7 +343,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         Debug.Log("END checkingEnd: validNodesCt: " + validNodesCount + " incrementor: " + incrementor);
-        if(incrementor == validNodesCount)
+        if(incrementor >= validNodesCount-1)
         {
             //changes to display endingDialogue!
             currentDialogueState = DialogueState.Endings;
