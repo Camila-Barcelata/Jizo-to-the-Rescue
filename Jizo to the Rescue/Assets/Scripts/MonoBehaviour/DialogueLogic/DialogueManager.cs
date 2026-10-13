@@ -228,26 +228,14 @@ public class DialogueManager : MonoBehaviour
             nextButton.SetActive(false);
             backButton.SetActive(false);
         }
-    
-        backButton.SetActive(false);
-
-        //hide normal dialogue option buttons
-        resetButton.SetActive(true);
-        
-        SetLeftButtonActive(false);
-        SetRightButtonActive(false);
     }
 
     void DisplayCurrentRealmText(int index)
     {
         speechBubbleText.text = realmDialogue[index];
 
-        realmAnimations[index].gameObject.SetActive(true);
-
         //display realm animation
-        //hide normal dialogue option buttons
-        SetLeftButtonActive(false);
-        SetRightButtonActive(false);
+        realmAnimations[index].gameObject.SetActive(true);
     }
 
     //called when Next button is pressed
@@ -386,32 +374,52 @@ public class DialogueManager : MonoBehaviour
 
     void HandleButtons()
     {
-        //if we're at the start, make sure back button isn't Active
-        if (currentDialogueState == DialogueState.mainDialogueTree){
+        //main tree
+        if(currentDialogueState == DialogueState.mainDialogueTree)
+        {
+            //if we're at the start node, make sure back button isn't Active but dialogue options are
             if(currentNode == firstNode)
+            {
+                SetBackButtonActive(false);
+                SetLeftButtonActive(true);
+                SetRightButtonActive(true);
+            }
+            //if node is a dead end, set back button active & hide left/right button
+            if (currentNode.answerChoices[0] == "" || currentNode.answerChoices[1] =="")
+            {
+                if(currentNode.answerChoices[0] == "" && currentNode.answerChoices[1] =="")
+                {
+                    SetBackButtonActive(true);
+                }
+                if(currentNode.answerChoices[0] =="")
+                {
+                    SetLeftButtonActive(false);
+                }
+                if(currentNode.answerChoices[1] =="")
+                {
+                    SetRightButtonActive(false);
+                }
+            }
+        }
+        //ending state
+        else if(currentDialogueState == DialogueState.Endings)
         {
+            backButton.SetActive(false);
+            resetButton.SetActive(true);
+            //hide normal dialogue option buttons
+            SetLeftButtonActive(false);
+            SetRightButtonActive(false);
+        }
+        else if(currentDialogueState == DialogueState.Realms)
+        {
+            //hide every dialogue option buttons
+            SetLeftButtonActive(false);
+            SetRightButtonActive(false);
             SetBackButtonActive(false);
-            SetLeftButtonActive(true);
-            SetRightButtonActive(true);
+            nextButton.SetActive(false);
         }
-        //if node is a dead end, set back button active & hide left/right button
-        if (currentNode.answerChoices[0] == "" || currentNode.answerChoices[1] =="")
-        {
-            if(currentNode.answerChoices[0] == "" && currentNode.answerChoices[1] =="")
-            {
-                
-                SetBackButtonActive(true);
-            }
-            if(currentNode.answerChoices[0] =="")
-            {
-                SetLeftButtonActive(false);
-            }
-            if(currentNode.answerChoices[1] =="")
-            {
-                SetRightButtonActive(false);
-            }
-        }
-        }
+
+        
     }
 
     void SetBackButtonActive(bool isActive)
