@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 238882764}
   - component: {fileID: 238882765}
   - component: {fileID: 238882766}
+  - component: {fileID: 238882767}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -166,8 +167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9128fbf389109b0468f49600a8d2c2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  baseSprites: []
-  mouthSprites: []
+  baseSprites:
+  - {fileID: 21300000, guid: 0e264937ebddd4ee7acad212df2c9a0e, type: 3}
+  - {fileID: -1816744532730807215, guid: 88fd2f1c25df8459bb38db1ae450502f, type: 3}
+  mouthSprites:
+  - {fileID: -2776806530142383596, guid: 45921de93ebfc438baa2d4f55d9155ad, type: 3}
+  - {fileID: -7655648638749899891, guid: fbaba6693cdbb47d78d7a640101d5aaa, type: 3}
+  baseSpriteForEachNode: 0000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000i
+  mouthSpriteForEachNode: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000000000000000000001000000010000000000000001000000010000000100000001000000000000000100000001000000010000000100000000000000010000000100000001000000i
   realmDialogue:
   - Very well. I will learn, my lord. Perhaps I will see you in another life.
   - I promise to you... I will do better in my next life.
@@ -306,6 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e856f23a8cc144808da7a3d3a7eb28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+  baseSprites: []
+  mouthSprites: []
   nextButton: {fileID: 1182508557}
   backButton: {fileID: 1537200565}
   leftButton: {fileID: 1377646213}
@@ -318,6 +327,20 @@ MonoBehaviour:
   - {fileID: 1055183854}
   - {fileID: 1126801659}
   - {fileID: 448240422}
+--- !u!114 &238882767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238882763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf01b72dc405f946b431acc93876d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteNodeHandler
+  baseSpriteRenderer: {fileID: 389941205}
+  mouthSpriteRenderer: {fileID: 1680723865}
 --- !u!1 &251182347
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,8 +892,8 @@ Transform:
   m_GameObject: {fileID: 389941203}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.96, y: -0.737, z: 0}
-  m_LocalScale: {x: 0.023176737, y: 0.025387501, z: 0.83496827}
+  m_LocalPosition: {x: -3.8079, y: -0.5396, z: 0}
+  m_LocalScale: {x: 0.0041775717, y: 0.003152884, z: 0.003152884}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 238882764}

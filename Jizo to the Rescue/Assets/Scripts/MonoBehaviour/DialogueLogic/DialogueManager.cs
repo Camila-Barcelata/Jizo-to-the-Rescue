@@ -8,8 +8,10 @@ using System;
 public class DialogueManager : MonoBehaviour
 {
     //-----OBJECTS-------<3
-        //character & UI buttons
+        //character, sprites & UI buttons
         PersonController character;
+        public List<Sprite> baseSprites;
+        public List<Sprite> mouthSprites;
         public GameObject nextButton;
         public GameObject backButton;
         public GameObject leftButton;
@@ -48,9 +50,9 @@ public class DialogueManager : MonoBehaviour
         int validNodesCount;
         int incrementor = 0; //keeps track of valid nodes that have been traveled to
         
-        //private important global dialogue nodes
+        // important global dialogue nodes
         private DialogueNode firstNode;
-        private DialogueNode currentNode;
+        public DialogueNode currentNode;
 
     //-----REALMS DIALOGUE---------<3
         //aka what a character says in response to where they're reincarnated
@@ -63,6 +65,8 @@ public class DialogueManager : MonoBehaviour
     void Start(){
         //-----ACCESS PERSON SCRIPTS/DATA-----<3
         character = GetComponent<PersonController>();
+        baseSprites = character.baseSprites;
+        mouthSprites = character.mouthSprites;
         //this is the dictionary that will be made into a heap
         Dictionary<string, string[]> thingsCharacterSays = character.thingsPersonSays;
         realmDialogue = character.realmDialogue;
@@ -73,6 +77,7 @@ public class DialogueManager : MonoBehaviour
         // initialize all DialogueNodes! <3 
         // dialogueNodeDict holds thingsChrSays's keys as keys & its DialogueNode object as values
         dialogueNodeDict =InitializeDialogueNodes(thingsCharacterSays);
+        InitializeNodeSprites(dialogueNodeDict);
         //count how many "valid" nodes there are in dialogueNodeDict (or non-dummy nodes)
         validNodesCount = CountValidNodes(dialogueNodeDict);
         //Initialize the heap! <3
@@ -139,6 +144,8 @@ public class DialogueManager : MonoBehaviour
 
             dialogueNodeDict[keyList[i]]= new DialogueNode(keyList[i]);
             string[] tempQuestionsLst = thingsCharacterSays[keyList[i]];
+
+            //add to answer choices
             if(tempQuestionsLst.Length !=0)
             {
                 dialogueNodeDict[keyList[i]].answerChoices.Add(tempQuestionsLst[0]);
@@ -147,6 +154,20 @@ public class DialogueManager : MonoBehaviour
         }
         return dialogueNodeDict;
     }
+
+
+    //IDK IF YOU WANT TO MOVE THIS TO A DIFFERENT SCRIPT WHERE SPRITE HANDLING WILL BE DONE?
+    void InitializeNodeSprites(Dictionary<string, DialogueNode> dialogueNodeDict)
+    {
+        List<string> keyList = new List<string>(dialogueNodeDict.Keys);
+        
+        for(int i = 0; i < dialogueNodeDict.Count; i++)
+        {
+            dialogueNodeDict[keyList[i]].baseSprite = baseSprites[dialogueNodeDict[keyList[i]].baseSpriteIndex];
+            dialogueNodeDict[keyList[i]].mouthSprite = mouthSprites[dialogueNodeDict[keyList[i]].mouthSpriteIndex];
+        }
+    }
+
 
     void InitializeHeap(Dictionary<string, string[]> thingsCharacterSays, Dictionary<string, DialogueNode> dialogueNodeDict)
     {

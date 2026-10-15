@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae064754d22bc654d8c6c129322fee28, type: 3}
   m_Name: Yanagiya
   m_EditorClassIdentifier: Assembly-CSharp::CharacterObjectScript
+  baseSprites: []
+  mouthSprites: []
+  topOptionDialogue: []
+  thingsPersonSays: []
   karmicMerit: 0

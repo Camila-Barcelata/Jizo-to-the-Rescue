@@ -8,9 +8,12 @@ public class PersonController : MonoBehaviour
         //base and mouth sprites should be assigned in the same elements. 
         //e.g. element 0 of baseSprites should be neutralBase(or neutralSprite)
         //       and element 0 of mouthSprites should be neutralMouth
-        [SerializeField] private Sprite[] baseSprites;
-        [SerializeField] private Sprite[] mouthSprites;
+        [SerializeField] public List<Sprite> baseSprites;
+        [SerializeField] public List<Sprite> mouthSprites;
 
+        //this will correlate to which sprites get displayed at which nodes!
+        [SerializeField] public List<int> baseSpriteForEachNode;
+        [SerializeField] public List<int> mouthSpriteForEachNode;
 
     //-----DIALOGUE------<3
         //realmDialogue--dialogue the person says in response to which realm they've been reincarnated to
