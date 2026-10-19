@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
     //-----OBJECTS-------<3
         //character, sprites & UI buttons
         PersonController character;
+        List<int> baseSpriteForEachNode;
+        List<int> mouthSpriteForEachNode;
         public List<Sprite> baseSprites;
         public List<Sprite> mouthSprites;
         public GameObject nextButton;
@@ -65,6 +67,8 @@ public class DialogueManager : MonoBehaviour
     void Start(){
         //-----ACCESS PERSON SCRIPTS/DATA-----<3
         character = GetComponent<PersonController>();
+        baseSpriteForEachNode = character.baseSpriteForEachNode;
+        mouthSpriteForEachNode = character.mouthSpriteForEachNode;
         baseSprites = character.baseSprites;
         mouthSprites = character.mouthSprites;
         //this is the dictionary that will be made into a heap
@@ -163,8 +167,18 @@ public class DialogueManager : MonoBehaviour
         
         for(int i = 0; i < dialogueNodeDict.Count; i++)
         {
-            dialogueNodeDict[keyList[i]].baseSprite = baseSprites[dialogueNodeDict[keyList[i]].baseSpriteIndex];
-            dialogueNodeDict[keyList[i]].mouthSprite = mouthSprites[dialogueNodeDict[keyList[i]].mouthSpriteIndex];
+            dialogueNodeDict[keyList[i]].baseSprite = baseSprites[baseSpriteForEachNode[i]];
+            dialogueNodeDict[keyList[i]].mouthSprite = mouthSprites[mouthSpriteForEachNode[i]];
+
+            //IF I WANT TO PRESERVE baseSpriteIndex (and mouth) IN DIALOGUE NODE:
+            //----aka uncomment the following & baseSpriteIndex & mouthSpriteIndex in dialogueNode for debugging!
+            // //grab indexes from list of indexes in PersonController
+            // dialogueNodeDict[keyList[i]].baseSpriteIndex = baseSpriteForEachNode[i];
+            // dialogueNodeDict[keyList[i]].mouthSpriteIndex = mouthSpriteForEachNode[i];
+
+            // //assign sprites based on indexes in node
+            // dialogueNodeDict[keyList[i]].baseSprite = baseSprites[dialogueNodeDict[keyList[i]].baseSpriteIndex];
+            // dialogueNodeDict[keyList[i]].mouthSprite = mouthSprites[dialogueNodeDict[keyList[i]].mouthSpriteIndex];
         }
     }
 

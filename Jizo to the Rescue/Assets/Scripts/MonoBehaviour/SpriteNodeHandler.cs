@@ -13,13 +13,16 @@ public class SpriteNodeHandler : MonoBehaviour
     void Start()
     {
         dialogueManager = GetComponent<DialogueManager>();
-        currentNode = dialogueManager.currentNode; //WRITE A CONSTRUCTOR FOR DIALOGUEMANAGER???
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        currentNode = dialogueManager.currentNode; //WRITE A CONSTRUCTOR FOR DIALOGUEMANAGER???
+
         //display currentNode's sprites
+        //Debug.Log("TEXT: " + currentNode.NPCtext + "current base: " + currentNode.baseSpriteIndex + "current mouth: " + currentNode.mouthSpriteIndex);
         baseSpriteRenderer.sprite = currentNode.baseSprite;
         mouthSpriteRenderer.sprite = currentNode.mouthSprite;
     }

@@ -24,8 +24,8 @@ public class DialogueNode{
         nextNodes = new List<DialogueNode>(); 
         traveledTo = false;
 
-        baseSpriteIndex = 0;
-        mouthSpriteIndex = 0;
+        // baseSpriteIndex = 0;
+        // mouthSpriteIndex = 0;
 
         baseSprite = null;
         mouthSprite = null;
