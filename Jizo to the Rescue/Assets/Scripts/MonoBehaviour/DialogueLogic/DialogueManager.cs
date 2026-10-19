@@ -7,9 +7,12 @@ using System;
 
 public class DialogueManager : MonoBehaviour
 {
+    //Scriptable obj testing!
+    public CharacterObjectScript character;
+
     //-----OBJECTS-------<3
         //character, sprites & UI buttons
-        PersonController character;
+        //PersonController character;
         List<int> baseSpriteForEachNode;
         List<int> mouthSpriteForEachNode;
         public List<Sprite> baseSprites;
@@ -64,9 +67,21 @@ public class DialogueManager : MonoBehaviour
         List<string> endingDialogue;
 
 
+    void Initialize(CharacterObjectScript m_character)
+    {
+        character = m_character;
+        // baseSpriteForEachNode = character.baseSpriteForEachNode;
+        // mouthSpriteForEachNode = character.mouthSpriteForEachNode;
+        // baseSprites = character.baseSprites;
+        // mouthSprites = character.mouthSprites;
+        // //this is the dictionary that will be made into a heap
+        // Dictionary<string, string[]> thingsCharacterSays = character.thingsPersonSays;
+        // realmDialogue = character.realmDialogue;
+        // endingDialogue = character.endingDialogue;
+    }
     void Start(){
         //-----ACCESS PERSON SCRIPTS/DATA-----<3
-        character = GetComponent<PersonController>();
+        //character = GetComponent<PersonController>();
         baseSpriteForEachNode = character.baseSpriteForEachNode;
         mouthSpriteForEachNode = character.mouthSpriteForEachNode;
         baseSprites = character.baseSprites;
@@ -152,10 +167,12 @@ public class DialogueManager : MonoBehaviour
             //add to answer choices
             if(tempQuestionsLst.Length !=0)
             {
+                
                 dialogueNodeDict[keyList[i]].answerChoices.Add(tempQuestionsLst[0]);
                 dialogueNodeDict[keyList[i]].answerChoices.Add(tempQuestionsLst[1]);
             } 
         }
+        Debug.Log("initialize dialogue nodes successful");
         return dialogueNodeDict;
     }
 

@@ -33,10 +33,4 @@ public class PersonController : MonoBehaviour
         //      eventually affect the player's reputation depending on where
         //      they send the person.
         public float karmicMerit;
-    
-    void Start()
-    {
-        //always display a default base sprite + 
-        //  default mouth sprite combo so that character doesn't just "disappear"
-    }
 }
