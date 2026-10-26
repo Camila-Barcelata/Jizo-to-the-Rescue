@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class UpdateStats: MonoBehaviour
 {
 
-    public void updateStats(Realm chosenRealm, CharacterObjectScript currentcharacter) {
+    public void updateInfo(Realm chosenRealm, CharacterObjectScript currentcharacter) {
 
         GameManager gm = GameManager.Instance;
 
@@ -45,7 +45,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             }
             else // hell or heaven
             {
-                gm.ReputationChange(-1);
+                gm.ReputationChange(1);
 
             }
         }
