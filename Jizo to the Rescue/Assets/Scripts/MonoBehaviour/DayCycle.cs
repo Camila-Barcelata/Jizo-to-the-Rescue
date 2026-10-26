@@ -3,16 +3,15 @@ using System.Collections.Generic;
 
 public class DayCycle : MonoBehaviour
 {
+    public CharacterObjectScript currentPerson; //the person that is currently being reincarnated
+    public List<CharacterObjectScript> dayPeople; //people interviewed in a day
 
-    List<Person> people;
-    void Start()
-    {
-        people = GameManager.instance.People;
+    public int peopleIntervieweed;
 
-    }
-
-    void Update()
+    void SelectCurrentPerson()
     {
         
     }
+
+
 }

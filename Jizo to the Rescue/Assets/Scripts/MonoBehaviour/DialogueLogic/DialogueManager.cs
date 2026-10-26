@@ -288,6 +288,7 @@ public class DialogueManager : MonoBehaviour
 
         //display realm animation
         realmAnimations[index].gameObject.SetActive(true);
+
     }
 
     //called when Next button is pressed
@@ -411,6 +412,7 @@ public class DialogueManager : MonoBehaviour
         currentDialogueState = DialogueState.Realms;
 
         DisplayCurrentRealmText(index);
+
     }
 
     int FindLeftChild(int index) {

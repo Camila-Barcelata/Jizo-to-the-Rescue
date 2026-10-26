@@ -7,10 +7,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     //holds all Person objects
-    List<Person> People;
+    List<CharacterObjectScript> allPeople;
     //global values
-    float reputationValue;
+    float reputationValue; //6
     int yokaiSentIncorrectly;
+
+    int lives;
     int soulsSentToHell;
     int soulsSentToHuman;
     int soulsSentToHeaven;
@@ -25,5 +27,35 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject); //ensures no duplicates :)
         }
     }
+
+    public void ReputationChange(int number)
+    {
+        reputationValue += number;
+    }
     
+    public void lifeLost (int number)
+    {
+        lives -= number;
+    }
+
+    public void AddIncorrect()
+    {
+        yokaiSentIncorrectly += 1;
+    }
+
+    public void addHeaven(int number)
+    {
+        soulsSentToHeaven += number;
+    }
+
+    public void addHuman(int number)
+    {
+        soulsSentToHuman += number;
+    }
+
+    public void addHell(int number)
+    {
+        soulsSentToHell += number;
+    }
+
 }

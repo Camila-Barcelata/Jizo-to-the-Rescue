@@ -38,5 +38,13 @@ public class CharacterObjectScript : ScriptableObject
         //      eventually affect the player's reputation depending on where
         //      they send the person.
         [Header("karmicMerit")]
-        public float karmicMerit;
+        public float karmicMerit; //lets say 1-33 is bad, 33-66 is neutral, 66-100 is good.
+
+    //-----ts evil---------<3
+        [Header("TenguStats")]
+        public bool isTengu;
+
+        [Header("Destination")]
+
+        public Realm destination; 
 }
