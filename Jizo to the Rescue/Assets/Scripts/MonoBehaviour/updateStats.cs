@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class UpdateStats: MonoBehaviour
 {
 
-    public void updateStats(Realm chosenRealm, CharacterObjectScript currentcharacter) {
+    public void updateInfo(Realm chosenRealm, CharacterObjectScript currentcharacter) {
 
         GameManager gm = GameManager.Instance;
 
