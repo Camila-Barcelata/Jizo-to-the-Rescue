@@ -7,83 +7,83 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         GameManager gm = GameManager.Instance;
 
-        if (currentcharacter.isTengu)
-        {
-            if (chosenRealm == Realm.Hell)
-            {
-                gm.ReputationChange(2);
-            }
-            else // heaven or human
-            {
-                gm.lifeLost(1);
-                gm.ReputationChange(-1);
-                gm.AddIncorrect();
-            }
-        }
-        else if (currentcharacter.karmicMerit < 33)// BAD
-        {
-            if (chosenRealm == Realm.Hell)
-            {
-                gm.ReputationChange(2);
-            }
-            else if (chosenRealm == Realm.Heaven)
-            {
-                gm.ReputationChange(-2);
+        // if (currentcharacter.isTengu)
+        // {
+        //     if (chosenRealm == Realm.Hell)
+        //     {
+        //         gm.ReputationChange(2);
+        //     }
+        //     else // heaven or human
+        //     {
+        //         gm.lifeLost(1);
+        //         gm.ReputationChange(-1);
+        //         gm.AddIncorrect();
+        //     }
+        // }
+        // else if (currentcharacter.karmicMerit < 33)// BAD
+        // {
+        //     if (chosenRealm == Realm.Hell)
+        //     {
+        //         gm.ReputationChange(2);
+        //     }
+        //     else if (chosenRealm == Realm.Heaven)
+        //     {
+        //         gm.ReputationChange(-2);
 
-            }
-            else // human
-            {
-                gm.ReputationChange(-1);
+        //     }
+        //     else // human
+        //     {
+        //         gm.ReputationChange(-1);
  
-            }
-        }
-        else if (currentcharacter.karmicMerit < 67)// MID
-        {
-            if (chosenRealm == Realm.Human)
-            {
-                gm.ReputationChange(2);
-            }
-            else // hell or heaven
-            {
-                gm.ReputationChange(-1);
+        //     }
+        // }
+        // else if (currentcharacter.karmicMerit < 67)// MID
+        // {
+        //     if (chosenRealm == Realm.Human)
+        //     {
+        //         gm.ReputationChange(2);
+        //     }
+        //     else // hell or heaven
+        //     {
+        //         gm.ReputationChange(-1);
 
-            }
-        }
-        else // HIGH
-        {
-            if (chosenRealm == Realm.Heaven)
-            {
-                gm.ReputationChange(2);
-            }
-            else if (chosenRealm == Realm.Human)
-            {
-                gm.ReputationChange(1);
+        //     }
+        // }
+        // else // HIGH
+        // {
+        //     if (chosenRealm == Realm.Heaven)
+        //     {
+        //         gm.ReputationChange(2);
+        //     }
+        //     else if (chosenRealm == Realm.Human)
+        //     {
+        //         gm.ReputationChange(1);
 
-            }
-            else // hell
-            {
-                gm.ReputationChange(-3);
+        //     }
+        //     else // hell
+        //     {
+        //         gm.ReputationChange(-3);
 
-            }
-        }
+        //     }
+        // }
 
-        switch (chosenRealm) //increments soul counter
-        {
-            case Realm.Heaven:
-                gm.addHeaven(1);
-                break;
+        // switch (chosenRealm) //increments soul counter
+        // {
+        //     case Realm.Heaven:
+        //         gm.addHeaven(1);
+        //         break;
 
-            case Realm.Hell:
-                gm.addHell(1);
-                break;
+        //     case Realm.Hell:
+        //         gm.addHell(1);
+        //         break;
 
-            case Realm.Human:
-                gm.addHuman(1);
-                break;
+        //     case Realm.Human:
+        //         gm.addHuman(1);
+        //         break;
                 
-            default:
-                break;
-        }
+        //     default:
+        //         break;
+        // }
 
     
 
