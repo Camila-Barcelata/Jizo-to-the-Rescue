@@ -3620,6 +3620,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814741680}
   m_CullTransparentMesh: 1
+--- !u!1 &1911936899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1911936901}
+  - component: {fileID: 1911936900}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1911936900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911936899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c332e8c82635d4195de8c98b29c653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  Characters:
+  - {fileID: 11400000, guid: f9f0604efa7d24a28bae63ad860153b4, type: 2}
+--- !u!4 &1911936901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911936899}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 592.60333, y: 362.67957, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1933191235
 GameObject:
   m_ObjectHideFlags: 0
@@ -4270,8 +4316,8 @@ Transform:
   m_GameObject: {fileID: 2116260571}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.63, y: -0.13, z: 0.6}
-  m_LocalScale: {x: -1.0376282, y: 0.8912978, z: 0.9200969}
+  m_LocalPosition: {x: -0.2877, y: -0.0639, z: 0.6}
+  m_LocalScale: {x: -1.0483158, y: 0.93461484, z: 0.9200969}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4287,6 +4333,10 @@ PrefabInstance:
     - target: {fileID: 1265180347776699061, guid: 64da8756eb5af4d48bafd172ab1baaa5, type: 3}
       propertyPath: m_Name
       value: Lady Yanagiya
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265180347776699061, guid: 64da8756eb5af4d48bafd172ab1baaa5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3163590141201985299, guid: 64da8756eb5af4d48bafd172ab1baaa5, type: 3}
       propertyPath: character
@@ -4392,3 +4442,4 @@ SceneRoots:
   - {fileID: 7457281388952707643}
   - {fileID: 501126792}
   - {fileID: 1506172743}
+  - {fileID: 1911936901}

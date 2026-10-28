@@ -67,14 +67,16 @@ public class DialogueManager : MonoBehaviour
         List<string> endingDialogue;
 
 
-    void Initialize(CharacterObjectScript m_character)
+
+    //so a manager can "create" or instantiate people and hook it up to a character object script 
+    void SetCharacterObject(CharacterObjectScript m_character)
     {
         character = m_character;
         // baseSpriteForEachNode = character.baseSpriteForEachNode;
         // mouthSpriteForEachNode = character.mouthSpriteForEachNode;
         // baseSprites = character.baseSprites;
         // mouthSprites = character.mouthSprites;
-        // //this is the dictionary that will be made into a heap
+        // // //this is the dictionary that will be made into a heap
         // Dictionary<string, string[]> thingsCharacterSays = character.thingsPersonSays;
         // realmDialogue = character.realmDialogue;
         // endingDialogue = character.endingDialogue;
@@ -288,7 +290,6 @@ public class DialogueManager : MonoBehaviour
 
         //display realm animation
         realmAnimations[index].gameObject.SetActive(true);
-
     }
 
     //called when Next button is pressed
@@ -407,12 +408,14 @@ public class DialogueManager : MonoBehaviour
     }
 
     //is called when realm buttons are clicked
-    public void RealmsButtonsClicked(int index)
+    public void RealmsButtonsClicked(int index, Realm realm)
     {
         currentDialogueState = DialogueState.Realms;
 
         DisplayCurrentRealmText(index);
 
+        //update current character's stats
+        InterviewController.interviewControllerInstance.UpdateStats(realm);
     }
 
     int FindLeftChild(int index) {
@@ -423,6 +426,11 @@ public class DialogueManager : MonoBehaviour
         int rightChildIndex = (index* 2 )+ 2;
         return rightChildIndex;
     }
+
+    // public class DialogueTree()
+    // {
+
+    // }
 
     //------BUTTON LOGIC--HIDING AND UNHIDING FOR CLEANER UI---<3
 

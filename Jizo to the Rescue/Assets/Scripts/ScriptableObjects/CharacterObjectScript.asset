@@ -20,3 +20,5 @@ MonoBehaviour:
   thingsPersonSays: []
   endingDialogue: []
   karmicMerit: 0
+  isTengu: 0
+  destination: 3
