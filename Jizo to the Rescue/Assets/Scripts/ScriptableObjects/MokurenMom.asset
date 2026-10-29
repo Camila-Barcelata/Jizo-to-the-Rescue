@@ -14,7 +14,7 @@ MonoBehaviour:
   m_Name: MokurenMom
   m_EditorClassIdentifier: Assembly-CSharp::CharacterObjectScript
   baseSprites:
-  - {fileID: -910156836087134479, guid: 5c460f95697b64005be1ce472b5175f4, type: 3}
+  - {fileID: 4407826080354321041, guid: b42c5005aa4734d89a7e89b092fc3875, type: 3}
   mouthSprites:
   - {fileID: 3959204916197448900, guid: 68f3d595b0dc746c6ae9de7a7ba01e3b, type: 3}
   - {fileID: -1028418884882909770, guid: 0afaa16bca7ed48df982a099ac2cdcb8, type: 3}

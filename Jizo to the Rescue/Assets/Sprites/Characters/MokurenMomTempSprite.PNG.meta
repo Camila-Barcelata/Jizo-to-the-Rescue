@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: faeddafcbb78aa843b7c7c9c47a68f72
+guid: b42c5005aa4734d89a7e89b092fc3875
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7794083439592422167
-    second: lady yanagiya concept_0
+      213: 4407826080354321041
+    second: MokurenMomTempSprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lady yanagiya concept_0
+      name: MokurenMomTempSprite_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 71
-        width: 972
-        height: 1845
+        x: 65
+        y: 0
+        width: 1063
+        height: 2341
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e4c651186ad5d390800000000000000
-      internalID: -7794083439592422167
+      spriteID: 192c837677ebb2d30800000000000000
+      internalID: 4407826080354321041
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lady yanagiya concept_0: -7794083439592422167
+      MokurenMomTempSprite_0: 4407826080354321041
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
