@@ -20,130 +20,105 @@ MonoBehaviour:
   baseSpriteForEachNode: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000i
   mouthSpriteForEachNode: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000i
   realmDialogue:
-  - Very well. I will learn, my lord. Perhaps I will see you in another life.
-  - I promise to you... I will do better in my next life.
-  - I appreciate you more than you could know, my lord. I will never forget you throughout my lives.
+  - "Ah... I see. If that is your final decision-cough-I suppose I can\u2019t do anything to change your mind."
+  - "R-cough-really, my lord? If that\u2019s your decision, I am be forever grateful. "
   thingsPersonSays:
-  - key: "Hello. My name is Lady Yanagiya. Please treat me kindly... I\u2019ve gone through so much. "
+  - key: Hello... cough, cough... my son, he told you of my condition?
     value:
-    - "\u201CLady\u201D? Are you of noble blood?"
-    - What has transpired that you believe warrants my compassion?
-  - key: "Yes, my lord. My father is a wealthy aristocrat. Though that is not important here\u2026"
+    - He did. But tell me more.
+    - "Ma\u2019am... I can\u2019t let you go into the Human Realm."
+  - key: "You\u2019re a compassionate man, my lord... cough... Well... where do I begin..."
+    value:
+    - ...
+    - 
+  - key: "Oh... wheezing sounds... well... I suppose there\u2019s not much else to talk about, then..."
+    value:
+    - ...
+    - 
+  - key: "Long ago, I was a queen. I birthed a son, who you\u2019ve met, who I loved and doted upon with all my heart."
+    value:
+    - Where were you the queen of?
+    - How did he become so powerful?
+  - key: None1
     value:
     - 
     - 
-  - key: "It\u2019s quite the tale, my lord... I was at Kiyomizu. I had gone to pray to Kannon. When a handsome man approached me."
+  - key: But maybe you should consider a little longer... my son... is very powerful, you know.
     value:
-    - Why had you gone to pray?
-    - Who was the man?
-  - key: None3
+    - Are you threatening a Bodhisattva?
+    - 
+  - key: None2
     value:
     - 
     - 
+  - key: "Oh-cough-Kushinakoku. You may know it as the Kingdom of Kushinagar. It\u2019s a beautiful country, my lord."
+    value:
+    - 
+    - 
+  - key: "Well, when my husband, when he learned that it\u2019d grant us the most karmic merit possible, sent my boy away into monasticism."
+    value:
+    - But he is no ordinary monk.
+    - 
+  - key: "No, my lord, I would never... but his actions are out of my control... and it\u2019s hard to think of a person who wouldn\u2019t be upset were their mother damned to Hell."
+    value:
+    - 
+    - 
+  - key: "No, he isn\u2019t. I reckon he became this powerful because of the prayers I poured into him during his studies. It was hard to be away from him for so long. But-cough-I found many ways to support him. I sent him food, clothes, supplies. I spent not a cent on myself."
+    value:
+    - ...or the temples.
+    - How kind of you.
   - key: None4
     value:
     - 
     - 
-  - key: " Well\u2026 While I am of beautiful visage, my luck romantically had been stale. I went to pray for love."
+  - key: "Y-yes... cough... that\u2019s why you see my in the form I\u2019m in today..."
     value:
-    - "If you\u2019re so beautiful, why the lack of suitors?"
+    - What form is that?
     - 
-  - key: "At first glance, he simply looked like\u2026 A handsome aristocrat. He said\u2026 Oh, I was a fool\u2026"
+  - key: Yes, well... perhaps I should have done things differently.
     value:
-    - What did he say?
+    - ...
+    - ...
+  - key: "He described it as becoming a gaki-a hungry ghost. I\u2019m cursed with eternal hunger... and any food I try to eat bursts into flames before it hits my tongue. It\u2019s-cough-excruciating."
+    value:
+    - Who described it as that?
     - 
+  - key: None5
+    value:
+    - 
+    - 
+  - key: "My son... he never got the chance to see me before I died. It\u2019s-cough-humiliating... I never wanted him to see me like this..."
+    value:
+    - ...
+    - ...
+  - key: None6
+    value:
+    - 
+    - 
+  - key: "Oh, my apologies... your mentor did. He\u2019s the one who made me this after all. He said it was a punishment fitting my scrupulousness in life."
+    value:
+    - 
+    - 
+  - key: "I\u2019m sorry if... I treated you harshly, Bodhisattva Jizo. I\u2019m just... filled with regret over how I lived my life."
+    value:
+    - "Do you think you\u2019ve earned a second chance?"
+    - "I still can\u2019t send you to the Human Realm."
   - key: None7
     value:
     - 
     - 
-  - key: None8
+  - key: "I like to think so... but of course-cough-that decision isn\u2019t up to me."
     value:
     - 
     - 
-  - key: None9
-    value:
-    - 
-    - 
-  - key: None10
-    value:
-    - 
-    - 
-  - key: "Are you trying to say I\u2019m ugly? My advisor tells me I\u2019m beautiful all the time. That\u2019s all that matters, anyway."
-    value:
-    - 
-    - 
-  - key: None12
-    value:
-    - 
-    - 
-  - key: " He was a bold man. He said he was unmarried... Complimented me\u2026 And asked for my hand in marriage. Of course, I obliged. I had gone to pray for someone like him, after all!"
-    value:
-    - Why did you say you were a fool?
-    - Did you know him?
-  - key: None14
-    value:
-    - 
-    - 
-  - key: None15
-    value:
-    - 
-    - 
-  - key: None16
-    value:
-    - 
-    - 
-  - key: None17
-    value:
-    - 
-    - 
-  - key: None18
-    value:
-    - 
-    - 
-  - key: None19
-    value:
-    - 
-    - 
-  - key: None20
-    value:
-    - 
-    - 
-  - key: None21
-    value:
-    - 
-    - 
-  - key: None22
-    value:
-    - 
-    - 
-  - key: None23
-    value:
-    - 
-    - 
-  - key: None24
-    value:
-    - 
-    - 
-  - key: None25
-    value:
-    - 
-    - 
-  - key: None26
-    value:
-    - 
-    - 
-  - key: "Well, during the wedding ceremony\u2026 I kept noticing strange occurrences around the venue. Tiger-like dogs lurching from corners, mice cooking the very food we were eating\u2026 It was all very impure! That\u2019s when I knew all wasn\u2019t as it seemed."
-    value:
-    - 
-    - 
-  - key: "Not at first. But when I realized the truth of his home, it was like I could see with a fresh pair of eyes. He was no man\u2026 He was a mouse! Without sparing a second, I used one of the strings from my koto to spring a trap on him. I saw him start to gnaw through it, but I had turned my back and started to run before I saw much more. And now\u2026 I\u2019m here."
+  - key: "That\u2019s... okay. I won\u2019t ask you to do that anymore. I\u2019ve made my mistakes."
     value:
     - 
     - 
   endingDialogue:
-  - "Well, my lord, you\u2019ve heard my story. I hope you sympathize with me. I truly believe I am deserving of the pure land\u2014"
-  - "I followed the scripture as well as I could! I just can\u2019t believe I fell for that hideous mouse\u2019s trap\u2026"
-  - Please be merciful, Jizo Bodhisattva!
-  karmicMerit: 20
-  isTengu: 0
+  - "My lord... you\u2019ve heard everything I have to say. You know of my misdeeds. If you believe I am-cough-still deserving of damnation, do what you must. I apologize, Bodhisattva, if my son gives you trouble for your decision. I have... cough... come to accept that your judgment is fair and just."
+  - If you believe I am-cough-still deserving of damnation, do what you must.
+  - I apologize, Bodhisattva, if my son gives you trouble for your decision. I have... cough... come to accept that your judgment is fair and just.
+  karmicMerit: 22
+  isTengu: 1
   destination: 3
