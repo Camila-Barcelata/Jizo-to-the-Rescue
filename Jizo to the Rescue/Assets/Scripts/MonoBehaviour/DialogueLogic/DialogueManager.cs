@@ -415,7 +415,7 @@ public class DialogueManager : MonoBehaviour
         DisplayCurrentRealmText(index);
 
         //update current character's stats
-        InterviewController.interviewControllerInstance.UpdateStats(realm);
+        //InterviewController.interviewControllerInstance.UpdateStats(realm);
     }
 
     int FindLeftChild(int index) {

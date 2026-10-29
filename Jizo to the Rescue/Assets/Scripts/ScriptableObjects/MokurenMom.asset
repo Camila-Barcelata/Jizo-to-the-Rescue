@@ -1,6 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,7 +40,7 @@ MonoBehaviour:
     value:
     - Where were you the queen of?
     - How did he become so powerful?
-  - key: None1
+  - key: None5
     value:
     - 
     - 
@@ -47,7 +48,7 @@ MonoBehaviour:
     value:
     - Are you threatening a Bodhisattva?
     - 
-  - key: None2
+  - key: None6
     value:
     - 
     - 
@@ -59,18 +60,110 @@ MonoBehaviour:
     value:
     - But he is no ordinary monk.
     - 
+  - key: None9
+    value:
+    - 
+    - 
+  - key: None10
+    value:
+    - 
+    - 
   - key: "No, my lord, I would never... but his actions are out of my control... and it\u2019s hard to think of a person who wouldn\u2019t be upset were their mother damned to Hell."
     value:
     - 
     - 
+  - key: None12
+    value:
+    - 
+    - 
+  - key: None13
+    value:
+    - 
+    - 
+  - key: None14
+    value:
+    - 
+    - 
+  - key: None15
+    value:
+    - 
+    - 
+  - key: None16
+    value:
+    - 
+    -
   - key: "No, he isn\u2019t. I reckon he became this powerful because of the prayers I poured into him during his studies. It was hard to be away from him for so long. But-cough-I found many ways to support him. I sent him food, clothes, supplies. I spent not a cent on myself."
     value:
     - ...or the temples.
     - How kind of you.
-  - key: None4
+  - key: None18
     value:
     - 
     - 
+  - key: None19
+    value:
+    - 
+    - 
+  - key: None20
+    value:
+    - 
+    - 
+  - key: None21
+    value:
+    - 
+    - 
+  - key: None22
+    value:
+    - 
+    - 
+  - key: None23
+    value:
+    - 
+    -
+  - key: None24
+    value:
+    - 
+    - 
+  - key: None25
+    value:
+    - 
+    - 
+  - key: None26
+    value:
+    - 
+    - 
+  - key: None27
+    value:
+    - 
+    - 
+  - key: None28
+    value:
+    - 
+    -
+  - key: None29
+    value:
+    - 
+    - 
+  - key: None30
+    value:
+    - 
+    - 
+  - key: None31
+    value:
+    - 
+    - 
+  - key: None32
+    value:
+    - 
+    - 
+  - key: None33
+    value:
+    - 
+    -
+  - key: None34
+    value:
+    - 
+    -
   - key: "Y-yes... cough... that\u2019s why you see my in the form I\u2019m in today..."
     value:
     - What form is that?
@@ -79,19 +172,427 @@ MonoBehaviour:
     value:
     - ...
     - ...
+  - key: None37
+    value:
+    - 
+    - 
+  - key: None38
+    value:
+    - 
+    - 
+  - key: None39
+    value:
+    - 
+    - 
+  - key: None40
+    value:
+    - 
+    - 
+  - key: None41
+    value:
+    - 
+    -
+  - key: None42
+    value:
+    - 
+    - 
+  - key: None43
+    value:
+    - 
+    - 
+  - key: None44
+    value:
+    - 
+    - 
+  - key: None45
+    value:
+    - 
+    - 
+  - key: None46
+    value:
+    - 
+    -
+  - key: None47
+    value:
+    - 
+    - 
+  - key: None48
+    value:
+    - 
+    - 
+  - key: None49
+    value:
+    - 
+    - 
+  - key: None50
+    value:
+    - 
+    - 
+  - key: None51
+    value:
+    - 
+    -
+  - key: None52
+    value:
+    - 
+    -
+  - key: None53
+    value:
+    - 
+    -
+  - key: None54
+    value:
+    - 
+    - 
+  - key: None55
+    value:
+    - 
+    -
+  - key: None56
+    value:
+    - 
+    - 
+  - key: None57
+    value:
+    - 
+    - 
+  - key: None58
+    value:
+    - 
+    - 
+  - key: None59
+    value:
+    - 
+    - 
+  - key: None60
+    value:
+    - 
+    -
+  - key: None61
+    value:
+    - 
+    -
+  - key: None62
+    value:
+    - 
+    -
+  - key: None63
+    value:
+    - 
+    - 
+  - key: None64
+    value:
+    - 
+    - 
+  - key: None65
+    value:
+    - 
+    - 
+  - key: None66
+    value:
+    - 
+    -
+  - key: None67
+    value:
+    - 
+    -
+  - key: None68
+    value:
+    - 
+    -
+  - key: None69
+    value:
+    - 
+    -
+  - key: None70
+    value:
+    - 
+    -
   - key: "He described it as becoming a gaki-a hungry ghost. I\u2019m cursed with eternal hunger... and any food I try to eat bursts into flames before it hits my tongue. It\u2019s-cough-excruciating."
     value:
     - Who described it as that?
     - 
-  - key: None5
+  - key: None72
+    value:
+    - 
+    -
+  - key: "My son... he never got the chance to see me before I died. It\u2019s-cough-humiliating... I never wanted him to see me like this...I\u2019m sorry if... I treated you harshly, Bodhisattva Jizo. I\u2019m just... filled with regret over how I lived my life."
+    value:
+    - "Do you think you\u2019ve earned a second chance?"
+    - "I still can\u2019t send you to the Human Realm."
+  - key: None74
     value:
     - 
     - 
-  - key: "My son... he never got the chance to see me before I died. It\u2019s-cough-humiliating... I never wanted him to see me like this..."
+  - key: None75
     value:
-    - ...
-    - ...
-  - key: None6
+    - 
+    - 
+  - key: None76
+    value:
+    - 
+    - 
+  - key: None77
+    value:
+    - 
+    - 
+  - key: None78
+    value:
+    - 
+    - 
+  - key: None79
+    value:
+    - 
+    - 
+  - key: None80
+    value:
+    - 
+    - 
+  - key: None81
+    value:
+    - 
+    - 
+  - key: None82
+    value:
+    - 
+    - 
+  - key: None83
+    value:
+    - 
+    - 
+  - key: None84
+    value:
+    - 
+    - 
+  - key: None85
+    value:
+    - 
+    -
+  - key: None86
+    value:
+    - 
+    - 
+  - key: None87
+    value:
+    - 
+    - 
+  - key: None88
+    value:
+    - 
+    - 
+  - key: None89
+    value:
+    - 
+    - 
+  - key: None90
+    value:
+    - 
+    -
+  - key: None91
+    value:
+    - 
+    - 
+  - key: None92
+    value:
+    - 
+    - 
+  - key: None93
+    value:
+    - 
+    - 
+  - key: None94
+    value:
+    - 
+    - 
+  - key: None95
+    value:
+    - 
+    -
+  - key: None96
+    value:
+    - 
+    -
+  - key: None97
+    value:
+    - 
+    -
+  - key: None98
+    value:
+    - 
+    - 
+  - key: None99
+    value:
+    - 
+    -
+  - key: None100
+    value:
+    - 
+    - 
+  - key: None101
+    value:
+    - 
+    - 
+  - key: None102
+    value:
+    - 
+    - 
+  - key: None103
+    value:
+    - 
+    - 
+  - key: None104
+    value:
+    - 
+    -
+  - key: None105
+    value:
+    - 
+    -
+  - key: None106
+    value:
+    - 
+    -
+  - key: None107
+    value:
+    - 
+    - 
+  - key: None108
+    value:
+    - 
+    - 
+  - key: None109
+    value:
+    - 
+    - 
+  - key: None110
+    value:
+    - 
+    -
+  - key: None111
+    value:
+    - 
+    -
+  - key: None112
+    value:
+    - 
+    -
+  - key: None113
+    value:
+    - 
+    -
+  - key: None114
+    value:
+    - 
+    -
+  - key: None115
+    value:
+    - 
+    -
+  - key: None116
+    value:
+    - 
+    -
+  - key: None117
+    value:
+    - 
+    -
+  - key: None118
+    value:
+    - 
+    - 
+  - key: None119
+    value:
+    - 
+    - 
+  - key: None120
+    value:
+    - 
+    -
+  - key: None121
+    value:
+    - 
+    -
+  - key: None122
+    value:
+    - 
+    -
+  - key: None123
+    value:
+    - 
+    -
+  - key: None124
+    value:
+    - 
+    -
+  - key: None125
+    value:
+    - 
+    -
+  - key: None126
+    value:
+    - 
+    - 
+  - key: None127
+    value:
+    - 
+    - 
+  - key: None128
+    value:
+    - 
+    - 
+  - key: None129
+    value:
+    - 
+    - 
+  - key: None130
+    value:
+    - 
+    - 
+  - key: None131
+    value:
+    - 
+    - 
+  - key: None132
+    value:
+    - 
+    - 
+  - key: None133
+    value:
+    - 
+    - 
+  - key: None134
+    value:
+    - 
+    -
+  - key: None135
+    value:
+    - 
+    - 
+  - key: None136
+    value:
+    - 
+    - 
+  - key: None137
+    value:
+    - 
+    - 
+  - key: None138
+    value:
+    - 
+    - 
+  - key: None139
+    value:
+    - 
+    -
+  - key: None140
+    value:
+    - 
+    - 
+  - key: None141
+    value:
+    - 
+    - 
+  - key: None142
     value:
     - 
     - 
@@ -99,14 +600,14 @@ MonoBehaviour:
     value:
     - 
     - 
-  - key: "I\u2019m sorry if... I treated you harshly, Bodhisattva Jizo. I\u2019m just... filled with regret over how I lived my life."
-    value:
-    - "Do you think you\u2019ve earned a second chance?"
-    - "I still can\u2019t send you to the Human Realm."
-  - key: None7
+  - key: None144
     value:
     - 
+    -
+  - key: None145
+    value:
     - 
+    -
   - key: "I like to think so... but of course-cough-that decision isn\u2019t up to me."
     value:
     - 

@@ -1,5 +1,5 @@
 using UnityEngine;
-
+/*
 public class InterviewController : MonoBehaviour
 {
     //reputationcalc(realmdecisionthat player made)
@@ -106,3 +106,6 @@ public class InterviewController : MonoBehaviour
 
     }
 }
+
+
+*/
