@@ -4341,7 +4341,7 @@ PrefabInstance:
     - target: {fileID: 3163590141201985299, guid: 64da8756eb5af4d48bafd172ab1baaa5, type: 3}
       propertyPath: character
       value: 
-      objectReference: {fileID: 11400000, guid: f9f0604efa7d24a28bae63ad860153b4, type: 2}
+      objectReference: {fileID: 11400000, guid: f0a978abb3e864bdc92aeb92b06e1d3f, type: 2}
     - target: {fileID: 3163590141201985299, guid: 64da8756eb5af4d48bafd172ab1baaa5, type: 3}
       propertyPath: backButton
       value: 
