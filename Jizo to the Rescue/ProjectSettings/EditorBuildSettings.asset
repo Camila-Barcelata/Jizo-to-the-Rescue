@@ -12,4 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ShrineInterview.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
+    com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: ed4fc2cc72e1044b5ae0f8fc526c2c75, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 97af58c2688cb4536b269c599002d918, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 12c7ff33606c54bb5b5ae25a4a478e98, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f395e524722d44617a6d4bfd8d66ee5c, type: 3}
+  m_Name: LadyYanagiya
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
+  karmicMerit: 45
+  Tengu: 0
+  Destination: 3
+  introLines:
+  - character_text: This is your first fallen soul to judge, Bodhisattva Jizo.
+    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "It will be up to you to decide where she will spend her next lifetime. Of course, after that, she\u2019ll return to the mortal realm."
+    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Depending on where you send her, your reputation in the mortal world as a Bodhisattva will be impacted.
+    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: It is of utmost importance you learn as much as you can from every fallen soul that approaches you. Some may not tell you all of the information you want without you asking for it.
+    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Additionally, you may encounter malevolent Tengu masquerading as deceased mortals.
+    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: When you suspect a soul of being a Tengu, do not, for ANY REASON, let them into the Human Realm. They will try to deceive, bribe, or threaten you. Do not let them in.
+    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Well, do your best.
+    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
+    mouthSprite: {fileID: 0}
+  finalLines:
+  - character_text: "Well, my lord, you\u2019ve heard my story. I hope you sympathize with me. "
+    baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "I truly believe I am deserving of the pure land\u2014I followed the scripture as well as I could! I just can\u2019t believe I fell for that hideous mouse\u2019s trap\u2026"
+    baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Please be merciful, Jizo Bodhisattva!
+    baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+    mouthSprite: {fileID: 0}
+  hellLines:
+  - character_text: "Wh... why, my lord? I don\u2019t understand. I admit I\u2019ve been a bit superficial throughout my life, but..."
+    baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "No, no, that\u2019s it. I... apologize for the way I\u2019ve acted. I know you don\u2019t want to do this."
+    baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Very well. I will learn, my lord. Perhaps I will see you in another life.
+    baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+    mouthSprite: {fileID: 0}
+  humanLines:
+  - character_text: Ah... I understand. I could have lived my life with the Buddhist values more in mind.
+    baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: I appreciate your sympathy and for lending me an ear, Bodhisattva Jizo.
+    baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: I promise to you... I will do better in my next life.
+    baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+    mouthSprite: {fileID: 0}
+  heavenLines:
+  - character_text: this is technically not supposed to be here...
+    baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+    mouthSprite: {fileID: 0}
+  CharacterNodes:
+  - key: IntroductionText
+    value:
+      character_text: "Hello. My name is Lady Yanagiya. Please treat me kindly... I\u2019ve gone through so much. "
+      nodeID: IntroductionText
+      answers:
+      - answer_text: "\u201CLady\u201D? Are you of noble blood?"
+        nextID: NobleBlood
+      - answer_text: What has transpired that you believe warrants my compassion?
+        nextID: TaleLord
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: NobleBlood
+    value:
+      character_text: "Yes, my lord. My father is a wealthy aristocrat. Though that is not important here\u2026"
+      nodeID: NobleBlood
+      answers:
+      - answer_text: (Seems like I won't get anymore answers here)
+        nextID: IntroductionText
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: TaleLord
+    value:
+      character_text: "It\u2019s quite the tale, my lord... I was at Kiyomizu. I had gone to pray to Kannon. When a handsome man approached me."
+      nodeID: TaleLord
+      answers:
+      - answer_text: Why had you gone to pray?
+        nextID: BeautifulYanagiya
+      - answer_text: Who was the man?
+        nextID: HandsomeGuy
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: BeautifulYanagiya
+    value:
+      character_text: "Well\u2026 While I am of beautiful visage, my luck romantically had been stale. I went to pray for love."
+      nodeID: BeautifulYanagiya
+      answers:
+      - answer_text: "If you\u2019re so beautiful, why the lack of suitors?"
+        nextID: YanagiyaFrus
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: HandsomeGuy
+    value:
+      character_text: "At first glance, he simply looked like\u2026 A handsome aristocrat. He said\u2026 Oh, I was a fool\u2026"
+      nodeID: HandsomeGuy
+      answers:
+      - answer_text: What did he say?
+        nextID: BoldMan
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: YanagiyaFrus
+    value:
+      character_text: "Are you trying to say I\u2019m ugly? My advisor tells me I\u2019m beautiful all the time. That\u2019s all that matters, anyway. As I was saying\u2026"
+      nodeID: YanagiyaFrus
+      answers:
+      - answer_text: (Seems like I won't get anymore answers here)
+        nextID: IntroductionText
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: BoldMan
+    value:
+      character_text: "He was a bold man. He said he was unmarried... Complimented me\u2026 And asked for my hand in marriage. Of course, I obliged. I had gone to pray for someone like him, after all!"
+      nodeID: BoldMan
+      answers:
+      - answer_text: Why did you say you were a fool?
+        nextID: StrangeOccur
+      - answer_text: Did you know him?
+        nextID: ending
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: StrangeOccur
+    value:
+      character_text: "Well, during the wedding ceremony\u2026 I kept noticing strange occurrences around the venue. Tiger-like dogs lurching from corners, mice cooking the very food we were eating\u2026 It was all very impure! That\u2019s when I knew all wasn\u2019t as it seemed."
+      nodeID: StrangeOccur
+      answers:
+      - answer_text: (Let me ask her some more questions)
+        nextID: IntroductionText
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: ending
+    value:
+      character_text: "Not at first. But when I realized the truth of his home, it was like I could see with a fresh pair of eyes. He was no man\u2026 He was a mouse! Without sparing a second, I used one of the strings from my koto to spring a trap on him. I saw him start to gnaw through it, but I had turned my back and started to run before I saw much more. And now\u2026 I\u2019m here."
+      nodeID: ending
+      answers:
+      - answer_text: (Let me ask her some more questions)
+        nextID: IntroductionText
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}

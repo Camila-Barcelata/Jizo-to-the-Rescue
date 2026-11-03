@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
-
+/*
 public class DayCycle : MonoBehaviour
 {
     public static DayCycle dayCycleInstance;
@@ -28,6 +28,7 @@ public class DayCycle : MonoBehaviour
     void SelectCurrentPerson()
     {
         
+        
     }
 
     void CreateNewPersonFromData()
@@ -37,3 +38,4 @@ public class DayCycle : MonoBehaviour
 
 
 }
+*/

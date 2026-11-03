@@ -1,0 +1,233 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f395e524722d44617a6d4bfd8d66ee5c, type: 3}
+  m_Name: MokurenMom
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
+  karmicMerit: 0
+  Tengu: 1
+  Destination: 3
+  introLines:
+  - character_text: Bodhisattva Jizo. I am Mokuren, a disciple of Buddha.
+    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Behind me is my mother. I will not deceive you\u2014she is a ghoul."
+    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Despite this, I beg of thee, send her to the Human Realm. I have prayed for her, offered the Bodhisattvas my devotion, and overall followed the holy values.
+    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Did you ask Which Bodhisattvas? I... fail to see how that\u2019s relevant..."
+    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Ahem. I am not here to be judged. Be wise with how you treat her.
+    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
+    mouthSprite: {fileID: 0}
+  finalLines:
+  - character_text: "My lord... you\u2019ve heard everything I have to say. You know of my misdeeds. If you believe I am-cough-still deserving of damnation, do what you must."
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: I apologize, Bodhisattva, if my son gives you trouble for your decision. I have... cough... come to accept that your judgment is fair and just.
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  hellLines:
+  - character_text: "Ah... I see. If that is your final decision-cough-I suppose I can\u2019t do anything to change your mind."
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "I understand why you\u2019re doing this. Hopefully we meet again under different circumstances, my lord."
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Tell my son I\u2019ll be okay for me, will you?"
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  humanLines:
+  - character_text: "R-cough-really, my lord? If that\u2019s your decision, I am be forever grateful. "
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "You truly are a merciful Bodhisattva. I\u2019m sure my son will be pleased to know of your verdict. "
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: I apologize if your doing this results in any sort of punishment because of what I am... I know your mentor probably wanted me to stay in Hell.
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: But anyhow... I hope I get to meet you again, Jizo.
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  heavenLines: []
+  CharacterNodes:
+  - key: IntroductionText
+    value:
+      character_text: Hello... cough, cough... my son, he told you of my condition?
+      nodeID: IntroductionText
+      answers:
+      - answer_text: He did. But tell me more.
+        nextID: Compassion
+      - answer_text: "Ma\u2019am... I can\u2019t let you go into the Human Realm."
+        nextID: WheezeSound
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: Compassion
+    value:
+      character_text: "You\u2019re a compassionate man, my lord... cough... Well... where do I begin..."
+      nodeID: Compassion
+      answers:
+      - answer_text: Go on.
+        nextID: BirthSon
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: BirthSon
+    value:
+      character_text: "Long ago, I was a queen. I birthed a son, who you\u2019ve met, who I loved and doted upon with all my heart."
+      nodeID: Birthson
+      answers:
+      - answer_text: Where were you the queen of?
+        nextID: Kushin
+      - answer_text: How did he become so powerful?
+        nextID: HusbandKar
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: Kushin
+    value:
+      character_text: "Oh-cough-Kushinakoku. You may know it as the Kingdom of Kushinagar. It\u2019s a beautiful country, my lord."
+      nodeID: Kushin
+      answers:
+      - answer_text: Interesting...(go back)
+        nextID: BirthSon
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: HusbandKar
+    value:
+      character_text: "Well, when my husband, when he learned that it\u2019d grant us the most karmic merit possible, sent my boy away into monasticism."
+      nodeID: HusbandKar
+      answers:
+      - answer_text: But he is no ordinary monk.
+        nextID: PrayerPower
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: PrayerPower
+    value:
+      character_text: "No, he isn\u2019t. I reckon he became this powerful because of the prayers I poured into him during his studies. It was hard to be away from him for so long. But-cough-I found many ways to support him. I sent him food, clothes, supplies. I spent not a cent on myself."
+      nodeID: PrayerPower
+      answers:
+      - answer_text: '...or the temples. '
+        nextID: templepower
+      - answer_text: How kind of you.
+        nextID: Diffdo
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: Diffdo
+    value:
+      character_text: 'Yes, well... perhaps I should have done things differently. '
+      nodeID: Diffdo
+      answers:
+      - answer_text: ......
+        nextID: SonDie
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: templepower
+    value:
+      character_text: "Y-yes... cough... that\u2019s why you see my in the form I\u2019m in today..."
+      nodeID: templepower
+      answers:
+      - answer_text: What form is that?
+        nextID: CoughGaki
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: SonDie
+    value:
+      character_text: "My son... he never got the chance to see me before I died. It\u2019s-cough-humiliating... I never wanted him to see me like this... I\u2019m sorry if... I treated you harshly, Bodhisattva Jizo. I\u2019m just... filled with regret over how I lived my life."
+      nodeID: SonDie
+      answers:
+      - answer_text: "Do you think you\u2019ve earned a second chance?"
+        nextID: ending
+      - answer_text: "I still can\u2019t send you to the Human Realm."
+        nextID: NoSecond
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: ending
+    value:
+      character_text: "I like to think so... but of course-cough-that decision isn\u2019t up to me."
+      nodeID: ending
+      answers:
+      - answer_text: I see...
+        nextID: IntroductionText
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: NoSecond
+    value:
+      character_text: "That\u2019s... okay. I won\u2019t ask you to do that anymore. I\u2019ve made my mistakes."
+      nodeID: NoSecond
+      answers:
+      - answer_text: (Let's think about this)
+        nextID: IntroductionText
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: CoughGaki
+    value:
+      character_text: "He described it as becoming a gaki-a hungry ghost. I\u2019m cursed with eternal hunger... and any food I try to eat bursts into flames before it hits my tongue. It\u2019s-cough-excruciating."
+      nodeID: CoughGaki
+      answers:
+      - answer_text: Who described it as that?
+        nextID: MentorMean
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: MentorMean
+    value:
+      character_text: "Oh, my apologies... your mentor did. He\u2019s the one who made me this after all. He said it was a punishment fitting my scrupulousness in life."
+      nodeID: MentorMean
+      answers:
+      - answer_text: That guy...
+        nextID: IntroductionText
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: WheezeSound
+    value:
+      character_text: "Oh... wheezing sounds... well... I suppose there\u2019s not much else to talk about, then..."
+      nodeID: WheezeSound
+      answers:
+      - answer_text: ...
+        nextID: Powerful
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: Powerful
+    value:
+      character_text: But maybe you should consider a little longer... my son... is very powerful, you know.
+      nodeID: Powerful
+      answers:
+      - answer_text: Are you threatening a Bodhisattva?
+        nextID: NoLord
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: NoLord
+    value:
+      character_text: "No, my lord, I would never... but his actions are out of my control... and it\u2019s hard to think of a person who wouldn\u2019t be upset were their mother damned to Hell."
+      nodeID: NoLord
+      answers:
+      - answer_text: '... '
+        nextID: IntroductionText
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+      mouthSprite: {fileID: 0}

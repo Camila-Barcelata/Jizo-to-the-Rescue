@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 
+/*
+
 public class DialogueManager : MonoBehaviour
 {
     //Scriptable obj testing!
@@ -501,3 +503,5 @@ public class DialogueManager : MonoBehaviour
         rightButton.SetActive(isActive);
     }
 }
+
+*/

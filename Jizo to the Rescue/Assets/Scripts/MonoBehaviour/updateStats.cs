@@ -5,7 +5,7 @@ public class UpdateStats: MonoBehaviour
 
     public void updateInfo(Realm chosenRealm, CharacterObjectScript currentcharacter) {
 
-        GameManager gm = GameManager.Instance;
+    
 
         // if (currentcharacter.isTengu)
         // {

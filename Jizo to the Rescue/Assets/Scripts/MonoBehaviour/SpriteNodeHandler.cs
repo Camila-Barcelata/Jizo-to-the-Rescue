@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 
 public class SpriteNodeHandler : MonoBehaviour
@@ -27,3 +28,4 @@ public class SpriteNodeHandler : MonoBehaviour
         mouthSpriteRenderer.sprite = currentNode.mouthSprite;
     }
 }
+*/

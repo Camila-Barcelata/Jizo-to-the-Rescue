@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
-
+/*
 public class GameManager : MonoBehaviour
 {
     //setting up singleton
@@ -43,3 +43,4 @@ public class GameManager : MonoBehaviour
 //     Cutscene;
     
 // }
+*/

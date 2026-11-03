@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-
+/*
 //I made this its own script for organization but this is basically the choice
 //nodes of the diagram :)
 
@@ -32,3 +32,5 @@ public class DialogueNode{
 
     }
 }
+
+*/
