@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
  
     [SerializeField] theInterviewScontroller interviewController;
  
-    CharacterDetailsInspector person;
+    [SerializeField] CharacterDetailsInspector person;
  
     List<Node> countEnd = new List<Node>(); // all nodes node marked CountsTowardsEnding
     List<Node> visited = new List<Node>();  // the marked nodes we've been has been through
@@ -62,6 +62,9 @@ public class DialogueManager : MonoBehaviour
  
         // displaying stuff
         textBox.text = node.character_text;
+        //the character text as list implementation
+
+
         baseImage.sprite = node.baseSprite;
         mouthImage.sprite = node.mouthSprite;
  

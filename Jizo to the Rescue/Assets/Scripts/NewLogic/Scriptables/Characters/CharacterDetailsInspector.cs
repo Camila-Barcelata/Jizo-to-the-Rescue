@@ -28,6 +28,7 @@ public class CharacterDetailsInspector : ScriptableObject
 [Serializable]
 public class Node
 {
+    //public List<string> character_text;
     public string character_text;
     public string nodeID;
     public List<Answer> answers = new();

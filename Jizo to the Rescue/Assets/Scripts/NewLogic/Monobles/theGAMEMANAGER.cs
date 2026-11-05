@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
  
 public class theGAMEMANAGER : MonoBehaviour
@@ -10,6 +11,9 @@ public class theGAMEMANAGER : MonoBehaviour
  
     public List<CharacterDetailsInspector> characters;
     public List<CharacterDetailsInspector> peopleVisited;
+
+    //different objs for each day. elem 0 = day1:
+    public List<EnmaDialogueObject> enmaDialogueObjects;
  
     public int day;
  
@@ -26,6 +30,7 @@ public class theGAMEMANAGER : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -58,6 +63,7 @@ public class theGAMEMANAGER : MonoBehaviour
                 break;
             case GameState.Cutscene:
                 // tell Enma's dialogue to play
+                SceneManager.LoadScene("DayOverCutscene");
                 break;
             case GameState.Interview:
                 interviewController.BeginInterview(theDayCYCLE.dayCycleInstance.currentPerson);
@@ -65,6 +71,7 @@ public class theGAMEMANAGER : MonoBehaviour
             case GameState.Judgment:
                 break;
             case GameState.StatReview:
+                theDayCYCLE.dayCycleInstance.FinishedResults();
                 break;
             case GameState.GameEnding:
                 break;
@@ -129,6 +136,12 @@ public class theGAMEMANAGER : MonoBehaviour
         }
         //this should increment days and do a new cycle select interviews
     }
+
+    public void SwitchToCutscene()
+    {
+        //called in the button in the stat review menu
+        SetGameState(GameState.Cutscene);
+    }
 }
  
 public enum GameState
@@ -149,4 +162,11 @@ public enum Realm
     Human,
     Heaven,
     Unjudged
+}
+
+public enum TempleState
+{
+    GoodTemple,
+    MidTemple,
+    BadTemple,
 }

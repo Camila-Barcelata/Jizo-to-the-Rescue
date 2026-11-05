@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad325b590998d9c41b97c7d553209116
+guid: 89ab186cb67004073974700584783316
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7506750822178538932
-    second: condemnation_UI_0
+      213: 538373313390981723
+    second: dialogue box png_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -56,7 +56,9 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationMethod: 0
   spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -113,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: condemnation_UI_0
+      name: dialogue box png_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 287
-        height: 301
+        x: 34
+        y: 37
+        width: 1231
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4a3da256e9a2d790800000000000000
-      internalID: -7506750822178538932
+      spriteID: b5238351dafa87700800000000000000
+      internalID: 538373313390981723
       vertices: []
       indices: 
       edges: []
@@ -138,7 +140,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      condemnation_UI_0: -7506750822178538932
+      dialogue box png_0: 538373313390981723
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f395e524722d44617a6d4bfd8d66ee5c, type: 3}
+  m_Name: MaskedSinner
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
+  karmicMerit: 35
+  Tengu: 0
+  Destination: 3
+  introLines:
+  - character_text: AOFSIDHFOASIDHF
+    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: JSODPFJS
+    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: JFOSDPGJ
+    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: AJDFSA
+    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: APOJASPDOFJASPD
+    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
+    mouthSprite: {fileID: 0}
+  finalLines:
+  - character_text: "My lord... you\u2019ve heard everything I have to say. You know of my misdeeds. If you believe I am-cough-still deserving of damnation, do what you must."
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: I apologize, Bodhisattva, if my son gives you trouble for your decision. I have... cough... come to accept that your judgment is fair and just.
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  hellLines:
+  - character_text: "Ah... I see. If that is your final decision-cough-I suppose I can\u2019t do anything to change your mind."
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "I understand why you\u2019re doing this. Hopefully we meet again under different circumstances, my lord."
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Tell my son I\u2019ll be okay for me, will you?"
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  humanLines:
+  - character_text: "R-cough-really, my lord? If that\u2019s your decision, I am be forever grateful. "
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "You truly are a merciful Bodhisattva. I\u2019m sure my son will be pleased to know of your verdict. "
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: I apologize if your doing this results in any sort of punishment because of what I am... I know your mentor probably wanted me to stay in Hell.
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: But anyhow... I hope I get to meet you again, Jizo.
+    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    mouthSprite: {fileID: 0}
+  heavenLines: []
+  CharacterNodes:
+  - key: IntroductionText
+    value:
+      character_text: "Ugh, I can\u2019t believe I have to do this again. can we just hurry this along?"
+      nodeID: IntroductionText
+      answers:
+      - answer_text: 'What is with the hastiness, the afterlife is going nowhere. '
+        nextID: Idiot
+      - answer_text: Again?
+        nextID: Ugly
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: Idiot
+    value:
+      character_text: "Don\u2019t blame me blame this idiotic system of yours."
+      nodeID: Idiot
+      answers:
+      - answer_text: What is it with your hostility?
+        nextID: skip
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: Ugly
+    value:
+      character_text: Mind your speech you insolent soul, he is the Judge of the underworld.
+      nodeID: Random
+      answers:
+      - answer_text: "Don\u2019t blame me blame this idiotic system of yours."
+        nextID: Idiot
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: skip
+    value:
+      character_text: Can we skip all these questions I can not say I have more patience, I am an important man!
+      nodeID: skip
+      answers: []
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: Random
+    value:
+      character_text: And yet the one judging me is some random. Look here I know he put you up to this, but he should give it up.
+      nodeID: Random
+      answers:
+      - answer_text: I- What is the matter with you?
+        nextID: Backer
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: Backer
+    value:
+      character_text: And yet the one Look! do not think you can bully me, nor should you think your are better then me. I have Jizo as my backer!judging me is some random. Look here I know he put you up to this, but he should give it up.
+      nodeID: Backer
+      answers:
+      - answer_text: I- What is the matter with you?
+        nextID: Backer
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}

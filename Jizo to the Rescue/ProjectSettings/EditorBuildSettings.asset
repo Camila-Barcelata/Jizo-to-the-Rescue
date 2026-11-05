@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShrineInterview.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/DayOverCutscene.unity
+    guid: e8e9989746117c144aa9f0b96aa263fb
   m_configObjects:
     com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: ed4fc2cc72e1044b5ae0f8fc526c2c75, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 97af58c2688cb4536b269c599002d918, type: 2}

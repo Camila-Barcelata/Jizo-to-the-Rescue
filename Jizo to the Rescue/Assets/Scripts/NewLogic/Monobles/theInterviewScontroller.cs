@@ -8,6 +8,9 @@ using UnityEngine.UI;
 // realm button -> judgment dialogue -> realm animation + Next button
 public class theInterviewScontroller : MonoBehaviour
 {
+    //singleton instance
+    theInterviewScontroller interviewControllerInst;
+
     [Header("Other scripts")]
     [SerializeField] Cutscene cutscenePlayer;
     [SerializeField] DialogueManager dialogueManager;
@@ -40,6 +43,15 @@ public class theInterviewScontroller : MonoBehaviour
  
     void Awake()
     {
+        if (interviewControllerInst == null)
+        {
+            interviewControllerInst = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
         startInterviewButton.onClick.AddListener(StartInterviewClicked); //turns on
         resetButton.onClick.AddListener(ResetClicked); //goes back
  
