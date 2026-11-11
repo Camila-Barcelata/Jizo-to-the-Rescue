@@ -17,6 +17,8 @@ public class theDayCYCLE : MonoBehaviour
     [SerializeField] TMP_Text reputationValText;
     [SerializeField] TMP_Text dayOverText;
 
+    
+
 
     void Awake()
     {

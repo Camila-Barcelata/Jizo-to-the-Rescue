@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
   karmicMerit: 45
   Tengu: 0
-  Destination: 3
+  Destination: 0
   introLines:
   - character_text: This is your first fallen soul to judge, Bodhisattva Jizo.
     baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}

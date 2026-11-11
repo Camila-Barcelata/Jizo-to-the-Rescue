@@ -1,4 +1,5 @@
 
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
  
@@ -10,6 +11,10 @@ public class theInterviewScontroller : MonoBehaviour
 {
     //singleton instance
     theInterviewScontroller interviewControllerInst;
+
+      [SerializeField] private Image JudgementDisplay;
+
+    NPCfile npcfile;
 
     [Header("Other scripts")]
     [SerializeField] Cutscene cutscenePlayer;
@@ -117,6 +122,17 @@ public class theInterviewScontroller : MonoBehaviour
         dialogueManager.StartDialogue(person);
     }
 
+  
+    public void JudgementToggleClicked()
+    {
+        if (JudgementDisplay.gameObject.activeSelf) //checks if its on or not
+            JudgementDisplay.gameObject.SetActive(false);
+            
+        else
+            JudgementDisplay.gameObject.SetActive(true);
+        
+    }
+
     //what did the player click
     public void HellButtonClicked()  
      { RealmButtonClicked(Realm.Hell); }
@@ -125,10 +141,9 @@ public class theInterviewScontroller : MonoBehaviour
      }
     public void HeavenButtonClicked() 
     { RealmButtonClicked(Realm.Heaven);
-     }
+    }
 
-    //public void FileButtonClicked() //file button selection{ }
- 
+
     //send in that choice
     void RealmButtonClicked(Realm choice)
     {

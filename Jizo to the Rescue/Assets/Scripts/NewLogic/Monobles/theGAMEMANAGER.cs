@@ -118,6 +118,7 @@ public class theGAMEMANAGER : MonoBehaviour
     //stats <3 <3 <3
  
     //interview controller calls this when a realm button gets clicked
+
     public void RealmChosen(Realm choice)
     {
         SetGameState(GameState.Judgment);
