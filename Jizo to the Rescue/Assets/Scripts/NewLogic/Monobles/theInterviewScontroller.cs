@@ -68,7 +68,7 @@ public class theInterviewScontroller : MonoBehaviour
     public void BeginInterview(CharacterDetailsInspector currentPerson)
     {
         person = currentPerson;
-        Realmimage.gameObject.SetActive(false);
+        //Realmimage.gameObject.SetActive(false);
         nextButton.SetActive(false);
         resetButton.gameObject.SetActive(false);
  

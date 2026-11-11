@@ -65,6 +65,7 @@ public class CutsceneDayOver : MonoBehaviour
         {
             continueButton.gameObject.SetActive(false);
             //load the shrine interview scene and increment the day count!
+            theGAMEMANAGER.Instance.SetGameState(GameState.Interview);
             SceneManager.LoadScene("ShrineInterview");
             theGAMEMANAGER.Instance.day += 1;
             return;

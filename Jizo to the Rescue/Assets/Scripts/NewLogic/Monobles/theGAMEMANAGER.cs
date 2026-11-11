@@ -10,6 +10,7 @@ public class theGAMEMANAGER : MonoBehaviour
     [SerializeField] theInterviewScontroller interviewController;
  
     public List<CharacterDetailsInspector> characters;
+    // [SerializeField] currentPerson;
     public List<CharacterDetailsInspector> peopleVisited;
 
     //different objs for each day. elem 0 = day1:
@@ -83,12 +84,34 @@ public class theGAMEMANAGER : MonoBehaviour
     public List<CharacterDetailsInspector> SelectInterviewees() //this just adds characters from a list
     {
         List<CharacterDetailsInspector> picks = new List<CharacterDetailsInspector>();
- 
-        for (int i = 0; i < 3; i++)
+        
+        if(day ==1)
         {
-            picks.Add(characters[i]);
+            for(int startElement = 0; startElement < 3; startElement ++)
+            {
+                picks.Add(characters[startElement]);
+            }
+        } else if (day == 2)
+        {
+            for(int startElement = 3; startElement < 3; startElement ++)
+            {
+                picks.Add(characters[startElement]);
+            }
+
+        } else if (day ==3)
+        {
+            for(int startElement = 6; startElement < 3; startElement ++)
+            {
+                picks.Add(characters[startElement]);
+            }
+        } else if(day ==4)
+        {
+            for(int startElement = 9; startElement < 2; startElement ++)
+            {
+                picks.Add(characters[startElement]);
+            }
         }
- 
+
         return picks;
     }
 
@@ -108,7 +131,8 @@ public class theGAMEMANAGER : MonoBehaviour
             soulsSentToHuman++;
         if (choice == Realm.Heaven) 
             soulsSentToHeaven++;
- 
+
+            //tell tara that we should make characters a queue. or that day cycle shouldn't be handling the current person
     }
 
 
