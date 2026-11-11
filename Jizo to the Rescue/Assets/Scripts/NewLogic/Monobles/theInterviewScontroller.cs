@@ -126,6 +126,8 @@ public class theInterviewScontroller : MonoBehaviour
     public void HeavenButtonClicked() 
     { RealmButtonClicked(Realm.Heaven);
      }
+
+    //public void FileButtonClicked() //file button selection{ }
  
     //send in that choice
     void RealmButtonClicked(Realm choice)
@@ -150,7 +152,7 @@ public class theInterviewScontroller : MonoBehaviour
             Debug.Log("Lady Yanagiya Realm" + person.Destination);
             person.Destination = Realm.Hell;
             Debug.Log("Lady Yanagiya Realm" + person.Destination);
-            
+
             cutscenePlayer.Play(person.hellLines);
             
         }
