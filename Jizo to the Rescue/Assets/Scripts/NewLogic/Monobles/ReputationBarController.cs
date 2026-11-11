@@ -51,6 +51,7 @@ public class ReputationBarController : MonoBehaviour
         }
         Debug.Log("REPPPPPPPP val:" + newrepvalue);
 
+
         Debug.Log("are you coming over here");
 
         slider.value = newrepvalue/100;
@@ -62,18 +63,20 @@ public class ReputationBarController : MonoBehaviour
     public float GetMultiplier(float NPCrep, Realm NPCrealm)
     {
 
-        Tier tier = NPCTier(NPCrep);
-
         bool TenguStatus = theDayCYCLE.dayCycleInstance.currentPerson.Tengu;
         
         if (TenguStatus){
             return 0;
         }
+
+        Tier tier = NPCTier(NPCrep);
+
     
         if (NPCrealm == Realm.Human)
         {
-            if(tier == Tier.Low)
+            if(tier == Tier.Low){
                 return -1;
+            }
             else if(tier == Tier.Mid)
                 return -1;
             else if(tier == Tier.High)
@@ -104,6 +107,7 @@ public class ReputationBarController : MonoBehaviour
             else 
                 return 0;
         }
+    
         return 0;
         
     }

@@ -128,6 +128,7 @@ public class theGAMEMANAGER : MonoBehaviour
         if (choice == Realm.Hell) 
             soulsSentToHell++;
             person.Destination = Realm.Hell;
+            Debug.Log("Lady Yanagiya Realm" + person.Destination);
         if (choice == Realm.Human)
             soulsSentToHuman++;
             person.Destination = Realm.Human;
