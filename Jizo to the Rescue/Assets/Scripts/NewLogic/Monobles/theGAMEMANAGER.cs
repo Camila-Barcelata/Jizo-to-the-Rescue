@@ -127,10 +127,13 @@ public class theGAMEMANAGER : MonoBehaviour
         // count where the soul went
         if (choice == Realm.Hell) 
             soulsSentToHell++;
+            person.Destination = Realm.Hell;
         if (choice == Realm.Human)
             soulsSentToHuman++;
+            person.Destination = Realm.Human;
         if (choice == Realm.Heaven) 
             soulsSentToHeaven++;
+            person.Destination = Realm.Heaven;
 
             //tell tara that we should make characters a queue. or that day cycle shouldn't be handling the current person
     }
