@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using Unity.XR.GoogleVr;
 using UnityEditor.Rendering;
@@ -74,13 +75,13 @@ public class ReputationBarController : MonoBehaviour
     
         if (NPCrealm == Realm.Human)
         {
-            if(tier == Tier.Low){
-                return -1;
+            if(tier == Tier.Low){ //CHANGE LATER
+                return -0.5f;
             }
             else if(tier == Tier.Mid)
-                return -1;
+                return 1;
             else if(tier == Tier.High)
-                return -1;
+                return -0.5f;
             else 
                 return 0;
         }
@@ -107,15 +108,13 @@ public class ReputationBarController : MonoBehaviour
             else 
                 return 0;
         }
-    
-        return 0;
-        
+        return 0;    
     }
     
 
     public Tier NPCTier(float NPCrep)
     {
-        if (NPCrep>1 && NPCrep < 33){
+        if (NPCrep>0 && NPCrep < 33){
             return Tier.Low;      
         }
         if (NPCrep>=33 && NPCrep < 67){

@@ -147,14 +147,21 @@ public class theInterviewScontroller : MonoBehaviour
         // play the dialogue for where they were sent
         if (choice == Realm.Hell)
         {
+            Debug.Log("Lady Yanagiya Realm" + person.Destination);
+            person.Destination = Realm.Hell;
+            Debug.Log("Lady Yanagiya Realm" + person.Destination);
+            
             cutscenePlayer.Play(person.hellLines);
+            
         }
         else if (choice == Realm.Human)
         {
+            person.Destination = Realm.Human;
             cutscenePlayer.Play(person.humanLines);
         }
         else
         {
+            person.Destination = Realm.Heaven;
             cutscenePlayer.Play(person.heavenLines);
         }
     }
