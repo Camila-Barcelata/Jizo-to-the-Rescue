@@ -12,24 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f395e524722d44617a6d4bfd8d66ee5c, type: 3}
   m_Name: MaskedSinner
   m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
-  karmicMerit: 35
+  karmicMerit: 75
   Tengu: 0
-  Destination: 3
+  Destination: 1
   introLines:
-  - character_text: AOFSIDHFOASIDHF
-    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
-    mouthSprite: {fileID: 0}
-  - character_text: JSODPFJS
-    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
-    mouthSprite: {fileID: 0}
-  - character_text: JFOSDPGJ
-    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
-    mouthSprite: {fileID: 0}
-  - character_text: AJDFSA
-    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
-    mouthSprite: {fileID: 0}
-  - character_text: APOJASPDOFJASPD
-    baseSprite: {fileID: 7214012709929518844, guid: 15959dd4cbad248a5a7b22737bb877e3, type: 3}
+  - character_text: Well, well, well...
+    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
     mouthSprite: {fileID: 0}
   finalLines:
   - character_text: "My lord... you\u2019ve heard everything I have to say. You know of my misdeeds. If you believe I am-cough-still deserving of damnation, do what you must."
@@ -63,63 +51,89 @@ MonoBehaviour:
     mouthSprite: {fileID: 0}
   heavenLines: []
   CharacterNodes:
-  - key: IntroductionText
+  - key: aletter
     value:
-      character_text: "Ugh, I can\u2019t believe I have to do this again. can we just hurry this along?"
-      nodeID: IntroductionText
+      character_text: BODHISATTVA JIZO! In my hands is a letter.
+      nodeID: aletter
       answers:
-      - answer_text: 'What is with the hastiness, the afterlife is going nowhere. '
-        nextID: Idiot
-      - answer_text: Again?
-        nextID: Ugly
+      - answer_text: Indeed there is...
+        nextID: whatsinside
+      - answer_text: "Can\u2019t you talk a little quieter? "
+        nextID: sassyboy
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
       mouthSprite: {fileID: 0}
-  - key: Idiot
+  - key: whatsinside
     value:
-      character_text: "Don\u2019t blame me blame this idiotic system of yours."
-      nodeID: Idiot
+      character_text: "Don\u2019t you want to know what\u2019s inside? In fact... shouldn\u2019t you already?"
+      nodeID: whatsinside
       answers:
-      - answer_text: What is it with your hostility?
-        nextID: skip
+      - answer_text: Is it from me?
+        nextID: youremember
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
       mouthSprite: {fileID: 0}
-  - key: Ugly
+  - key: sassyboy
     value:
-      character_text: Mind your speech you insolent soul, he is the Judge of the underworld.
-      nodeID: Random
+      character_text: "Don\u2019t you tell me how to act! I\u2019m on my way to the Pure Land!"
+      nodeID: sassyboy
       answers:
-      - answer_text: "Don\u2019t blame me blame this idiotic system of yours."
-        nextID: Idiot
+      - answer_text: What makes you think that...
+        nextID: readit
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
       mouthSprite: {fileID: 0}
-  - key: skip
+  - key: youreremember
     value:
-      character_text: Can we skip all these questions I can not say I have more patience, I am an important man!
-      nodeID: skip
-      answers: []
-      CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
-      mouthSprite: {fileID: 0}
-  - key: Random
-    value:
-      character_text: And yet the one judging me is some random. Look here I know he put you up to this, but he should give it up.
-      nodeID: Random
+      character_text: ' Ah... it seems you remember! Indeed it is, o astute Bodhisattva! '
+      nodeID: youremember
       answers:
-      - answer_text: I- What is the matter with you?
-        nextID: Backer
+      - answer_text: Just show me it already, sir.
+        nextID: apologizing
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
       mouthSprite: {fileID: 0}
-  - key: Backer
+  - key: readit
     value:
-      character_text: And yet the one Look! do not think you can bully me, nor should you think your are better then me. I have Jizo as my backer!judging me is some random. Look here I know he put you up to this, but he should give it up.
-      nodeID: Backer
+      character_text: "Well, I guess you\u2019ll have to read this letter to find out!"
+      nodeID: readit
       answers:
-      - answer_text: I- What is the matter with you?
-        nextID: Backer
+      - answer_text: Just show me it already, sir.
+        nextID: apologizing
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: apologizing
+    value:
+      character_text: "Very well. Don\u2019t start sobbing to me apologizing once you get to the end."
+      nodeID: apologizing
+      answers:
+      - answer_text: '[Take the note]'
+        nextID: thenote
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: thenote
+    value:
+      character_text: "(The man hands you the letter. Inside, a note from you to the Sinner\u2019s brother-in-law promising him safe passage into the Pure Land.)"
+      nodeID: thenote
+      answers:
+      - answer_text: "Um... you understand this isn\u2019t addressed to you, right?"
+        nextID: trumpets
+      - answer_text: Wait a second... are you...
+        nextID: humblebrag
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: trumpets
+    value:
+      character_text: "(The man hands you the letter. Inside, a note from you to the Sinner\u2019s brother-in-law promising him safe passage into the Pure Land.)"
+      nodeID: trumpets
+      answers:
+      - answer_text: "Um... you understand this isn\u2019t addressed to you, right?"
+        nextID: trumpets
+      - answer_text: Wait a second... are you...
+        nextID: humblebrag
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
       mouthSprite: {fileID: 0}
