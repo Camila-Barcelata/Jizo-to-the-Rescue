@@ -20,37 +20,53 @@ MonoBehaviour:
     baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
     mouthSprite: {fileID: 0}
   finalLines:
-  - character_text: "My lord... you\u2019ve heard everything I have to say. You know of my misdeeds. If you believe I am-cough-still deserving of damnation, do what you must."
+  - character_text: "You\u2019ve heard everything there is to hear."
     baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
     mouthSprite: {fileID: 0}
-  - character_text: I apologize, Bodhisattva, if my son gives you trouble for your decision. I have... cough... come to accept that your judgment is fair and just.
+  - character_text: "I\u2019m sure you\u2019ll make the right choice."
     baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
     mouthSprite: {fileID: 0}
   hellLines:
-  - character_text: "Ah... I see. If that is your final decision-cough-I suppose I can\u2019t do anything to change your mind."
-    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+  - character_text: "H-hell?!? You\u2019re sending me back there?!?"
+    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
     mouthSprite: {fileID: 0}
-  - character_text: "I understand why you\u2019re doing this. Hopefully we meet again under different circumstances, my lord."
-    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+  - character_text: "You\u2019re... a fool! B-but my letter! YOUR letter! You promised... "
+    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
     mouthSprite: {fileID: 0}
-  - character_text: "Tell my son I\u2019ll be okay for me, will you?"
-    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+  - character_text: "But... I guess you didn\u2019t promise ME, huh? This is... ugh... "
+    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "I hope you\u2019re ready to feel the pain of denying one of Buddha\u2019s most faithful worshipers."
+    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
     mouthSprite: {fileID: 0}
   humanLines:
-  - character_text: "R-cough-really, my lord? If that\u2019s your decision, I am be forever grateful. "
-    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+  - character_text: "The Human Realm?!? That isn\u2019t what I... ugh."
+    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
     mouthSprite: {fileID: 0}
-  - character_text: "You truly are a merciful Bodhisattva. I\u2019m sure my son will be pleased to know of your verdict. "
-    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+  - character_text: "This letter specifically said I\u2019d get to go to the Pure Land!"
+    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
     mouthSprite: {fileID: 0}
-  - character_text: I apologize if your doing this results in any sort of punishment because of what I am... I know your mentor probably wanted me to stay in Hell.
-    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+  - character_text: "Well, no, it doesn\u2019t have my name, b-but... I have it, don\u2019t I?"
+    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
     mouthSprite: {fileID: 0}
-  - character_text: But anyhow... I hope I get to meet you again, Jizo.
-    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+  - character_text: "Whatever. I guess it\u2019s better than this battleground I was sent to by your disrespectful mentor."
+    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: See you.
+    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
     mouthSprite: {fileID: 0}
   heavenLines: []
   CharacterNodes:
+  - key: IntroductionText
+    value:
+      character_text: Well, well, well...
+      nodeID: IntroductionText
+      answers:
+      - answer_text: Um.. have we met?
+        nextID: a letter
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
   - key: aletter
     value:
       character_text: BODHISATTVA JIZO! In my hands is a letter.
@@ -127,13 +143,175 @@ MonoBehaviour:
       mouthSprite: {fileID: 0}
   - key: trumpets
     value:
-      character_text: "(The man hands you the letter. Inside, a note from you to the Sinner\u2019s brother-in-law promising him safe passage into the Pure Land.)"
+      character_text: "Duh! I\u2019m not a neanderthal... or a woman...  "
       nodeID: trumpets
       answers:
-      - answer_text: "Um... you understand this isn\u2019t addressed to you, right?"
-        nextID: trumpets
-      - answer_text: Wait a second... are you...
-        nextID: humblebrag
+      - answer_text: '[Keep listening]'
+        nextID: trumpets2
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: trumpets2
+    value:
+      character_text: "But that doesn\u2019t change the fact that this right here is a one-way ticket to the Pure Land!"
+      nodeID: trumpets2
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: trumpets3
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: trumpets3
+    value:
+      character_text: Ahh... I can hear the trumpets and singing already!
+      nodeID: trumpets3
+      answers:
+      - answer_text: "Sir, I couldn\u2019t even send you to the Pure Land if I wanted to."
+        nextID: nopureland
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: humblebrag
+    value:
+      character_text: Am I the most noble in all the land? The person with the highest karmic merit EVER?
+      nodeID: trumpets3
+      answers:
+      - answer_text: Don't get ahead of yourself.
+        nextID: skiptheformalities
+      - answer_text: "Didn\u2019t you try to pull this same stunt when Enma sent you here the first time?"
+        nextID: trickster
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: skiptheformalities
+    value:
+      character_text: "Ehe... my apologies, my lord. I just know where I\u2019m going and wanna get past all these formalities!"
+      nodeID: skiptheformalities
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: skiptheformalities2
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: skiptheformalities2
+    value:
+      character_text: Is that too much to ask?
+      nodeID: skiptheformalities2
+      answers:
+      - answer_text: (It doesn't seem like I'll get more information.)
+        nextID: IntroductionText
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: trickster
+    value:
+      character_text: "I\u2019m confused on what you mean by stunt... "
+      nodeID: trickster
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: trickster2
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: trickster2
+    value:
+      character_text: "Just \u2018cause I have this completely valid letter and followed the principles of Buddhism I\u2019m now some kind of trickster?"
+      nodeID: trickster2
+      answers:
+      - answer_text: "I feel like you don\u2019t understand how this works."
+        nextID: highmerit
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: highmerit
+    value:
+      character_text: "Hey pal, if I didn\u2019t understand how this works, why is my karmic merit as high as it is?"
+      nodeID: highmerit
+      answers:
+      - answer_text: "You don\u2019t have to be a good person to have high karmic merit."
+        nextID: rectangles
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: rectangles
+    value:
+      character_text: And not all rectangles are square, but all squares are rectangles!
+      nodeID: rectangles
+      answers:
+      - answer_text: And I assume you think of yourself as a square?
+        nextID: squares
+      - answer_text: So what did you do in life that gave you all that merit?
+        nextID: gooddeeds
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: squares
+    value:
+      character_text: "Astute observation, my friend. Assuming we\u2019re understanding that squares are... "
+      nodeID: squares
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: squares2
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: squares2
+    value:
+      character_text: ...good people with high karmic merit...
+      nodeID: squares2
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: squares3
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: squares3
+    value:
+      character_text: Why did I make that analogy, again?
+      nodeID: squares3
+      answers:
+      - answer_text: (I don't think I'll get any more information.)
+        nextID: IntroductionText
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: gooddeeds
+    value:
+      character_text: Well... everything I could do! Made art, recited and wrote scriptures, and of course, made sure to pray to Buddha the moment before I passed on.
+      nodeID: gooddeeds
+      answers:
+      - answer_text: You did all that stuff?
+        nextID: ofcourse
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: ofcourse
+    value:
+      character_text: Um... of course! As you can see...?
+      nodeID: ofcourse
+      answers:
+      - answer_text: "You didn\u2019t just hire people to do those things in your name?"
+        nextID: explain
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: explain
+    value:
+      character_text: ...I can explain?
+      nodeID: explain
+      answers:
+      - answer_text: "You\u2019ve explained enough through your actions. "
+        nextID: ending
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: ending
+    value:
+      character_text: "Please don\u2019t send me back... if you did that... your reputation might be ruined beyond repair!"
+      nodeID: ending
+      answers:
+      - answer_text: '(It seems I won''t get any more information.) '
+        nextID: IntroductionText
       CountsTowardsEnding: 0
       baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
       mouthSprite: {fileID: 0}
