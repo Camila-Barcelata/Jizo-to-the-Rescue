@@ -16,44 +16,65 @@ MonoBehaviour:
   Tengu: 0
   Destination: 0
   introLines:
-  - character_text: Well, well, well...
-    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+  - character_text: This is your first fallen soul to judge, Bodhisattva Jizo.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "It will be up to you to decide where he will spend his next lifetime. Of course, after that, she\u2019ll return to the Human Realm."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Depending on where you send him, your reputation in the Human Realm as a Bodhisattva will be impacted.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: It is of utmost importance you learn as much as you can from every fallen soul that approaches you. Some may not tell you all of the information you want without you asking for it.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Additionally, you may encounter malevolent Tengu masquerading as deceased humans.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: When you suspect a soul of being a Tengu, do not, for ANY REASON, let them into the Human Realm. They will try to deceive, bribe, or threaten you. Do not let them in.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: ...good luck.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Well, well, well
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   finalLines:
   - character_text: "You\u2019ve heard everything there is to hear."
-    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: "I\u2019m sure you\u2019ll make the right choice."
-    baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   hellLines:
   - character_text: "H-hell?!? You\u2019re sending me back there?!?"
-    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: "You\u2019re... a fool! B-but my letter! YOUR letter! You promised... "
-    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: "But... I guess you didn\u2019t promise ME, huh? This is... ugh... "
-    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: "I hope you\u2019re ready to feel the pain of denying one of Buddha\u2019s most faithful worshipers."
-    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   humanLines:
   - character_text: "The Human Realm?!? That isn\u2019t what I... ugh."
-    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: "This letter specifically said I\u2019d get to go to the Pure Land!"
-    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: "Well, no, it doesn\u2019t have my name, b-but... I have it, don\u2019t I?"
-    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: "Whatever. I guess it\u2019s better than this battleground I was sent to by your disrespectful mentor."
-    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: See you.
-    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
     mouthSprite: {fileID: 0}
   heavenLines: []
   CharacterNodes:
@@ -65,7 +86,7 @@ MonoBehaviour:
       - answer_text: Um.. have we met?
         nextID: aletter
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: aletter
     value:
@@ -77,7 +98,7 @@ MonoBehaviour:
       - answer_text: "Can\u2019t you talk a little quieter? "
         nextID: sassyboy
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: whatsinside
     value:
@@ -87,7 +108,7 @@ MonoBehaviour:
       - answer_text: Is it from me?
         nextID: youremember
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: sassyboy
     value:
@@ -97,9 +118,9 @@ MonoBehaviour:
       - answer_text: What makes you think that...
         nextID: readit
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
-  - key: youreremember
+  - key: youremember
     value:
       character_text: ' Ah... it seems you remember! Indeed it is, o astute Bodhisattva! '
       nodeID: youremember
@@ -107,7 +128,7 @@ MonoBehaviour:
       - answer_text: Just show me it already, sir.
         nextID: apologizing
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: readit
     value:
@@ -117,7 +138,7 @@ MonoBehaviour:
       - answer_text: Just show me it already, sir.
         nextID: apologizing
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: apologizing
     value:
@@ -127,7 +148,7 @@ MonoBehaviour:
       - answer_text: '[Take the note]'
         nextID: thenote
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: thenote
     value:
@@ -139,7 +160,7 @@ MonoBehaviour:
       - answer_text: Wait a second... are you...
         nextID: humblebrag
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: trumpets
     value:
@@ -149,7 +170,7 @@ MonoBehaviour:
       - answer_text: '[Keep listening]'
         nextID: trumpets2
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: trumpets2
     value:
@@ -159,7 +180,7 @@ MonoBehaviour:
       - answer_text: '[Keep listening]'
         nextID: trumpets3
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: trumpets3
     value:
@@ -169,7 +190,7 @@ MonoBehaviour:
       - answer_text: "Sir, I couldn\u2019t even send you to the Pure Land if I wanted to."
         nextID: nopureland
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: humblebrag
     value:
@@ -181,7 +202,7 @@ MonoBehaviour:
       - answer_text: "Didn\u2019t you try to pull this same stunt when Enma sent you here the first time?"
         nextID: trickster
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: skiptheformalities
     value:
@@ -191,7 +212,7 @@ MonoBehaviour:
       - answer_text: '[Keep listening]'
         nextID: skiptheformalities2
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: skiptheformalities2
     value:
@@ -201,7 +222,7 @@ MonoBehaviour:
       - answer_text: (It doesn't seem like I'll get more information.)
         nextID: IntroductionText
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: trickster
     value:
@@ -211,7 +232,7 @@ MonoBehaviour:
       - answer_text: '[Keep listening]'
         nextID: trickster2
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: trickster2
     value:
@@ -221,7 +242,7 @@ MonoBehaviour:
       - answer_text: "I feel like you don\u2019t understand how this works."
         nextID: highmerit
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: highmerit
     value:
@@ -231,7 +252,7 @@ MonoBehaviour:
       - answer_text: "You don\u2019t have to be a good person to have high karmic merit."
         nextID: rectangles
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: rectangles
     value:
@@ -243,7 +264,7 @@ MonoBehaviour:
       - answer_text: So what did you do in life that gave you all that merit?
         nextID: gooddeeds
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: squares
     value:
@@ -253,7 +274,7 @@ MonoBehaviour:
       - answer_text: '[Keep listening]'
         nextID: squares2
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: squares2
     value:
@@ -263,7 +284,7 @@ MonoBehaviour:
       - answer_text: '[Keep listening]'
         nextID: squares3
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: squares3
     value:
@@ -273,7 +294,7 @@ MonoBehaviour:
       - answer_text: (I don't think I'll get any more information.)
         nextID: IntroductionText
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: gooddeeds
     value:
@@ -283,7 +304,7 @@ MonoBehaviour:
       - answer_text: You did all that stuff?
         nextID: ofcourse
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: ofcourse
     value:
@@ -293,7 +314,7 @@ MonoBehaviour:
       - answer_text: "You didn\u2019t just hire people to do those things in your name?"
         nextID: explain
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: explain
     value:
@@ -303,7 +324,7 @@ MonoBehaviour:
       - answer_text: "You\u2019ve explained enough through your actions. "
         nextID: ending
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: ending
     value:
@@ -313,5 +334,15 @@ MonoBehaviour:
       - answer_text: '(It seems I won''t get any more information.) '
         nextID: IntroductionText
       CountsTowardsEnding: 0
-      baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: nopureland
+    value:
+      character_text: ...what?
+      nodeID: nopureland
+      answers:
+      - answer_text: (what)
+        nextID: thenote
+      CountsTowardsEnding: 0
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}

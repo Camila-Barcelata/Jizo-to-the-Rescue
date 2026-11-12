@@ -16,26 +16,8 @@ MonoBehaviour:
   Tengu: 0
   Destination: 0
   introLines:
-  - character_text: This is your first fallen soul to judge, Bodhisattva Jizo.
-    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
-    mouthSprite: {fileID: 0}
-  - character_text: "It will be up to you to decide where she will spend her next lifetime. Of course, after that, she\u2019ll return to the mortal realm."
-    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
-    mouthSprite: {fileID: 0}
-  - character_text: Depending on where you send her, your reputation in the mortal world as a Bodhisattva will be impacted.
-    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
-    mouthSprite: {fileID: 0}
-  - character_text: It is of utmost importance you learn as much as you can from every fallen soul that approaches you. Some may not tell you all of the information you want without you asking for it.
-    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
-    mouthSprite: {fileID: 0}
-  - character_text: Additionally, you may encounter malevolent Tengu masquerading as deceased mortals.
-    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
-    mouthSprite: {fileID: 0}
-  - character_text: When you suspect a soul of being a Tengu, do not, for ANY REASON, let them into the Human Realm. They will try to deceive, bribe, or threaten you. Do not let them in.
-    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
-    mouthSprite: {fileID: 0}
-  - character_text: Well, do your best.
-    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
+  - character_text: "Hello. My name is Lady Yanagiya. Please treat me kindly... I\u2019ve gone through so much. "
+    baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
     mouthSprite: {fileID: 0}
   finalLines:
   - character_text: "Well, my lord, you\u2019ve heard my story. I hope you sympathize with me. "

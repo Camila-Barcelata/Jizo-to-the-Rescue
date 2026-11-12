@@ -17,34 +17,34 @@ MonoBehaviour:
   Destination: 0
   introLines:
   - character_text: "Yoo-hoo Jizo! It\u2019s nice so to see you. "
-    baseSprite: {fileID: 0}
+    baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: And might I add, that cloak makes you look quite dashing...
-    baseSprite: {fileID: 0}
+    baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
     mouthSprite: {fileID: 0}
   finalLines:
   - character_text: "Anyway, can\u2019t you get this whole judging thing over with? Then you and I can have some fun... "
-    baseSprite: {fileID: 0}
+    baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
     mouthSprite: {fileID: 0}
   hellLines:
   - character_text: "You\u2019re no better than Raiko, the samurai who killed me. All just men who think they can do whatever they please."
-    baseSprite: {fileID: 0}
+    baseSprite: {fileID: 4078593789030537479, guid: b2706784e480043ceab5e7048ba28453, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: "You may be sending me to Hell, but I\u2019ll be back, and I\u2019ll MAKE you regret this. I\u2019ll chop your head off, and eat it too, just like the nineteen hundred and ninety I\u2019ve already eaten.  "
-    baseSprite: {fileID: 0}
+    baseSprite: {fileID: 4078593789030537479, guid: b2706784e480043ceab5e7048ba28453, type: 3}
     mouthSprite: {fileID: 0}
   humanLines:
   - character_text: "Ha! You\u2019re not the first to be bewitched by my good looks."
     baseSprite: {fileID: 0}
     mouthSprite: {fileID: 0}
   - character_text: "You truly think I\u2019m some innocent girl from Kitayama? If only the samurai who killed me had been as foolish as you."
-    baseSprite: {fileID: 0}
+    baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: Thanks to you, me and my spider children will continue to seduce and eat men for hundreds of years to come.
-    baseSprite: {fileID: 0}
+    baseSprite: {fileID: 4078593789030537479, guid: b2706784e480043ceab5e7048ba28453, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: Good luck sending souls to their right places. If you were tricked THIS easily, I doubt Enma has much hope for you.
-    baseSprite: {fileID: 0}
+    baseSprite: {fileID: 4078593789030537479, guid: b2706784e480043ceab5e7048ba28453, type: 3}
     mouthSprite: {fileID: 0}
   heavenLines: []
   CharacterNodes:
@@ -58,7 +58,7 @@ MonoBehaviour:
       - answer_text: "Well, if it\u2019s a long story, perhaps you\u2019re right. But what else is there to do?"
         nextID: plentyoffun
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: luscioushair
     value:
@@ -70,7 +70,7 @@ MonoBehaviour:
       - answer_text: "That\u2019s horrible!"
         nextID: nevermind
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: plentyoffun
     value:
@@ -80,7 +80,7 @@ MonoBehaviour:
       - answer_text: (...I don't think she'll give me more information)
         nextID: IntroductionText
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: openeddoor
     value:
@@ -90,7 +90,7 @@ MonoBehaviour:
       - answer_text: '[Keep listening]'
         nextID: openeddoor2
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: openeddoor2
     value:
@@ -100,7 +100,7 @@ MonoBehaviour:
       - answer_text: Why do you think you ended up here, in Hell?
         nextID: perfectbuddhist
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: nevermind
     value:
@@ -110,7 +110,7 @@ MonoBehaviour:
       - answer_text: Wanted to what?
         nextID: suspicioussilence
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: suspicioussilence
     value:
@@ -120,7 +120,7 @@ MonoBehaviour:
       - answer_text: (I think I've heard enough.)
         nextID: IntroductionText
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: perfectbuddhist
     value:
@@ -130,7 +130,7 @@ MonoBehaviour:
       - answer_text: '[Keep listening]'
         nextID: perfectbuddhist2
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: perfectbuddhist2
     value:
@@ -140,7 +140,7 @@ MonoBehaviour:
       - answer_text: '[Keep listening]'
         nextID: perfectbuddhist3
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: perfectbuddhist3
     value:
@@ -152,7 +152,7 @@ MonoBehaviour:
       - answer_text: 'It seems your story is fairly straightforward, then. Is there anything else you have to share with me? '
         nextID: worthyourwhile
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: beautifulisasin
     value:
@@ -162,7 +162,7 @@ MonoBehaviour:
       - answer_text: (I think I've heard enough.)
         nextID: IntroductionText
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: worthyourwhile
     value:
@@ -172,7 +172,7 @@ MonoBehaviour:
       - answer_text: '[Keep listening]'
         nextID: worthyourwhile2
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: worthyourwhile2
     value:
@@ -182,5 +182,5 @@ MonoBehaviour:
       - answer_text: (I think I've heard enough.)
         nextID: IntroductionText
       CountsTowardsEnding: 0
-      baseSprite: {fileID: 0}
+      baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
