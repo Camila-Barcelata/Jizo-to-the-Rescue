@@ -2,6 +2,7 @@
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
  
 // Runs the order of one interview:
 // intro cutscene -> Start Interview button -> nodes
@@ -32,6 +33,8 @@ public class theInterviewScontroller : MonoBehaviour
     [SerializeField] Sprite hellSprite;
     [SerializeField] Sprite humanSprite;
     [SerializeField] Sprite heavenSprite;
+
+    public TMP_Text Daytext;
  
     //lowkey im taking advantage of learning enums
     //so i spilt the interview cycle into them!!
@@ -45,9 +48,14 @@ public class theInterviewScontroller : MonoBehaviour
  
     CharacterDetailsInspector person; //curent person :p
     Realm chosenRealm;  // where dae go
+
+
+
  
     void Awake()
+
     {
+
         if (interviewControllerInst == null)
         {
             interviewControllerInst = this;
@@ -66,6 +74,13 @@ public class theInterviewScontroller : MonoBehaviour
         Realmimage.gameObject.SetActive(false);
         nextButton.SetActive(false);
     }
+
+
+    void Start()  // <-- NEW METHOD
+{
+    theGAMEMANAGER.Instance.interviewController = this;
+    theGAMEMANAGER.Instance.StartDay();
+}
  
     // ---------- Interview ---------- <3
  
@@ -81,6 +96,12 @@ public class theInterviewScontroller : MonoBehaviour
         startInterviewButton.gameObject.SetActive(false);
         dialogueManager.HideAnswerButtons();
         cutscenePlayer.Play(person.introLines);
+        displayDay();
+    }
+
+    public void displayDay()
+    {
+        Daytext.text = "Day " + theGAMEMANAGER.Instance.day;
     }
  
     //Lil cutscene at the end

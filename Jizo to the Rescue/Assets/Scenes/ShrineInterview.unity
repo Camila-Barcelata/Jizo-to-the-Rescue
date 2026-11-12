@@ -4922,6 +4922,7 @@ MonoBehaviour:
   statsText: {fileID: 165408239}
   reputationValText: {fileID: 272788074}
   dayOverText: {fileID: 693618364}
+  purebutton: {fileID: 1135890533}
 --- !u!1 &1742514409
 GameObject:
   m_ObjectHideFlags: 0
@@ -6205,10 +6206,10 @@ MonoBehaviour:
   CurrentState: 0
   interviewController: {fileID: 614948999}
   characters:
+  - {fileID: 11400000, guid: 82e51bc36574a8441a04fc019a2d2c1a, type: 2}
+  - {fileID: 11400000, guid: 9af0269c0e76cbc4ebed2f3968579d0f, type: 2}
   - {fileID: 11400000, guid: f42a8bc623f8a462cab4266bb11b8ef8, type: 2}
   - {fileID: 11400000, guid: a2dc5c7967dbb446bbb01c81a2e74d63, type: 2}
-  - {fileID: 11400000, guid: 82e51bc36574a8441a04fc019a2d2c1a, type: 2}
-  - {fileID: 11400000, guid: 82e51bc36574a8441a04fc019a2d2c1a, type: 2}
   - {fileID: 11400000, guid: 82e51bc36574a8441a04fc019a2d2c1a, type: 2}
   - {fileID: 11400000, guid: 82e51bc36574a8441a04fc019a2d2c1a, type: 2}
   peopleVisited: []

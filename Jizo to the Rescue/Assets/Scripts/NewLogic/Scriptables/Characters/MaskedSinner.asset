@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
   karmicMerit: 75
   Tengu: 0
-  Destination: 1
+  Destination: 0
   introLines:
   - character_text: Well, well, well...
     baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
@@ -63,7 +63,7 @@ MonoBehaviour:
       nodeID: IntroductionText
       answers:
       - answer_text: Um.. have we met?
-        nextID: a letter
+        nextID: aletter
       CountsTowardsEnding: 0
       baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
       mouthSprite: {fileID: 0}

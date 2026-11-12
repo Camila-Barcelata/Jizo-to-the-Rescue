@@ -7,7 +7,8 @@ public class theGAMEMANAGER : MonoBehaviour
     public static theGAMEMANAGER Instance;
     public GameState CurrentState;
  
-    [SerializeField] theInterviewScontroller interviewController;
+    //[SerializeField] theInterviewScontroller interviewController;
+    public theInterviewScontroller interviewController;
  
     public List<CharacterDetailsInspector> characters;
     // [SerializeField] currentPerson;
@@ -39,19 +40,17 @@ public class theGAMEMANAGER : MonoBehaviour
             return;
         }
     }
- 
-    void Start()
+
+
+    public void StartDay()
     {
-        StartDay(); 
+        if (day < 1)
+            day = 1;   //dayjumping
+
+        theDayCYCLE.dayCycleInstance.SetPeople(SelectInterviewees());
+        SetGameState(GameState.Interview);
     }
- 
-    void StartDay()
-    {
-        day++;
-        theDayCYCLE.dayCycleInstance.SetPeople(SelectInterviewees()); //this sends in ppl
-        SetGameState(GameState.Interview); // the first person's intro cutscene starts here
-    }
- 
+    
     public void SetGameState(GameState newState)
     {
         CurrentState = newState;
@@ -81,36 +80,24 @@ public class theGAMEMANAGER : MonoBehaviour
         }
     }
  
-    public List<CharacterDetailsInspector> SelectInterviewees() //this just adds characters from a list
+    public List<CharacterDetailsInspector> SelectInterviewees()
     {
         List<CharacterDetailsInspector> picks = new List<CharacterDetailsInspector>();
-        
-        if(day ==1)
-        {
-            for(int startElement = 0; startElement < 3; startElement ++)
-            {
-                picks.Add(characters[startElement]);
-            }
-        } else if (day == 2)
-        {
-            for(int startElement = 3; startElement < 3; startElement ++)
-            {
-                picks.Add(characters[startElement]);
-            }
 
-        } else if (day ==3)
-        {
-            for(int startElement = 6; startElement < 3; startElement ++)
-            {
-                picks.Add(characters[startElement]);
-            }
-        } else if(day ==4)
-        {
-            for(int startElement = 9; startElement < 2; startElement ++)
-            {
-                picks.Add(characters[startElement]);
-            }
-        }
+        int start = 0;
+        int end = 0;
+
+        if (day == 1) //changed this because days were actually taking me out
+        { start = 0; end = 3; }
+        else if (day == 2)
+        { start = 3; end = 6; }
+        else if (day == 3) 
+        { start = 6; end = 9; }
+        else if (day == 4) 
+        { start = 9; end = 11; }
+
+        for (int i = start; i < end && i < characters.Count; i++)
+            picks.Add(characters[i]);
 
         return picks;
     }

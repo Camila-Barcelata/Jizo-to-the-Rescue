@@ -22,9 +22,10 @@ public class CutsceneDayOver : MonoBehaviour
 
     void Awake()
     {
+
         enmaDialogueObject = theGAMEMANAGER.Instance.enmaDialogueObjects[(theGAMEMANAGER.Instance.day)-1];
-        continueButton.onClick.AddListener(NextLine);
         lines = enmaDialogueObject.introLines;
+        continueButton.onClick.AddListener(NextLine);
         //continueButton.gameObject.SetActive(false);
     }
 
@@ -62,14 +63,12 @@ public class CutsceneDayOver : MonoBehaviour
         index++;
 
         if (index >= lines.Count)
-        {
-            continueButton.gameObject.SetActive(false);
-            //load the shrine interview scene and increment the day count!
-            theGAMEMANAGER.Instance.SetGameState(GameState.Interview);
-            SceneManager.LoadScene("ShrineInterview");
-            theGAMEMANAGER.Instance.day += 1;
-            return;
-        }
+            {
+                continueButton.gameObject.SetActive(false);
+                theGAMEMANAGER.Instance.day++;
+                SceneManager.LoadScene("ShrineInterview");
+                return;
+            }
 
         ShowLine();
     }

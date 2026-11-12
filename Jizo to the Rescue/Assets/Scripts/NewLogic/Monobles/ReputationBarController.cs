@@ -50,15 +50,10 @@ public class ReputationBarController : MonoBehaviour
         if (newrepvalue > 101) {
             newrepvalue = 100;
         }
-        Debug.Log("REPPPPPPPP val:" + newrepvalue);
-
-
-        Debug.Log("are you coming over here");
 
         slider.value = newrepvalue/100;
         theGAMEMANAGER.Instance.reputationValue = newrepvalue;
 
-        Debug.Log("did you update??"); //does show on console
     }
 
     public float GetMultiplier(float NPCrep, Realm NPCrealm)
