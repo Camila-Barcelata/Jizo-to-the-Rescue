@@ -63,6 +63,7 @@ public class theGAMEMANAGER : MonoBehaviour
                 break;
             case GameState.Cutscene:
                 // tell Enma's dialogue to play
+                Debug.Log("set game state to cutscene");
                 SceneManager.LoadScene("DayOverCutscene");
                 break;
             case GameState.Interview:

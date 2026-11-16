@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
   karmicMerit: 75
   Tengu: 0
-  Destination: 0
+  Destination: 1
   introLines:
   - character_text: This is your first fallen soul to judge, Bodhisattva Jizo.
     baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
@@ -85,7 +85,9 @@ MonoBehaviour:
       answers:
       - answer_text: Um.. have we met?
         nextID: aletter
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: aletter
@@ -97,7 +99,9 @@ MonoBehaviour:
         nextID: whatsinside
       - answer_text: "Can\u2019t you talk a little quieter? "
         nextID: sassyboy
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: whatsinside
@@ -107,7 +111,9 @@ MonoBehaviour:
       answers:
       - answer_text: Is it from me?
         nextID: youremember
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: sassyboy
@@ -117,7 +123,9 @@ MonoBehaviour:
       answers:
       - answer_text: What makes you think that...
         nextID: readit
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: youremember
@@ -127,7 +135,9 @@ MonoBehaviour:
       answers:
       - answer_text: Just show me it already, sir.
         nextID: apologizing
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: readit
@@ -137,7 +147,9 @@ MonoBehaviour:
       answers:
       - answer_text: Just show me it already, sir.
         nextID: apologizing
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: apologizing
@@ -147,7 +159,9 @@ MonoBehaviour:
       answers:
       - answer_text: '[Take the note]'
         nextID: thenote
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: thenote
@@ -159,7 +173,9 @@ MonoBehaviour:
         nextID: trumpets
       - answer_text: Wait a second... are you...
         nextID: humblebrag
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: trumpets
@@ -169,7 +185,9 @@ MonoBehaviour:
       answers:
       - answer_text: '[Keep listening]'
         nextID: trumpets2
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: trumpets2
@@ -179,7 +197,9 @@ MonoBehaviour:
       answers:
       - answer_text: '[Keep listening]'
         nextID: trumpets3
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: trumpets3
@@ -189,7 +209,9 @@ MonoBehaviour:
       answers:
       - answer_text: "Sir, I couldn\u2019t even send you to the Pure Land if I wanted to."
         nextID: nopureland
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: humblebrag
@@ -201,7 +223,9 @@ MonoBehaviour:
         nextID: skiptheformalities
       - answer_text: "Didn\u2019t you try to pull this same stunt when Enma sent you here the first time?"
         nextID: trickster
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: skiptheformalities
@@ -211,7 +235,9 @@ MonoBehaviour:
       answers:
       - answer_text: '[Keep listening]'
         nextID: skiptheformalities2
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: skiptheformalities2
@@ -221,7 +247,9 @@ MonoBehaviour:
       answers:
       - answer_text: (It doesn't seem like I'll get more information.)
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: trickster
@@ -231,7 +259,9 @@ MonoBehaviour:
       answers:
       - answer_text: '[Keep listening]'
         nextID: trickster2
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: trickster2
@@ -241,7 +271,9 @@ MonoBehaviour:
       answers:
       - answer_text: "I feel like you don\u2019t understand how this works."
         nextID: highmerit
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: highmerit
@@ -251,7 +283,9 @@ MonoBehaviour:
       answers:
       - answer_text: "You don\u2019t have to be a good person to have high karmic merit."
         nextID: rectangles
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: rectangles
@@ -263,7 +297,9 @@ MonoBehaviour:
         nextID: squares
       - answer_text: So what did you do in life that gave you all that merit?
         nextID: gooddeeds
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: squares
@@ -273,7 +309,9 @@ MonoBehaviour:
       answers:
       - answer_text: '[Keep listening]'
         nextID: squares2
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: squares2
@@ -283,7 +321,9 @@ MonoBehaviour:
       answers:
       - answer_text: '[Keep listening]'
         nextID: squares3
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: squares3
@@ -293,7 +333,9 @@ MonoBehaviour:
       answers:
       - answer_text: (I don't think I'll get any more information.)
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: gooddeeds
@@ -303,7 +345,9 @@ MonoBehaviour:
       answers:
       - answer_text: You did all that stuff?
         nextID: ofcourse
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: ofcourse
@@ -313,7 +357,9 @@ MonoBehaviour:
       answers:
       - answer_text: "You didn\u2019t just hire people to do those things in your name?"
         nextID: explain
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: explain
@@ -323,7 +369,9 @@ MonoBehaviour:
       answers:
       - answer_text: "You\u2019ve explained enough through your actions. "
         nextID: ending
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: ending
@@ -333,16 +381,32 @@ MonoBehaviour:
       answers:
       - answer_text: '(It seems I won''t get any more information.) '
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
   - key: nopureland
     value:
       character_text: ...what?
-      nodeID: nopureland
+      nodeID: what
       answers:
-      - answer_text: (what)
+      - answer_text: ...
+        nextID: what
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
+      mouthSprite: {fileID: 0}
+  - key: what
+    value:
+      character_text: ...what?
+      nodeID: what
+      answers:
+      - answer_text: '[Return]'
         nextID: thenote
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}

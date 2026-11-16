@@ -3541,15 +3541,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2264151, g: 0.16019934, b: 0.16019934, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 588722548114333327, guid: f667a453a08754166b41c130e55109cd, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5111,6 +5111,10 @@ MonoBehaviour:
   mouthImage: {fileID: 2040442504}
   answerButton1: {fileID: 1377646215}
   answerButton2: {fileID: 664569147}
+  answerButton1Image: {fileID: 1377646216}
+  answerButton2Image: {fileID: 664569148}
+  defaultButtonSprite: {fileID: -4816990551846497349, guid: ca3a74d49e2974f4abca480a489860fc, type: 3}
+  greyedButtonSprite: {fileID: -1065121346956897197, guid: 7564e01438d12b84f9db7ecb4ef6a837, type: 3}
   answerText1: {fileID: 971141624}
   answerText2: {fileID: 1975803337}
   interviewController: {fileID: 614948999}
@@ -5260,7 +5264,7 @@ GameObject:
   - component: {fileID: 1882972423}
   - component: {fileID: 1882972422}
   m_Layer: 5
-  m_Name: Button
+  m_Name: JudgementToggleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

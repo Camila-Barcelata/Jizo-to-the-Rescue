@@ -22,7 +22,7 @@ public class CutsceneDayOver : MonoBehaviour
 
     void Awake()
     {
-
+        Debug.Log("awoke cutscene day over script");
         enmaDialogueObject = theGAMEMANAGER.Instance.enmaDialogueObjects[(theGAMEMANAGER.Instance.day)-1];
         lines = enmaDialogueObject.introLines;
         continueButton.onClick.AddListener(NextLine);

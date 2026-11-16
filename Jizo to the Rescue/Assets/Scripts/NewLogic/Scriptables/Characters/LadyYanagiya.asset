@@ -63,7 +63,9 @@ MonoBehaviour:
         nextID: NobleBlood
       - answer_text: What has transpired that you believe warrants my compassion?
         nextID: TaleLord
-      CountsTowardsEnding: 0
+      previousID: []
+      markedGrey: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
   - key: NobleBlood
@@ -73,7 +75,9 @@ MonoBehaviour:
       answers:
       - answer_text: (Seems like I won't get anymore answers here)
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      previousID: []
+      markedGrey: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
   - key: TaleLord
@@ -85,7 +89,9 @@ MonoBehaviour:
         nextID: BeautifulYanagiya
       - answer_text: Who was the man?
         nextID: HandsomeGuy
-      CountsTowardsEnding: 0
+      previousID: []
+      markedGrey: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
   - key: BeautifulYanagiya
@@ -95,7 +101,9 @@ MonoBehaviour:
       answers:
       - answer_text: "If you\u2019re so beautiful, why the lack of suitors?"
         nextID: YanagiyaFrus
-      CountsTowardsEnding: 0
+      previousID: []
+      markedGrey: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
   - key: HandsomeGuy
@@ -105,7 +113,9 @@ MonoBehaviour:
       answers:
       - answer_text: What did he say?
         nextID: BoldMan
-      CountsTowardsEnding: 0
+      previousID: []
+      markedGrey: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
   - key: YanagiyaFrus
@@ -115,7 +125,9 @@ MonoBehaviour:
       answers:
       - answer_text: (Seems like I won't get anymore answers here)
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      previousID: []
+      markedGrey: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
   - key: BoldMan
@@ -127,7 +139,9 @@ MonoBehaviour:
         nextID: StrangeOccur
       - answer_text: Did you know him?
         nextID: ending
-      CountsTowardsEnding: 0
+      previousID: []
+      markedGrey: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
   - key: StrangeOccur
@@ -137,7 +151,9 @@ MonoBehaviour:
       answers:
       - answer_text: (Let me ask her some more questions)
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      previousID: []
+      markedGrey: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
   - key: ending
@@ -147,6 +163,8 @@ MonoBehaviour:
       answers:
       - answer_text: (Let me ask her some more questions)
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      previousID: []
+      markedGrey: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}

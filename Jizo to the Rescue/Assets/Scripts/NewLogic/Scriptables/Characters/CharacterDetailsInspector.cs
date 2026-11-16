@@ -32,7 +32,10 @@ public class Node
     public string character_text;
     public string nodeID;
     public List<Answer> answers = new();
-    public bool CountsTowardsEnding;
+    //public List<string> previousIDs; // the node that's before this node. is a list because sometimes nodes have more than 2 parents. 0= left, 1= right
+    public bool markedGrey; //if they've been marked grey in the scene -- has the player explored all the options this node leads to?
+    public bool isALastNode; //if it's an end of a branch/tree, NOT only for nodes with "ending" as their key
+    public bool CountsTowardsEnding = true; //true by default, can change in inspector
  
     [Header("Sprites")]
     public Sprite baseSprite;
