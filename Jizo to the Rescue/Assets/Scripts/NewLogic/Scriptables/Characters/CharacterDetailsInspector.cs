@@ -9,7 +9,7 @@ public class CharacterDetailsInspector : ScriptableObject
     public float karmicMerit;
  
     [Header("Tengu Status")]
-    public bool Tengu;
+    public bool isTengu;
  
     [Header("Realm")]
     public Realm Destination;
@@ -47,4 +47,14 @@ public class Answer
 {
     public string answer_text;
     public string nextID;
+}
+
+[Serializable]
+public class CaseFile
+{
+    public Sprite portrait;
+    public string characterName;
+    public int characterAge;
+    public int karmicMerit;
+    public string reasons;
 }

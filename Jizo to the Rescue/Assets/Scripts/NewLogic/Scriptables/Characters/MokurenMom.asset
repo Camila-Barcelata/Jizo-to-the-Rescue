@@ -72,7 +72,9 @@ MonoBehaviour:
         nextID: Compassion
       - answer_text: "Ma\u2019am... I can\u2019t let you go into the Human Realm."
         nextID: WheezeSound
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: Compassion
@@ -82,7 +84,9 @@ MonoBehaviour:
       answers:
       - answer_text: Go on.
         nextID: BirthSon
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: BirthSon
@@ -94,7 +98,9 @@ MonoBehaviour:
         nextID: Kushin
       - answer_text: How did he become so powerful?
         nextID: HusbandKar
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: Kushin
@@ -104,7 +110,9 @@ MonoBehaviour:
       answers:
       - answer_text: Interesting...(go back)
         nextID: BirthSon
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: HusbandKar
@@ -114,7 +122,9 @@ MonoBehaviour:
       answers:
       - answer_text: But he is no ordinary monk.
         nextID: PrayerPower
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: PrayerPower
@@ -126,7 +136,9 @@ MonoBehaviour:
         nextID: templepower
       - answer_text: How kind of you.
         nextID: Diffdo
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: Diffdo
@@ -136,7 +148,9 @@ MonoBehaviour:
       answers:
       - answer_text: ......
         nextID: SonDie
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: templepower
@@ -146,7 +160,9 @@ MonoBehaviour:
       answers:
       - answer_text: What form is that?
         nextID: CoughGaki
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: SonDie
@@ -158,7 +174,9 @@ MonoBehaviour:
         nextID: ending
       - answer_text: "I still can\u2019t send you to the Human Realm."
         nextID: NoSecond
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: ending
@@ -168,7 +186,9 @@ MonoBehaviour:
       answers:
       - answer_text: I see...
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: NoSecond
@@ -178,7 +198,9 @@ MonoBehaviour:
       answers:
       - answer_text: (Let's think about this)
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: CoughGaki
@@ -188,7 +210,9 @@ MonoBehaviour:
       answers:
       - answer_text: Who described it as that?
         nextID: MentorMean
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: MentorMean
@@ -198,7 +222,9 @@ MonoBehaviour:
       answers:
       - answer_text: That guy...
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: WheezeSound
@@ -208,7 +234,9 @@ MonoBehaviour:
       answers:
       - answer_text: ...
         nextID: Powerful
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: Powerful
@@ -218,7 +246,9 @@ MonoBehaviour:
       answers:
       - answer_text: Are you threatening a Bodhisattva?
         nextID: NoLord
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
   - key: NoLord
@@ -228,6 +258,8 @@ MonoBehaviour:
       answers:
       - answer_text: '... '
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}

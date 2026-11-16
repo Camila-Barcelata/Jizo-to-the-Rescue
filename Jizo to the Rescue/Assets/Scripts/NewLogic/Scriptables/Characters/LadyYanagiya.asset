@@ -63,8 +63,8 @@ MonoBehaviour:
         nextID: NobleBlood
       - answer_text: What has transpired that you believe warrants my compassion?
         nextID: TaleLord
-      previousID: []
       markedGrey: 0
+      isALastNode: 0
       CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
@@ -75,8 +75,8 @@ MonoBehaviour:
       answers:
       - answer_text: (Seems like I won't get anymore answers here)
         nextID: IntroductionText
-      previousID: []
       markedGrey: 0
+      isALastNode: 1
       CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
@@ -89,8 +89,8 @@ MonoBehaviour:
         nextID: BeautifulYanagiya
       - answer_text: Who was the man?
         nextID: HandsomeGuy
-      previousID: []
       markedGrey: 0
+      isALastNode: 0
       CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
@@ -101,8 +101,8 @@ MonoBehaviour:
       answers:
       - answer_text: "If you\u2019re so beautiful, why the lack of suitors?"
         nextID: YanagiyaFrus
-      previousID: []
       markedGrey: 0
+      isALastNode: 0
       CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
@@ -113,8 +113,8 @@ MonoBehaviour:
       answers:
       - answer_text: What did he say?
         nextID: BoldMan
-      previousID: []
       markedGrey: 0
+      isALastNode: 0
       CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
@@ -125,8 +125,8 @@ MonoBehaviour:
       answers:
       - answer_text: (Seems like I won't get anymore answers here)
         nextID: IntroductionText
-      previousID: []
       markedGrey: 0
+      isALastNode: 1
       CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
@@ -138,33 +138,93 @@ MonoBehaviour:
       - answer_text: Why did you say you were a fool?
         nextID: StrangeOccur
       - answer_text: Did you know him?
-        nextID: ending
-      previousID: []
+        nextID: RatTale
       markedGrey: 0
+      isALastNode: 0
       CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
   - key: StrangeOccur
     value:
-      character_text: "Well, during the wedding ceremony\u2026 I kept noticing strange occurrences around the venue. Tiger-like dogs lurching from corners, mice cooking the very food we were eating\u2026 It was all very impure! That\u2019s when I knew all wasn\u2019t as it seemed."
-      nodeID: StrangeOccur
+      character_text: "Well, during the wedding ceremony\u2026 I kept noticing strange occurrences... "
+      nodeID: StangeOccur
       answers:
-      - answer_text: (Let me ask her some more questions)
-        nextID: IntroductionText
-      previousID: []
+      - answer_text: '[Keep listening]'
+        nextID: StangeOccur2
       markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: StangeOccur2
+    value:
+      character_text: "Tiger-like dogs lurching from corners, rats cooking the very food we were eating\u2026 It was all very impure! "
+      nodeID: StrangeOccur2
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: StrangeOccur3
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: StrangeOccur3
+    value:
+      character_text: "That\u2019s when I knew all wasn\u2019t as it seemed. "
+      nodeID: StrangeOccur3
+      answers:
+      - answer_text: (Let me ask her some more questions.)
+        nextID: IntroductionText
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: RatTale
+    value:
+      character_text: "Not at first. But when I realized the truth of his home, it was like I could see with a fresh pair of eyes. He was no man\u2026 "
+      nodeID: RatTale
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: RatTale2
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: RatTale2
+    value:
+      character_text: He was a rat! Without sparing a second, I used one of the strings from my koto to spring a trap on him.
+      nodeID: RatTale2
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: RatTale3
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
+      mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
+  - key: RatTale3
+    value:
+      character_text: 'I saw him start to gnaw through it, but I had turned my back and started to run before I saw much more. '
+      nodeID: RatTale3
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: ending
+      markedGrey: 0
+      isALastNode: 0
       CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}
   - key: ending
     value:
-      character_text: "Not at first. But when I realized the truth of his home, it was like I could see with a fresh pair of eyes. He was no man\u2026 He was a mouse! Without sparing a second, I used one of the strings from my koto to spring a trap on him. I saw him start to gnaw through it, but I had turned my back and started to run before I saw much more. And now\u2026 I\u2019m here."
-      nodeID: ending
+      character_text: "There\u2019s no way a beautiful lady like me could me married to vermin like him!"
+      nodeID: RatTale4
       answers:
-      - answer_text: (Let me ask her some more questions)
+      - answer_text: (It seems like her story's over.)
         nextID: IntroductionText
-      previousID: []
       markedGrey: 0
+      isALastNode: 1
       CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}
       mouthSprite: {fileID: 7482667652216324306, guid: a21a1bfaf0db54809a4ba1376d3ded8f, type: 3}

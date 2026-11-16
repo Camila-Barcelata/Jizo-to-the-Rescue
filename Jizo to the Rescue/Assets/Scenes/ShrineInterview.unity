@@ -884,13 +884,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 293098462}
+  - component: {fileID: 293098463}
   m_Layer: 5
   m_Name: demons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &293098462
 RectTransform:
   m_ObjectHideFlags: 0
@@ -910,9 +911,27 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121.20007, y: -39.920715}
+  m_AnchoredPosition: {x: 0, y: 367}
   m_SizeDelta: {x: 291.15802, y: 116.41501}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &293098463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293098461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbdf93f94a25c547b04f979580dced9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  demons:
+  - {fileID: 1670655438}
+  - {fileID: 373903494}
+  - {fileID: 988481914}
+  aliveSprite: {fileID: -5293139701919625493, guid: 5eeb96d56ea144057a24acce30686e21, type: 3}
+  deadSprite: {fileID: 6000219935258799787, guid: 5d1a011decfc5c84d8f3cab21b2f29bf, type: 3}
 --- !u!1 &301930513
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,7 +3243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.964844, y: -7.92572}
+  m_AnchoredPosition: {x: -8.964905, y: -7.9257812}
   m_SizeDelta: {x: -404.482, y: -89.439}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989091594

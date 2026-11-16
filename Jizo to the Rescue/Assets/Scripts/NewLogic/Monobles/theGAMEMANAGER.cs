@@ -20,7 +20,7 @@ public class theGAMEMANAGER : MonoBehaviour
     public int day;
  
     [Header("Stats")]
-    public float reputationValue = 100;
+    public float reputationValue = 50;
     public int lives = 3;
     public int yokaiSentIncorrectly;
     public int soulsSentToHell;

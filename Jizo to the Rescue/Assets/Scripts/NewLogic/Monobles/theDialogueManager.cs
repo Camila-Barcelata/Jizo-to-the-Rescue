@@ -156,10 +156,13 @@ public class DialogueManager : MonoBehaviour
         }
  
         // on the ending node, and been through every marked node -> the controller plays the final remarks
-        if (node.nodeID == "ending" && visited.Count == countEnd.Count)
+        //if (node.nodeID == "ending" && visited.Count == countEnd.Count)
+        if (visited.Count == countEnd.Count)
         {
-            Debug.Log(visited.Count + " " + countEnd.Count);
-            interviewController.ReachedEnding();
+            
+            Debug.Log("visited and count end comparison: " + visited.Count + " " + countEnd.Count);
+            answerButton1.onClick.AddListener(interviewController.ReachedEnding);
+            answerButton2.onClick.AddListener(interviewController.ReachedEnding);
             return;
         }
     }

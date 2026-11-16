@@ -53,9 +53,7 @@ public class theInterviewScontroller : MonoBehaviour
 
  
     void Awake()
-
     {
-
         if (interviewControllerInst == null)
         {
             interviewControllerInst = this;
@@ -185,9 +183,9 @@ public class theInterviewScontroller : MonoBehaviour
         // play the dialogue for where they were sent
         if (choice == Realm.Hell)
         {
-            Debug.Log("Lady Yanagiya Realm" + person.Destination);
+            // Debug.Log("persons Realm" + person.Destination);
             person.Destination = Realm.Hell;
-            Debug.Log("Lady Yanagiya Realm" + person.Destination);
+            // Debug.Log("persons Realm" + person.Destination);
 
             cutscenePlayer.Play(person.hellLines);
             

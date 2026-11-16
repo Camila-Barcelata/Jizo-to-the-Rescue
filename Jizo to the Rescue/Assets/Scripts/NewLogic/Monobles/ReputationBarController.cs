@@ -19,9 +19,6 @@ public class ReputationBarController : MonoBehaviour
         High, Mid, Low
     }
 
-
-     
-
     void Update()
     {
         float reputationValue = theGAMEMANAGER.Instance.reputationValue;
@@ -31,14 +28,10 @@ public class ReputationBarController : MonoBehaviour
             if (!judgmentApplied) //added this just so it doesn't constantly update (just updates during judgment)
             {
                 judgmentApplied = true;
-
-                float NPCrep = theDayCYCLE.dayCycleInstance.currentPerson.karmicMerit;
-
-                Realm NPCrealm = theDayCYCLE.dayCycleInstance.currentPerson.Destination; 
-
-                float negativeMultiplier = GetMultiplier(NPCrep,NPCrealm);
-
-                theGAMEMANAGER.Instance.reputationValue = reputationValue + (NPCrep/2 * negativeMultiplier);
+                Debug.Log("Before tengu lives" + theGAMEMANAGER.Instance.lives);
+                CalculateStats(reputationValue);
+                HandleTenguLives();
+                Debug.Log("After tengu lives" + theGAMEMANAGER.Instance.lives);
 
             }
         }
@@ -50,22 +43,37 @@ public class ReputationBarController : MonoBehaviour
         if (newrepvalue > 101) {
             newrepvalue = 100;
         }
-
         slider.value = newrepvalue/100;
         theGAMEMANAGER.Instance.reputationValue = newrepvalue;
 
     }
 
+    void CalculateStats(float reputationValue)
+    {
+        float NPCrep = theDayCYCLE.dayCycleInstance.currentPerson.karmicMerit;
+        Realm NPCrealm = theDayCYCLE.dayCycleInstance.currentPerson.Destination; 
+        float negativeMultiplier = GetMultiplier(NPCrep,NPCrealm);
+
+        theGAMEMANAGER.Instance.reputationValue = reputationValue + (NPCrep/2 * negativeMultiplier);
+    }
+    void HandleTenguLives()
+    {
+        //didn't send tengu to hell
+        if(theDayCYCLE.dayCycleInstance.currentPerson.isTengu && theDayCYCLE.dayCycleInstance.currentPerson.Destination != Realm.Hell)
+        {
+            theGAMEMANAGER.Instance.lives -=1;
+        }
+    }
     public float GetMultiplier(float NPCrep, Realm NPCrealm)
     {
 
-        bool TenguStatus = theDayCYCLE.dayCycleInstance.currentPerson.Tengu;
+        bool TenguStatus = theDayCYCLE.dayCycleInstance.currentPerson.isTengu;
         
         if (TenguStatus){
-            return 0;
+            return -1;
         }
 
-        Tier tier = NPCTier(NPCrep);
+        Tier tier = GetNPCTier(NPCrep);
 
     
         if (NPCrealm == Realm.Human)
@@ -107,7 +115,7 @@ public class ReputationBarController : MonoBehaviour
     }
     
 
-    public Tier NPCTier(float NPCrep)
+    public Tier GetNPCTier(float NPCrep)
     {
         if (NPCrep>0 && NPCrep < 33){
             return Tier.Low;      
@@ -120,8 +128,6 @@ public class ReputationBarController : MonoBehaviour
         }
         return Tier.Low;
     }
-
-
 }
 
     

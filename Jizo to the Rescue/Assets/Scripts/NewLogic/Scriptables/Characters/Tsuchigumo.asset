@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Tsuchigumo
   m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
   karmicMerit: 66
-  Tengu: 0
-  Destination: 0
+  isTengu: 1
+  Destination: 1
   introLines:
   - character_text: "Yoo-hoo Jizo! It\u2019s nice so to see you. "
     baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
@@ -57,19 +57,23 @@ MonoBehaviour:
         nextID: luscioushair
       - answer_text: "Well, if it\u2019s a long story, perhaps you\u2019re right. But what else is there to do?"
         nextID: plentyoffun
-      CountsTowardsEnding: 0
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: luscioushair
     value:
       character_text: Very well. If you MUST know, I was minding my own business, combing my beautifully long, luscious hair, when a samurai suddenly attacked me!
-      nodeID: IntroductionText
+      nodeID: luscioushair
       answers:
       - answer_text: Well, why did he attack you?
         nextID: openeddoor
       - answer_text: "That\u2019s horrible!"
         nextID: nevermind
-      CountsTowardsEnding: 0
+      markedGrey: 1
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: plentyoffun
@@ -79,7 +83,9 @@ MonoBehaviour:
       answers:
       - answer_text: (...I don't think she'll give me more information)
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      markedGrey: 1
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: openeddoor
@@ -89,7 +95,9 @@ MonoBehaviour:
       answers:
       - answer_text: '[Keep listening]'
         nextID: openeddoor2
-      CountsTowardsEnding: 0
+      markedGrey: 1
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: openeddoor2
@@ -99,7 +107,9 @@ MonoBehaviour:
       answers:
       - answer_text: Why do you think you ended up here, in Hell?
         nextID: perfectbuddhist
-      CountsTowardsEnding: 0
+      markedGrey: 1
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: nevermind
@@ -109,7 +119,9 @@ MonoBehaviour:
       answers:
       - answer_text: Wanted to what?
         nextID: suspicioussilence
-      CountsTowardsEnding: 0
+      markedGrey: 1
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: suspicioussilence
@@ -119,7 +131,9 @@ MonoBehaviour:
       answers:
       - answer_text: (I think I've heard enough.)
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      markedGrey: 1
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: perfectbuddhist
@@ -129,7 +143,9 @@ MonoBehaviour:
       answers:
       - answer_text: '[Keep listening]'
         nextID: perfectbuddhist2
-      CountsTowardsEnding: 0
+      markedGrey: 1
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: perfectbuddhist2
@@ -139,7 +155,9 @@ MonoBehaviour:
       answers:
       - answer_text: '[Keep listening]'
         nextID: perfectbuddhist3
-      CountsTowardsEnding: 0
+      markedGrey: 1
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: perfectbuddhist3
@@ -151,7 +169,9 @@ MonoBehaviour:
         nextID: beautifulisasin
       - answer_text: 'It seems your story is fairly straightforward, then. Is there anything else you have to share with me? '
         nextID: worthyourwhile
-      CountsTowardsEnding: 0
+      markedGrey: 1
+      isALastNode: 0
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: beautifulisasin
@@ -161,7 +181,9 @@ MonoBehaviour:
       answers:
       - answer_text: (I think I've heard enough.)
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      markedGrey: 1
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
   - key: worthyourwhile
@@ -171,6 +193,8 @@ MonoBehaviour:
       answers:
       - answer_text: '[Keep listening]'
         nextID: worthyourwhile2
+      markedGrey: 1
+      isALastNode: 0
       CountsTowardsEnding: 0
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
@@ -181,6 +205,8 @@ MonoBehaviour:
       answers:
       - answer_text: (I think I've heard enough.)
         nextID: IntroductionText
-      CountsTowardsEnding: 0
+      markedGrey: 1
+      isALastNode: 1
+      CountsTowardsEnding: 1
       baseSprite: {fileID: -5787922849853237297, guid: 212e747dce7704249b8aef99323786fb, type: 3}
       mouthSprite: {fileID: 0}
