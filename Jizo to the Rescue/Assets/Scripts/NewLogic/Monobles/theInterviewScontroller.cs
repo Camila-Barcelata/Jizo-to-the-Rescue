@@ -27,12 +27,15 @@ public class theInterviewScontroller : MonoBehaviour
     [Header("Reset button after last words")]
     [SerializeField] Button resetButton;
  
-    [Header("Judgmentstuff")]
+    [Header("Judgment Stuff")]
     [SerializeField] Image Realmimage; //placeohlder for the sprites
     [SerializeField] GameObject nextButton;
     [SerializeField] Sprite hellSprite;
     [SerializeField] Sprite humanSprite;
     [SerializeField] Sprite heavenSprite;
+
+    [Header("CaseFile")]
+    [SerializeField] CaseFileController caseFile;
 
     public TMP_Text Daytext;
  
@@ -113,17 +116,19 @@ public class theInterviewScontroller : MonoBehaviour
     // Cutscene calls this whenever it runs out of lines
     public void CutsceneFinished() //i lowkey looked up list dialogue systems and how they get displayed
     {
-        if (stage == Stage.Intro)
+        switch(stage)
         {
-            startInterviewButton.gameObject.SetActive(true); // intro is over
-        }
-        else if (stage == Stage.FinalRemarks)
-        {
-            resetButton.gameObject.SetActive(true);  // final remarks are over
-        }
-        else if (stage == Stage.Judgment)
-        {
-            ShowJudgmentImage(); // judgment dialogue is over
+            case Stage.Intro:
+                startInterviewButton.gameObject.SetActive(true); // intro is over
+                GiveFile();
+                break;
+            case Stage.FinalRemarks:
+                resetButton.gameObject.SetActive(true);  // final remarks are over
+                break;
+
+            case Stage.Judgment:
+                ShowJudgmentImage(); // judgment dialogue is over
+                break;
         }
     }
  
@@ -150,6 +155,13 @@ public class theInterviewScontroller : MonoBehaviour
         else
             JudgementDisplay.gameObject.SetActive(true);
         
+    }
+
+    //called after intro lines are over. i think we should give this a cool sliding animation
+    public void GiveFile()
+    {
+        caseFile.SetCaseFileCharacter(person);
+        caseFile.gameObject.SetActive(true);
     }
 
     //what did the player click

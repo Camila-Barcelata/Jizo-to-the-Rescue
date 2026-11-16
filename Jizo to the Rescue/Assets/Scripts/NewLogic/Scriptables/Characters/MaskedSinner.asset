@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MaskedSinner
   m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
   karmicMerit: 75
-  Tengu: 0
+  isTengu: 0
   Destination: 1
   introLines:
   - character_text: This is your first fallen soul to judge, Bodhisattva Jizo.
@@ -410,3 +410,9 @@ MonoBehaviour:
       CountsTowardsEnding: 1
       baseSprite: {fileID: 3040590271621785640, guid: 8a0717a23ec2c4078960eef14d50f4c0, type: 3}
       mouthSprite: {fileID: 0}
+  caseFile:
+    portrait: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    characterName: Ado Matagoro
+    characterAge: 35
+    karmicMerit: 75
+    reasons: TBD

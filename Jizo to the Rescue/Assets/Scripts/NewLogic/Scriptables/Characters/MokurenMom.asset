@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f395e524722d44617a6d4bfd8d66ee5c, type: 3}
   m_Name: MokurenMom
   m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
-  karmicMerit: 0
-  Tengu: 1
+  karmicMerit: 56
+  isTengu: 0
   Destination: 3
   introLines:
   - character_text: Bodhisattva Jizo. I am Mokuren, a disciple of Buddha.
@@ -263,3 +263,9 @@ MonoBehaviour:
       CountsTowardsEnding: 1
       baseSprite: {fileID: 21300000, guid: 7dea8bdc66a774643be54315673e07bc, type: 3}
       mouthSprite: {fileID: 0}
+  caseFile:
+    portrait: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    characterName: Lady Kanrobon
+    characterAge: 53
+    karmicMerit: 56
+    reasons: gaki

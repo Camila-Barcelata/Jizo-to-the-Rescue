@@ -23,6 +23,8 @@ public class CharacterDetailsInspector : ScriptableObject
  
     [Header("FIRST NODE ID MUST BE IntroductionText also there should be one called ending")]
     [SerializeField] public Dictionary<string, Node> CharacterNodes = new();
+
+    [SerializeField] public CaseFile caseFile;
 }
  
 [Serializable]
