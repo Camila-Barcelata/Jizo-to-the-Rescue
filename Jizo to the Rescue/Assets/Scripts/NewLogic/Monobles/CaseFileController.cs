@@ -5,7 +5,7 @@ using TMPro;
 public class CaseFileController : MonoBehaviour
 {
     //display all the information of person
-    [SerializeField] CharacterDetailsInspector character;
+    CharacterDetailsInspector character;
 
     CaseFile caseFile;
 

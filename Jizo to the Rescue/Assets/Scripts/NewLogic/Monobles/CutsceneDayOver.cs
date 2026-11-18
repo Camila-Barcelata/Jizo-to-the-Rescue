@@ -14,24 +14,30 @@ public class CutsceneDayOver : MonoBehaviour
     [SerializeField] Button continueButton; // click to go to the next line
     
     //this is only serialized so you can view it in the inspector for debugging:
-    [SerializeField] EnmaDialogueObject enmaDialogueObject; //scriptable objs that represent enma's
+    [SerializeField] EnmaDialogueObject currEnmaDialogueObject; //scriptable objs that represent enma's
     // dialogue and gets passed in on a day by day basis from game manager
 
     List<CutsceneLine> lines;
     int index;
+    bool gotToFinalLine;
 
     void Awake()
     {
         Debug.Log("awoke cutscene day over script");
-        enmaDialogueObject = theGAMEMANAGER.Instance.enmaDialogueObjects[(theGAMEMANAGER.Instance.day)-1];
-        lines = enmaDialogueObject.introLines;
+        currEnmaDialogueObject = theGAMEMANAGER.Instance.enmaDialogueObjects[(theGAMEMANAGER.Instance.day)-1];
+        lines = currEnmaDialogueObject.introLines;
         continueButton.onClick.AddListener(NextLine);
+        gotToFinalLine = false; //reset for each day/scene reload
         //continueButton.gameObject.SetActive(false);
     }
 
     void Start()
     {
-        Play(lines);
+        //if there are intro lines
+        if(lines != null)
+        {
+            Play(lines); //play intro lines
+        } 
     }
 
     void Play(List<CutsceneLine> newLines)
@@ -64,12 +70,70 @@ public class CutsceneDayOver : MonoBehaviour
 
         if (index >= lines.Count)
             {
-                continueButton.gameObject.SetActive(false);
-                theGAMEMANAGER.Instance.day++;
-                SceneManager.LoadScene("ShrineInterview");
-                return;
+                if(gotToFinalLine)
+                {
+                    GoToInterviewScene();
+                    return;
+                }
+                else
+                {
+                    //change the lines to be the next lines
+                    lines = GetNextCutsceneLines();
+                    index = 0;
+                }
             }
 
         ShowLine();
+    }
+
+    List<CutsceneLine> GetNextCutsceneLines()
+    {
+        if(lines == currEnmaDialogueObject.introLines)
+        {
+            //evaulate 1st person's destination
+            if(theDayCYCLE.dayCycleInstance.dayPeople[0].Destination == Realm.Hell)
+            {
+                return currEnmaDialogueObject.person1BadLines;
+            } else
+            {
+                return currEnmaDialogueObject.person1GoodLines;
+            }
+        }
+        else if(lines == currEnmaDialogueObject.person1GoodLines || lines == currEnmaDialogueObject.person1BadLines) 
+        {
+            //evaluate 2nd person's destination
+            if(theDayCYCLE.dayCycleInstance.dayPeople[1].Destination == Realm.Hell)
+            {
+                return currEnmaDialogueObject.person2BadLines;
+            } else
+            {
+                return currEnmaDialogueObject.person2GoodLines;
+            }
+        }
+        else if (lines == currEnmaDialogueObject.person2GoodLines || lines == currEnmaDialogueObject.person2BadLines)
+        {
+            //evaluate 3rd person's destination
+            if(theDayCYCLE.dayCycleInstance.dayPeople[2].Destination == Realm.Hell)
+            {
+                return currEnmaDialogueObject.person3BadLines;
+            } else
+            {
+                return currEnmaDialogueObject.person3GoodLines;
+            }
+        }
+        else if(lines == currEnmaDialogueObject.person3GoodLines || lines == currEnmaDialogueObject.person3BadLines)
+        {
+            gotToFinalLine = true;
+            return currEnmaDialogueObject.finalLines;
+        }
+        Debug.Log("returned null cutscene lines");
+        return null;
+    }
+
+    void GoToInterviewScene()
+    {
+        continueButton.gameObject.SetActive(false);
+        theGAMEMANAGER.Instance.day++;
+        SceneManager.LoadScene("ShrineInterview");
     }
 }

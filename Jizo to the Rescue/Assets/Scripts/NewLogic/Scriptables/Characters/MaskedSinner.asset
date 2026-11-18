@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
   karmicMerit: 75
   isTengu: 0
-  Destination: 1
+  Destination: 0
   introLines:
   - character_text: This is your first fallen soul to judge, Bodhisattva Jizo.
     baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
     mouthSprite: {fileID: 0}
-  - character_text: "It will be up to you to decide where he will spend his next lifetime. Of course, after that, she\u2019ll return to the Human Realm."
+  - character_text: It will be up to you to decide where he will spend his next lifetime. Of course, after that, he'll return to the Human Realm.
     baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
     mouthSprite: {fileID: 0}
   - character_text: Depending on where you send him, your reputation in the Human Realm as a Bodhisattva will be impacted.

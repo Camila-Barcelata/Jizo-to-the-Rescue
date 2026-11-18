@@ -13,11 +13,109 @@ MonoBehaviour:
   m_Name: Day1EnmaDialogue
   m_EditorClassIdentifier: Assembly-CSharp::EnmaDialogueObject
   introLines:
-  - character_text: '"Good job on your first day!"'
-    baseSprite: {fileID: -4259985369460014451, guid: 433532da525554be4a6158b9168aa277, type: 3}
+  - character_text: Hello, Jizo.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
     mouthSprite: {fileID: 0}
-  finalLines: []
-  goodReputationLines: []
-  midReputationLines: []
-  badReputationLines: []
-  pureLandTipLines: []
+  finalLines:
+  - character_text: "Well, that\u2019s all the notes I have for your performance today. I have faith in you going forward, Jizo."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: " Starting tomorrow, I\u2019m going to allow you to send the interviewees who approach you to the Pure Land, which for our purposes works a little differently from the other realms."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Normally, when you keep someone in Hell or send someone to the Human Realm, you\u2019re only sending them there for a lifetime."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "They\u2019ll live their lifespan, accumulate their karma, and come back to be judged again."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "It\u2019s quite mundane isn\u2019t it?"
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: But when a soul reaches the Pure Land...
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "It\u2019s removed from the cycle completely. "
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: The Buddha encourages me to send everyone I can, Tengu withholding, to the Pure Land. I suggest you do the same.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Well... I suppose that\u2019s all we have to talk about."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: " I hope you\u2019re enjoying your duties so far. Truthfully... after so many millennia, I\u2019d be lying if I said it\u2019s not a tedious process for me."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: ...
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: But enough of my whining.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Good luck tomorrow, my friend.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person1BadLines:
+  - character_text: 'That was a bold choice of you to keep that masked fellow in Hell. '
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "I know the way he talked probably irked you, but... it doesn\u2019t mean he deserved that. "
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: You need to learn how to separate your emotions from your judgment, Jizo.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person1GoodLines:
+  - character_text: That was smart of you to send that masked fellow to the Human Realm.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: ' I know his demeanor likely enticed you to keep him here, but his high karmic merit means that was the right decision.'
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Good job, Jizo.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person2BadLines:
+  - character_text: Also, good job spotting the Tengu masquerading as that woman.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "For some reason, I\u2019ve found those beasts take a liking to imitating... temptresses."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Maybe that\u2019s something to look out for going forward."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person2GoodLines:
+  - character_text: You let a Tengu into the Human Realm today...
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "It\u2019s your first day, so don\u2019t think I\u2019m upset at you or anything like that."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Still, that mistake was a costly one. The Buddha told me to emphasize to you the importance of keeping them here.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: You can only afford to miss one more Tengu. Any more... and I may be forced to remove you from this position, as much as I hate to say it.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person3BadLines:
+  - character_text: Hm... do you really think Lady Yanagiya deserved to stay here?
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "I suppose she was quite vain, but what noble wouldn\u2019t be? "
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Make sure you\u2019re listening closely to what they\u2019ve done in their past lifetime."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person3GoodLines:
+  - character_text: I think sending that Yanagiya woman back to the Human Realm was the smart call.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "She was vain, sure, but she didn\u2019t necessarily do anything egregiously against the Buddhist principles."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Though I would like to know more about her story... tricked by a mouse? How absurd.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
