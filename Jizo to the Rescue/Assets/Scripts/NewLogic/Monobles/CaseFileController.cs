@@ -17,7 +17,6 @@ public class CaseFileController : MonoBehaviour
         if(character != null)
         {
             caseFile = character.caseFile;
-            portraitImage.sprite = caseFile.portrait;
 
             string displayStr = caseFile.characterName + "\n"+ "Age: " + 
             caseFile.characterAge + "\n" +"Karmic Merit " + caseFile.karmicMerit

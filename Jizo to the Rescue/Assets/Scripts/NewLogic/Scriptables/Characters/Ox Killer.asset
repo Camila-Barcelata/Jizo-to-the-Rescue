@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f395e524722d44617a6d4bfd8d66ee5c, type: 3}
+  m_Name: Ox Killer
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
+  karmicMerit: 68
+  isTengu: 0
+  Destination: 0
+  introLines:
+  - character_text: Oh, Boddhisattva Jizo, please spare me!
+    baseSprite: {fileID: -2685202389345621323, guid: 826dfebe57c5341fb94314da88fc5f54, type: 3}
+    mouthSprite: {fileID: 0}
+  finalLines:
+  - character_text: I have told you my life story, and now you know why I am here.
+    baseSprite: {fileID: 0}
+    mouthSprite: {fileID: 0}
+  - character_text: ' I may have once worshiped false gods, and violated the Buddhist precepts in their name, but I have done everything within my power to mend my foolish ways!'
+    baseSprite: {fileID: 0}
+    mouthSprite: {fileID: 0}
+  hellLines:
+  - character_text: ' ....I understand, Boddhisattva. I never should have worshiped Chinese gods in the first place. '
+    baseSprite: {fileID: 0}
+    mouthSprite: {fileID: 0}
+  humanLines:
+  - character_text: 'I shall! My dedication to Buddhism in my first life will pale in comparison to my next. Thank you, Boddhisattva Jizo! '
+    baseSprite: {fileID: 0}
+    mouthSprite: {fileID: 0}
+  heavenLines:
+  - character_text: Thank you, thank you, THANK YOU, most glorious, wonderful Boddhisattva! I promise you will not regret this decision.
+    baseSprite: {fileID: 0}
+    mouthSprite: {fileID: 0}
+  CharacterNodes:
+  - key: IntroductionText
+    value:
+      character_text: I may have worshiped false gods early on, but I promise you I have mended my ways!
+      nodeID: IntroductionText
+      answers:
+      - answer_text: False gods? What are you talking about?
+        nextID: familytothrive
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: familytothrive
+    value:
+      character_text: Oh, Boddhisattva Jizo! I foolishly spent the first part of my life worshipping Chinese gods....
+      nodeID: familytothrive
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: familytothrive2
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: familytothrive2
+    value:
+      character_text: They told me I must sacrifice an oxen every year if I wanted my family to thrive....
+      nodeID: familytothrive2
+      answers:
+      - answer_text: Sacrifice an oxen!
+        nextID: violationofprecepts
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: violationofprecepts
+    value:
+      character_text: ' I know....to kill any animal is clearly a  violation of Buddhist precepts.'
+      nodeID: violationofprecepts
+      answers:
+      - answer_text: ...
+        nextID: hearmeout
+      - answer_text: "But it sounds like you weren\u2019t Buddhist at the time..."
+        nextID: buddhisttemple
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: hearmeout
+    value:
+      character_text: Yes, this is why I stand before you now.
+      nodeID: hearmeout
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: hearmeout2
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: hearmeout2
+    value:
+      character_text: But I promise I have mended my ways! If you only hear me out, I promise I can explain everything.
+      nodeID: hearmeout2
+      answers:
+      - answer_text: (It seems I won't get any more information here.)
+        nextID: violationofprecepts
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: buddhisttemple
+    value:
+      character_text: ' I was not. But this has changed! '
+      nodeID: buddhisttemple
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: buddhisttemple2
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: buddhisttemple2
+    value:
+      character_text: 'My home has now become a glorious Buddhist temple, and I have saved hundreds upon hundreds of animals from captivity. '
+      nodeID: buddhisttemple2
+      answers:
+      - answer_text: ...Perhaps arrogance was the trait that landed you here?
+        nextID: arrogancelandedyouhere
+      - answer_text: How did you go from sacrificing oxen to saving them?
+        nextID: dreamaboutcows
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: arrogancelandedyouhere
+    value:
+      character_text: Oh, pardon me! I just tend to get a little excited about my conversion to Buddhism
+      nodeID: arrogancelandedyouhere
+      answers:
+      - answer_text: (It seems I won't get any more information here.)
+        nextID: buddhisttemple2
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: dreamaboutcows
+    value:
+      character_text: Well, I once grew terribly sick...and then I had a dream! About cows!
+      nodeID: dreamaboutcows
+      answers:
+      - answer_text: Cows?
+        nextID: respectanddignity
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: respectanddignity
+    value:
+      character_text: Yes, cows! I was sitting in a field filled with oxen.
+      nodeID: respectanddignity
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: respectanddignity2
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: respectanddignity2
+    value:
+      character_text: Then, one of them approached me and licked my cheek.
+      nodeID: respectanddignity2
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: respectanddignity3
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: respectanddignity3
+    value:
+      character_text: I have never felt so welcomed, so at peace.
+      nodeID: respectanddignity3
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: respectanddignity4
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: respectanddignity4
+    value:
+      character_text: I finally realized that the oxen I had been sacrificing were no mindless beasts, but beings deserving of respect and dignity.
+      nodeID: respectanddignity4
+      answers:
+      - answer_text: Took you long enough...
+        nextID: secondchangeending
+      - answer_text: And what did you do once you woke up?
+        nextID: onceyouwokeupending
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: secondchanceending
+    value:
+      character_text: ...Once again, I apologize, O great Boddhisattva.
+      nodeID: secondchanceending
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: secondchangeending2
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: secondchanceending2
+    value:
+      character_text: In an effort to make up for my foolishness, I spent the remainder of my life saving every animal I could from captivity.
+      nodeID: secondchanceending2
+      answers:
+      - answer_text: '[Keep listening]'
+        nextID: secondchangeending3
+      markedGrey: 0
+      isALastNode: 0
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: secondchanceending3
+    value:
+      character_text: I know the sin I committed was unforgivable, but please consider giving me a second chance.
+      nodeID: secondchanceending3
+      answers:
+      - answer_text: (It seems I won't get any more information here.)
+        nextID: respectanddignity4
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  - key: ending
+    value:
+      character_text: I converted to Buddhism, and spent the rest of my life saving every animal I could.
+      nodeID: ending
+      answers:
+      - answer_text: (It seems I won't get any more information here.)
+        nextID: IntroductionText
+      markedGrey: 0
+      isALastNode: 1
+      CountsTowardsEnding: 1
+      baseSprite: {fileID: 0}
+      mouthSprite: {fileID: 0}
+  caseFile:
+    characterName: Ox Killer
+    characterAge: 93
+    karmicMerit: 68
+    reasons: A rich and powerful lord who once sacrificed oxen in the name of Chinese gods, after suffering from an intense bout of sickness, he converted to Buddhism and spent the rest of his life saving animals from captivity.

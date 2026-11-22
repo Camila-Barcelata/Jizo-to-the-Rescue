@@ -54,9 +54,8 @@ public class Answer
 [Serializable]
 public class CaseFile
 {
-    public Sprite portrait;
     public string characterName;
-    public int characterAge;
+    public string characterAge;
     public int karmicMerit;
     public string reasons;
 }
