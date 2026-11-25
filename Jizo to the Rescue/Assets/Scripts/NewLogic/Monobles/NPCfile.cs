@@ -14,7 +14,7 @@ public class NPCfile : MonoBehaviour
     [SerializeField] private Image scrollDisplay;
 
     [SerializeField] private TMP_Text textbox;
-    CharacterDetailsInspector person = theDayCYCLE.dayCycleInstance.currentPerson;
+    //CharacterDetailsInspector person = theDayCYCLE.dayCycleInstance.currentPerson;
 
     public void NPCfileDisplay()
     {

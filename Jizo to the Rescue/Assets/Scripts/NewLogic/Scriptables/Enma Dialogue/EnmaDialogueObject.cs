@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "EnmaDialogueObject", menuName = "Scriptable Objects/EnmaDialogueObject")]
 public class EnmaDialogueObject : ScriptableObject
@@ -17,14 +18,4 @@ public class EnmaDialogueObject : ScriptableObject
     public List<CutsceneLine> person3GoodLines = new();
 
 
-    [Header("Pop-Up Tutorial Dialogue")]
-    //each "node" has an icon, the text, and the associated UI object
-    public List<PopUpNode> tutorialLines = new();
-
-    public class PopUpNode
-    {
-        public string tutorialText;
-        public Sprite tutorialIcon;
-        public GameObject UIpointedAt;
-    }
 }

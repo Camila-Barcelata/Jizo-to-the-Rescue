@@ -3,7 +3,8 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
- 
+using Unity.Properties;
+
 // Runs the order of one interview:
 // intro cutscene -> Start Interview button -> nodes
 // all marked nodes visited + ending node -> final remarks-> Reset button -> back to the intro
@@ -36,6 +37,8 @@ public class theInterviewScontroller : MonoBehaviour
 
     [Header("CaseFile")]
     [SerializeField] CaseFileController caseFile;
+
+    [SerializeField] helpButton helpButton2;  
 
     public TMP_Text Daytext;
  
@@ -137,6 +140,14 @@ public class theInterviewScontroller : MonoBehaviour
         startInterviewButton.gameObject.SetActive(false);
         stage = Stage.Nodes;
         dialogueManager.StartDialogue(person);
+
+        Debug.Log("The check");
+        if (theDayCYCLE.dayCycleInstance.currentPerson == theDayCYCLE.dayCycleInstance.dayPeople[0])
+        {
+            helpButton2.StartTutorial();
+        }
+        
+
     }
  
     void ResetClicked()

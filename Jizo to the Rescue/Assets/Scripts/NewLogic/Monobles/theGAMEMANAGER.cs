@@ -14,7 +14,7 @@ public class theGAMEMANAGER : MonoBehaviour
     // [SerializeField] currentPerson;
     public List<CharacterDetailsInspector> peopleVisited;
 
-    //different objs for each day. elem 0 = day1:
+
     public List<EnmaDialogueObject> enmaDialogueObjects;
  
     public int day;
@@ -80,6 +80,12 @@ public class theGAMEMANAGER : MonoBehaviour
                 break;
         }
     }
+
+    public void TriggerGameOver()
+        {
+            //loads gameover
+            SceneManager.LoadScene("GameOver");
+        }
  
     public List<CharacterDetailsInspector> SelectInterviewees()
     {
