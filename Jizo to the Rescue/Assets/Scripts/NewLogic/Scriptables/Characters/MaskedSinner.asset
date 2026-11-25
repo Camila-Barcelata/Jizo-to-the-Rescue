@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MaskedSinner
   m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
   karmicMerit: 75
-  isTengu: 0
+  isTengu: 1
   Destination: 0
   introLines:
   - character_text: This is your first fallen soul to judge, Bodhisattva Jizo.

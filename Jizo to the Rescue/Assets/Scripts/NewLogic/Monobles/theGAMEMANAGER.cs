@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
- 
+using UnityEngine.Android;
+
 public class theGAMEMANAGER : MonoBehaviour
 {
     public static theGAMEMANAGER Instance;
@@ -26,6 +27,9 @@ public class theGAMEMANAGER : MonoBehaviour
     public int soulsSentToHell;
     public int soulsSentToHuman;
     public int soulsSentToHeaven;
+
+
+    public string ExitReason;
  
     void Awake()
     {
@@ -40,7 +44,21 @@ public class theGAMEMANAGER : MonoBehaviour
             return;
         }
     }
+    
+    public void resetGameManager()
+    {
+        reputationValue = 50;
+        lives = 3;
+        yokaiSentIncorrectly=0;
+        soulsSentToHell=0;
+        soulsSentToHuman=0;
+        soulsSentToHeaven=0;
 
+        foreach (CharacterDetailsInspector character in characters)
+        {
+            character.Destination= Realm.Unjudged;
+        }
+    }
 
     public void StartDay()
     {
@@ -77,6 +95,7 @@ public class theGAMEMANAGER : MonoBehaviour
             case GameState.GameEnding:
                 break;
             case GameState.Gameover:
+                TriggerGameOver();
                 break;
         }
     }
@@ -152,16 +171,23 @@ public class theGAMEMANAGER : MonoBehaviour
  
         if (lives <= 0)
         {
+            ExitReason = "tengulives";
             SetGameState(GameState.Gameover);
+            return;
         }
-        //this should increment days and do a new cycle select interviews
+        if (reputationValue <= 0)
+        {
+            ExitReason = "reputationValue";
+            SetGameState(GameState.Gameover);
+            return;
+        }
+        else
+        {
+           SetGameState(GameState.Cutscene);
+        }
+
     }
 
-    public void SwitchToCutscene()
-    {
-        //called in the button in the stat review menu
-        SetGameState(GameState.Cutscene);
-    }
 }
  
 public enum GameState

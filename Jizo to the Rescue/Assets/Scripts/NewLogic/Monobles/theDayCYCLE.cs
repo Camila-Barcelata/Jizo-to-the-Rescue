@@ -36,7 +36,13 @@ public class theDayCYCLE : MonoBehaviour
         reputationValText.text = "Reputation left: " + theGAMEMANAGER.Instance.reputationValue;
         statsText.text = "People reincarnated to the Hell Realm: " + theGAMEMANAGER.Instance.soulsSentToHell +  
                         "\nPeople reincarnated back as a Human: " + theGAMEMANAGER.Instance.soulsSentToHuman + 
-                        "\nPeople reincarnated into the Pure Land: " + theGAMEMANAGER.Instance.soulsSentToHeaven;          
+                        "\nPeople reincarnated into the Pure Land: " + theGAMEMANAGER.Instance.soulsSentToHeaven;         
+    }
+
+    public void OnStatsNextClicked()
+    {
+        statsReviewPanel.SetActive(false);
+        theGAMEMANAGER.Instance.AfterStatReview();
     }
 
     // GameManager calls this at the start of a day

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f395e524722d44617a6d4bfd8d66ee5c, type: 3}
   m_Name: LadyYanagiya
   m_EditorClassIdentifier: Assembly-CSharp::CharacterDetailsInspector
-  karmicMerit: 45
-  isTengu: 0
+  karmicMerit: 70
+  isTengu: 1
   Destination: 0
   introLines:
   - character_text: "Hello. My name is Lady Yanagiya. Please treat me kindly... I\u2019ve gone through so much. "
@@ -75,7 +75,7 @@ MonoBehaviour:
       answers:
       - answer_text: (Seems like I won't get anymore answers here)
         nextID: IntroductionText
-      markedGrey: 0
+      markedGrey: 1
       isALastNode: 1
       CountsTowardsEnding: 1
       baseSprite: {fileID: 2993617451595162224, guid: 811475fc1c6d847f4874ce00635fdb7d, type: 3}

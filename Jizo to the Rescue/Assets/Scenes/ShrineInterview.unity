@@ -877,9 +877,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2099102134}
-        m_TargetAssemblyTypeName: theGAMEMANAGER, Assembly-CSharp
-        m_MethodName: SwitchToCutscene
+      - m_Target: {fileID: 1734678564}
+        m_TargetAssemblyTypeName: theDayCYCLE, Assembly-CSharp
+        m_MethodName: OnStatsNextClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2856,6 +2856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::helpButton
   tutorialsByDay: []
   tutorialPanel: {fileID: 0}
+  arrowTutorial: {fileID: 0}
   textBox: {fileID: 0}
   helpButtonObject: {fileID: 0}
 --- !u!1 &793651441
@@ -3021,6 +3022,7 @@ MonoBehaviour:
       coords: {x: -40, y: 0}
       highlight: {fileID: 0}
   tutorialPanel: {fileID: 1308988105}
+  arrowTutorial: {fileID: 1208202464}
   textBox: {fileID: 945540381}
   helpButtonObject: {fileID: 793651441}
 --- !u!1 &879175410
@@ -4564,6 +4566,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180934903}
   m_CullTransparentMesh: 1
+--- !u!1 &1208202463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1208202464}
+  - component: {fileID: 1208202466}
+  - component: {fileID: 1208202465}
+  m_Layer: 5
+  m_Name: arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1208202464
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208202463}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1308988105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -4.7099457, y: 253.00008}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1208202465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208202463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1208202466
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208202463}
+  m_CullTransparentMesh: 1
 --- !u!1 &1308988104
 GameObject:
   m_ObjectHideFlags: 0
@@ -4594,6 +4671,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1208202464}
   - {fileID: 914371766}
   - {fileID: 945540380}
   - {fileID: 744454464}
@@ -5415,8 +5493,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1234, y: 261}
-  m_SizeDelta: {x: -68.071, y: -48.095}
+  m_AnchoredPosition: {x: -1232.5651, y: 261}
+  m_SizeDelta: {x: -70.941, y: -48.095}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1578882422
 MonoBehaviour:
@@ -7435,6 +7513,7 @@ MonoBehaviour:
   soulsSentToHell: 0
   soulsSentToHuman: 0
   soulsSentToHeaven: 0
+  ExitReason: 
 --- !u!1 &2116260571
 GameObject:
   m_ObjectHideFlags: 0
