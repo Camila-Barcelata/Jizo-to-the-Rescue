@@ -41,6 +41,9 @@ public class theInterviewScontroller : MonoBehaviour
 
     [SerializeField] helpButton helpButton2;  
 
+    [Header("Judgement")]
+    [SerializeField] Button judgementButton;
+
     public TMP_Text Daytext;
  
     //lowkey im taking advantage of learning enums
@@ -139,6 +142,7 @@ public class theInterviewScontroller : MonoBehaviour
     void StartInterviewClicked()
     {
         startInterviewButton.gameObject.SetActive(false);
+        judgementButton.gameObject.SetActive(true);
         stage = Stage.Nodes;
         dialogueManager.StartDialogue(person);
 
@@ -161,6 +165,7 @@ public class theInterviewScontroller : MonoBehaviour
   
     public void JudgementToggleClicked()
     {
+
         if (JudgementDisplay.gameObject.activeSelf) //checks if its on or not
             JudgementDisplay.gameObject.SetActive(false);
             
@@ -244,6 +249,7 @@ public class theInterviewScontroller : MonoBehaviour
  
         Realmimage.gameObject.SetActive(true);
         nextButton.SetActive(true);
+        judgementButton.gameObject.SetActive(false);
     }
 
     public void NextClicked()
