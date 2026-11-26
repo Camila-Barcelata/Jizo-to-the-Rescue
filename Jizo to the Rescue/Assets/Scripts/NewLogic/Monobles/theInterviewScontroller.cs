@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.Properties;
+using UnityEngine.SceneManagement;
 
 // Runs the order of one interview:
 // intro cutscene -> Start Interview button -> nodes
@@ -251,4 +252,12 @@ public class theInterviewScontroller : MonoBehaviour
         nextButton.SetActive(false);
         theGAMEMANAGER.Instance.AfterJudgment(); // next person, or the stat review
     }
+
+    public void settingInInterviewClicked()
+    {
+        theGAMEMANAGER.Instance.resetGameManager();
+        SceneManager.LoadScene("MainMenu");
+    }
 }
+
+

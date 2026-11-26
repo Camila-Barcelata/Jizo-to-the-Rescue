@@ -34,6 +34,7 @@ public class ReputationBarController : MonoBehaviour
                 Debug.Log("After tengu lives" + theGAMEMANAGER.Instance.lives);
 
             }
+
         }
         else
         {
@@ -45,6 +46,7 @@ public class ReputationBarController : MonoBehaviour
         }
         slider.value = newrepvalue/100;
         theGAMEMANAGER.Instance.reputationValue = newrepvalue;
+
 
     }
 
@@ -128,6 +130,7 @@ public class ReputationBarController : MonoBehaviour
         }
         return Tier.Low;
     }
+
 }
 
     
