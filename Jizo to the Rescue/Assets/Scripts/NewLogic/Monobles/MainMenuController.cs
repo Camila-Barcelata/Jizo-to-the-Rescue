@@ -7,18 +7,9 @@ public class MainMenuController : MonoBehaviour
     public static MainMenuController menuController;
     public float xOffset;
 
-    void Awake()
+   void Awake()
     {
-        if (menuController == null)
-        {
-            menuController = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        menuController = this;
     }
 
     public void DisplayArrow(RectTransform button)

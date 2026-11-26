@@ -9066,7 +9066,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2d90110fc6c8d8840b359238a2e9c2c1, type: 2}
   - {fileID: 11400000, guid: 2d90110fc6c8d8840b359238a2e9c2c1, type: 2}
   day: 0
-  reputationValue: 100
+  reputationValue: 50
   lives: 3
   yokaiSentIncorrectly: 0
   soulsSentToHell: 0
