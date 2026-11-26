@@ -807,8 +807,9 @@ GameObject:
   - component: {fileID: 212196421}
   - component: {fileID: 212196423}
   - component: {fileID: 212196422}
+  - component: {fileID: 212196424}
   m_Layer: 0
-  m_Name: border (change later)
+  m_Name: currborder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -871,6 +872,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212196420}
   m_CullTransparentMesh: 1
+--- !u!114 &212196424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212196420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6aa594dd655b40a8ac86cf3413b08d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BorderChanger
+  borderSprites:
+  - {fileID: 8807481738881907635, guid: fd09d49e038754bd5b3bf1eed2046a61, type: 3}
+  - {fileID: -112374351547234803, guid: cb7833d71cb7648c7ac667dc3572181e, type: 3}
+  - {fileID: 3848948477791457387, guid: 0363ca4051bbf4da99f32fa8155523a3, type: 3}
+  border: {fileID: 212196422}
 --- !u!1 &251182347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2610,6 +2628,7 @@ MonoBehaviour:
   heavenSprite: {fileID: 7295422636866266320, guid: 52875df5b0e4e46518c397b8656bdb8d, type: 3}
   caseFile: {fileID: 326030459}
   helpButton2: {fileID: 793651446}
+  judgementButton: {fileID: 1882972422}
   Daytext: {fileID: 2081705489}
 --- !u!4 &614949000
 Transform:
@@ -7815,7 +7834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1882972421
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8845,7 +8864,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Temple
   templeSprites:
-  - {fileID: 3346372396129232408, guid: 884a95bb78553114f8aaf1230aef03d6, type: 3}
+  - {fileID: -2776806530142383596, guid: 45921de93ebfc438baa2d4f55d9155ad, type: 3}
+  - {fileID: -7655648638749899891, guid: fbaba6693cdbb47d78d7a640101d5aaa, type: 3}
+  - {fileID: -6313336670576203369, guid: 31a0347f1796949c58869acd658966f9, type: 3}
   templeImageObj: {fileID: 611526357}
 --- !u!1 &2081705487
 GameObject:
