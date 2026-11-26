@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Runtime.CompilerServices;
 
 public class Temple : MonoBehaviour
 {
@@ -14,33 +15,40 @@ public class Temple : MonoBehaviour
     [SerializeField] Image templeImageObj;
     public void ShowTemple()
     {
-        switch(templeState)
+        switch(calculateTempState())
         {
             case TempleState.GoodTemple:
-                Debug.Log("gg");
                 templeImageObj.gameObject.SetActive(true);
                 templeImageObj.sprite = templeSprites[0];
                 break;
-            //     templeImageObj = templeImages[0];
-            // }
-            // case(BadTemple)
-            // {
-            //     templeImageObj = templeImages[2];
-            // }
+            case TempleState.MidTemple:
+                templeImageObj.gameObject.SetActive(true);
+                templeImageObj.sprite = templeSprites[1];
+                break;
+            case TempleState.BadTemple:
+                templeImageObj.gameObject.SetActive(true);
+                templeImageObj.sprite = templeSprites[2];
+                break;
+        }
+    }
+
+    public TempleState calculateTempState()
+    {
+        float reputationVal = theGAMEMANAGER.Instance.reputationValue;
+        if(reputationVal >= 75) //good standing
+        {
+            return TempleState.GoodTemple;
+        }
+        else if (reputationVal >= 35 && reputationVal <= 75)
+        {
+            return TempleState.MidTemple;
+        }
+        else
+        {
+            return TempleState.BadTemple;
         }
 
-        // if(reputationVal >= 75) //good standing
-        // {
-        //     templeImageObj = templeImages[0];
-        // }
-        // else if (reputationVal >= 35 && reputationVal <= 75)
-        // {
-        //     templeImageObj = templeImages[1];
-        // }
-        // else if(reputationVal <= 35)
-        // {
-        //     templeImageObj = templeImages[2];
-        // }
+        
     }
 
     public void HideTemple()
