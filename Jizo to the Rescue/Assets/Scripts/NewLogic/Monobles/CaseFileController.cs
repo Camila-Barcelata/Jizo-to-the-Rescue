@@ -9,7 +9,6 @@ public class CaseFileController : MonoBehaviour
 
     CaseFile caseFile;
 
-    [SerializeField]Image portraitImage;
     [SerializeField] TMP_Text textBox;
 
     void Update()
@@ -18,8 +17,8 @@ public class CaseFileController : MonoBehaviour
         {
             caseFile = character.caseFile;
 
-            string displayStr = caseFile.characterName + "\n"+ "Age: " + 
-            caseFile.characterAge + "\n" +"Karmic Merit " + caseFile.karmicMerit
+            string displayStr = caseFile.characterName + "\n\n"+ "Age: " + 
+            caseFile.characterAge + "\n" +"Karmic Merit: " + caseFile.karmicMerit
              + "\n" + caseFile.reasons;
 
             textBox.text = displayStr;

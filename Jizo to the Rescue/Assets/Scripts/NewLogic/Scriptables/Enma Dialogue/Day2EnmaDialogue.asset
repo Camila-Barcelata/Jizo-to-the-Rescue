@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e167393d2a1fbe4bbc781cc2706e252, type: 3}
+  m_Name: Day2EnmaDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::EnmaDialogueObject
+  introLines:
+  - character_text: "That\u2019s Day 2 done with!"
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Good work today.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Let\u2019s go over the souls again, just to make sure we\u2019re on the same page."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  finalLines:
+  - character_text: "That\u2019s all the interviewees for today. "
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: ...
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Sorry. It\u2019s been a long day."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: 'I had to judge a child earlier. '
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: She was a sweet girl. Took care of her younger brother, worked tirelessly for her household...
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: And killed the person who tried to assault her a few years back.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "But that\u2019s enough, in the eyes of the Buddha."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "That\u2019s enough to send that little girl to hell."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: So I did.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: ...
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: 'Anyway... '
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "I shouldn\u2019t be feeling these things at this point."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "I\u2019ve been the King of Hell for how long? How many kalpa? "
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: ...
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: See you tomorrow.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person1BadLines:
+  - character_text: I suppose that was a fair judgment by some standards.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: ' He did kill quite a few Ox in worship of that cult. '
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: ' I guess one could make a point he redeemed himself through his conversion to Buddhism, but...'
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person1GoodLines:
+  - character_text: I think you made the right choice sending the Ox Killer there.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: Even though all of these people were sent to Hell for one reason or another, some of the reasons for damnation are more... outdated than others.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: For example, there was once a time where I was required to send every single woman to hell!
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Glad we\u2019re past those days..."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person2BadLines:
+  - character_text: "Good call with the monk\u2019s mom, Jizo."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Genuinely---I\u2019m proud of you for standing up to him! Who did he think he was, anyway?"
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "If he tries anything... I\u2019ll be there for you."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person2GoodLines:
+  - character_text: And as for the ghoul... oh.
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: You... released her from hell?
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: She had no hesitation telling you she was a oni...
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Sorry, I\u2019m just a little shocked. This job isn\u2019t one to be taken lightly, Jizo."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "You can\u2019t let your emotions take the reigns when you\u2019re sitting in that chair."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person3BadLines:
+  - character_text: Ah, I assume you noticed the familiar face that approached you today?
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "The people you\u2019ve already judged might return to you after living their next life in the realm you sent them to."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "That being said, they\u2019ll have different experiences and memories, and it\u2019s unlikely they\u2019ll remember you."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Just make sure you\u2019re treating them with the same kindness and respect everyone deserves."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  person3GoodLines:
+  - character_text: Ah, I assume you noticed the familiar face that approached you today?
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "The people you\u2019ve already judged might return to you after living their next life in the realm you sent them to."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "That being said, they\u2019ll have different experiences and memories, and it\u2019s unlikely they\u2019ll remember you."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Just make sure you\u2019re treating them with the same kindness and respect everyone deserves."
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}

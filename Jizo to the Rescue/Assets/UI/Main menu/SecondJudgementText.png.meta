@@ -1,0 +1,496 @@
+fileFormatVersion: 2
+guid: 0affb54d2a3f5f14e95b0435dadbbf36
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7671267672289553462
+    second: SecondJudgementText_0
+  - first:
+      213: -8458068447323876410
+    second: SecondJudgementText_1
+  - first:
+      213: 3369290581444268358
+    second: SecondJudgementText_2
+  - first:
+      213: -1538237396803568011
+    second: SecondJudgementText_3
+  - first:
+      213: 5864438772917190766
+    second: SecondJudgementText_4
+  - first:
+      213: 8515811607239583337
+    second: SecondJudgementText_5
+  - first:
+      213: -1539010055919744713
+    second: SecondJudgementText_6
+  - first:
+      213: -2195734850566385137
+    second: SecondJudgementText_7
+  - first:
+      213: 4496218290072281637
+    second: SecondJudgementText_8
+  - first:
+      213: 6614310030581645533
+    second: SecondJudgementText_9
+  - first:
+      213: -478643752124726491
+    second: SecondJudgementText_10
+  - first:
+      213: 4208098841141457062
+    second: SecondJudgementText_11
+  - first:
+      213: 222183234156887871
+    second: SecondJudgementText_12
+  - first:
+      213: 6703014235331439947
+    second: SecondJudgementText_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SecondJudgementText_0
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 773
+        width: 104
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac35e3832be2a8590800000000000000
+      internalID: -7671267672289553462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_1
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 775
+        width: 96
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c312575f87ee9a80800000000000000
+      internalID: -8458068447323876410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_2
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 773
+        width: 230
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6411e0cbeef12ce20800000000000000
+      internalID: 3369290581444268358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_3
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 774
+        width: 104
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e3d4fcc3517aae0800000000000000
+      internalID: -1538237396803568011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_4
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 774
+        width: 117
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60c1ca2efba26150800000000000000
+      internalID: 5864438772917190766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_5
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 774
+        width: 78
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966e9afb98d3e2670800000000000000
+      internalID: 8515811607239583337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_6
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 773
+        width: 105
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7394627128654aae0800000000000000
+      internalID: -1539010055919744713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_7
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 774
+        width: 117
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f029b0379ce2781e0800000000000000
+      internalID: -2195734850566385137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_8
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 770
+        width: 111
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5226f5c76b6c56e30800000000000000
+      internalID: 4496218290072281637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_9
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 775
+        width: 96
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd04f1fbdefbacb50800000000000000
+      internalID: 6614310030581645533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_10
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 774
+        width: 133
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52345ac1b048b59f0800000000000000
+      internalID: -478643752124726491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_11
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 775
+        width: 96
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a038fdb99b266a30800000000000000
+      internalID: 4208098841141457062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_12
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 774
+        width: 104
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ff7fa697a551300800000000000000
+      internalID: 222183234156887871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SecondJudgementText_13
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 774
+        width: 102
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d2155dee3e50d50800000000000000
+      internalID: 6703014235331439947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SecondJudgementText_0: -7671267672289553462
+      SecondJudgementText_1: -8458068447323876410
+      SecondJudgementText_10: -478643752124726491
+      SecondJudgementText_11: 4208098841141457062
+      SecondJudgementText_12: 222183234156887871
+      SecondJudgementText_13: 6703014235331439947
+      SecondJudgementText_2: 3369290581444268358
+      SecondJudgementText_3: -1538237396803568011
+      SecondJudgementText_4: 5864438772917190766
+      SecondJudgementText_5: 8515811607239583337
+      SecondJudgementText_6: -1539010055919744713
+      SecondJudgementText_7: -2195734850566385137
+      SecondJudgementText_8: 4496218290072281637
+      SecondJudgementText_9: 6614310030581645533
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

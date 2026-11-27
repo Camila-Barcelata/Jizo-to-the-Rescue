@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Day1EnmaDialogue
   m_EditorClassIdentifier: Assembly-CSharp::EnmaDialogueObject
   introLines:
-  - character_text: Hello, Jizo.
+  - character_text: Well, that was your first day!
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "I hope you didn\u2019t mind the process. "
+    baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
+    mouthSprite: {fileID: 0}
+  - character_text: "Let\u2019s go over the souls you met today and your choices of where you sent them."
     baseSprite: {fileID: -6224334638340052128, guid: 41a3e782a4efd4fd5a1712a5a30ed9bd, type: 3}
     mouthSprite: {fileID: 0}
   finalLines:
